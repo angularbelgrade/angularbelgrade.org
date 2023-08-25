@@ -11,7 +11,8 @@
     "start": "yarn dev",
     "build": "ng build",
     "watch": "ng build --watch",
-    "test": "ng test"
+    "test": "ng test",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@analogjs/content": "^0.2.0",
@@ -42,8 +43,9 @@
     "@angular/cli": "^16.2.0",
     "@angular/compiler-cli": "^16.2.0",
     "@nx/vite": "^16.7.0",
-    "nx": "^16.7.0",
     "jsdom": "^22.1.0",
+    "nx": "^16.7.0",
+    "prettier": "^3.0.2",
     "typescript": "~5.0.2",
     "vite": "^4.4.8",
     "vitest": "^0.32.0"

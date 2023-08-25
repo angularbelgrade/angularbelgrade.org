@@ -7,7 +7,7 @@
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "bgd",
       "architect": {
         "build": {
           "builder": "@nx/vite:build",
@@ -49,5 +49,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
