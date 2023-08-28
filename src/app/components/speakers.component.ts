@@ -1,12 +1,127 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { NgFor, NgIf } from '@angular/common';
+import { Speaker } from '../models/speaker';
 
 @Component({
   selector: 'bgd-speakers',
   standalone: true,
-  imports: [CommonModule],
-  template: `<p>speakers works!</p>`,
-  styles: [``],
+  imports: [NgIf, NgFor],
+  template: `
+    <h2 id="speakers" class="section-title">Speakers</h2>
+
+    <div class="speaker-list">
+      <div
+        class="speaker"
+        *ngFor="let speaker of speakers; trackBy: trackByName"
+      >
+        <img
+          class="speaker-photo"
+          [alt]="speaker.name"
+          [src]="speaker.photoUrl"
+          loading="lazy"
+          height="170"
+          width="170"
+        />
+
+        <div class="speaker-info">
+          <div class="speaker-details">
+            <h3 class="speaker-name">{{ speaker.name }}</h3>
+            <p class="speaker-headline" [innerHTML]="speaker.headline"></p>
+          </div>
+
+          <p class="speaker-talk-title" [innerHTML]="speaker.talkTitle"></p>
+        </div>
+      </div>
+    </div>
+
+    <p class="more-speakers" *ngIf="showMore">
+      More speakers will be announced soon!
+    </p>
+  `,
+  styles: [
+    `
+      :host {
+        display: block;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #303b57;
+      }
+
+      .speaker-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .speaker {
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        border: 1px solid #303b57;
+        border-radius: 0.5rem;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .speaker:hover {
+        border-color: #d62f39;
+      }
+
+      .speaker-photo {
+        border-radius: 0.5rem;
+      }
+
+      .speaker-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+
+      .speaker-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .speaker-name {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .speaker-headline {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+
+      .speaker-talk-title {
+        font-size: 1.25rem;
+        margin: 0;
+        line-height: 1.4;
+        font-style: italic;
+      }
+
+      .more-speakers {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 0;
+      }
+    `,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SpeakersComponent {}
+export class SpeakersComponent {
+  @Input() speakers: Speaker[] = [];
+  @Input() showMore = false;
+
+  trackByName(_: number, speaker: Speaker): string {
+    return speaker.name;
+  }
+}

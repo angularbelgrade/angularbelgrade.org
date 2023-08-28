@@ -1,94 +1,76 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'bgd-event-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [DatePipe],
   template: `
-    <div class="event">
-      <div class="event-register">
-        <button class="register-button">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScoWYDjd8T4aVF8z91WCoHjxQ0NtVA_PridxFBF9zDFkDiPpw/viewform?pli=1"
-            target="_blank"
-          >
-            Register here
-          </a>
-        </button>
-      </div>
-      <div class="event-details">
-        <p class="event-date">
-          <i class="fas fa-calendar"></i>November 4, 2023
-        </p>
-        <p class="event-location">
-          <i class="fas fa-map-marker-alt"></i>
-          <a
-            href="https://www.google.com/maps/place/Startit+Centar+Beograd/@44.8069241,20.4555015,15z/data=!4m6!3m5!1s0x475a7aaa0756e81f:0x1e47be2a38dbf0ee!8m2!3d44.8069241!4d20.4555015!16s%2Fg%2F11bwkhl8xs?entry=ttu"
-            target="_blank"
-          >
-            Startit Centar, Belgrade
-          </a>
-        </p>
-        <p class="event-time"><i class="fas fa-clock"></i>11 AM</p>
-      </div>
+    <div class="event-date">
+      <img
+        src="/icons/calendar.svg"
+        fetchPriority="high"
+        loading="eager"
+        height="30px"
+      />
+      <span>{{ eventDate | date }}</span>
     </div>
+
+    <div class="event-location">
+      <img
+        src="/icons/location.svg"
+        fetchPriority="high"
+        loading="eager"
+        height="30px"
+      />
+      <a [href]="locationLink" target="_blank">Belgrade, Serbia</a>
+    </div>
+
+    <a class="reserve-button" [href]="registrationLink" target="_blank">
+      Reserve Your Spot
+    </a>
   `,
   styles: [
     `
-      .event {
-        background: #2b3248;
+      :host {
+        padding: 2rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        padding-bottom: 2rem;
+        justify-content: center;
+        gap: 2rem;
         border-bottom: 1px solid #303b57;
       }
 
-      .event-register {
+      .event-date,
+      .event-location {
         display: flex;
-        justify-content: center;
-        margin: 2rem;
-      }
-
-      .register-button {
-        background-color: #d62f39;
-        border: none;
-        padding: 1rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: background-color 0.5s;
-      }
-
-      .register-button:hover {
-        background-color: rgba(214, 47, 57, 0.8);
-      }
-
-      .event-details {
-        width: 90vw;
-        display: flex;
-        justify-content: center;
+        flex-direction: row;
         align-items: center;
-        font-size: 1.5rem;
+        gap: 0.5rem;
+        font-size: 1.25rem;
       }
 
-      .register-button a,
-      .event-details a {
+      .reserve-button {
+        background-color: #d62f39;
+        color: #fff;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        font-size: 1.25rem;
         text-decoration: none;
       }
 
-      .event-date,
-      .event-location,
-      .event-time {
-        margin: 0 1rem;
-      }
-
-      .event-details i {
-        margin-right: 10px;
-        color: #d62f39;
+      .reserve-button:hover {
+        text-decoration: none;
+        opacity: 0.9;
+        color: white;
       }
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class EventDetailsComponent {}
+export class EventDetailsComponent {
+  @Input({ required: true }) eventDate!: Date;
+  @Input({ required: true }) locationLink!: string;
+  @Input({ required: true }) registrationLink!: string;
+}
