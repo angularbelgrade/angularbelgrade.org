@@ -8,20 +8,24 @@ import { DatePipe } from '@angular/common';
   template: `
     <div class="event-date">
       <img
+        alt="Calendar Icon"
         src="/icons/calendar.svg"
         fetchPriority="high"
         loading="eager"
-        height="30px"
+        height="30"
+        width="30"
       />
       <span>{{ eventDate | date }}</span>
     </div>
 
     <div class="event-location">
       <img
+        alt="Location Icon"
         src="/icons/location.svg"
         fetchPriority="high"
         loading="eager"
-        height="30px"
+        height="30"
+        width="30"
       />
       <a [href]="locationLink" target="_blank">Belgrade, Serbia</a>
     </div>
@@ -38,7 +42,8 @@ import { DatePipe } from '@angular/common';
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
         border-bottom: 1px solid #303b57;
       }
 

@@ -51,14 +51,14 @@ import { Speaker } from '../models/speaker';
         flex-direction: column;
         align-items: center;
         gap: 2rem;
-        max-width: 700px;
-        margin: 0 auto;
+        margin: 0 2rem;
       }
 
       .speaker {
         padding: 2rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         gap: 2rem;
         border: 1px solid #303b57;
         border-radius: 0.5rem;
@@ -77,9 +77,9 @@ import { Speaker } from '../models/speaker';
       .speaker-info {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 0.5rem;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
       }
 
       .speaker-details {
@@ -112,6 +112,25 @@ import { Speaker } from '../models/speaker';
         font-weight: 600;
         margin-top: 2rem;
         margin-bottom: 0;
+        padding: 0 2rem;
+      }
+
+      @media only screen and (min-width: 850px) {
+        .speaker-list {
+          max-width: 720px;
+          margin: 0 auto;
+        }
+
+        .speaker {
+          flex-direction: row;
+          align-items: stretch;
+        }
+
+        .speaker-info {
+          align-items: flex-start;
+          justify-content: space-between;
+          text-align: left;
+        }
       }
     `,
   ],

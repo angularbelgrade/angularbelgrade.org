@@ -4,6 +4,7 @@ import { EventDetailsComponent } from '../components/event-details.component';
 import { SpeakersComponent } from '../components/speakers.component';
 import { Speaker } from '../models/speaker';
 import { SponsorsComponent } from '../components/sponsors.component';
+import { PartnersComponent } from '../components/partners.component';
 
 @Component({
   selector: 'bgd-home',
@@ -13,6 +14,7 @@ import { SponsorsComponent } from '../components/sponsors.component';
     EventDetailsComponent,
     SpeakersComponent,
     SponsorsComponent,
+    PartnersComponent,
   ],
   template: `
     <bgd-banner [year]="2023" />
@@ -26,25 +28,122 @@ import { SponsorsComponent } from '../components/sponsors.component';
     <bgd-speakers [speakers]="speakers" [showMore]="true" />
 
     <bgd-sponsors>
-      <img
-        alt="Publicis Sapient"
-        src="/sapient.svg"
-        height="150"
-        width="274.63"
-        loading="lazy"
-      />
-      <img
-        alt="Webkraft Studio"
-        src="/webkraft.svg"
-        height="90"
-        width="376.2"
-        loading="lazy"
-      />
+      <a
+        href="https://www.publicissapient.com/"
+        title="Publicis Sapient"
+        target="_blank"
+      >
+        <img
+          class="sapient-logo"
+          alt="Publicis Sapient"
+          src="/sapient.svg"
+          height="110"
+          width="201"
+          loading="lazy"
+        />
+      </a>
+
+      <a
+        href="https://webkraft.studio/"
+        title="Webkraft Studio"
+        target="_blank"
+      >
+        <img
+          class="webkraft-logo"
+          alt="Webkraft Studio"
+          src="/webkraft.svg"
+          height="60"
+          width="251"
+          loading="lazy"
+        />
+      </a>
     </bgd-sponsors>
 
-    <h2 id="community-partners" class="section-title">Community Partners</h2>
-    <div style="height: 700px"></div>
+    <bgd-partners>
+      <a href="https://ngrx.io/" title="NgRx" target="_blank">
+        <img
+          alt="NgRx"
+          src="/ngrx.svg"
+          height="110"
+          width="110"
+          loading="lazy"
+        />
+      </a>
+
+      <a
+        href="https://www.angular.love/en/"
+        title="Angular Love"
+        target="_blank"
+      >
+        <img
+          alt="Angular Love"
+          src="/angular-love.svg"
+          height="110"
+          width="110"
+          loading="lazy"
+        />
+      </a>
+
+      <a
+        href="https://www.meetup.com/angulartoronto/"
+        title="Angular Toronto"
+        target="_blank"
+      >
+        <img
+          alt="Angular Toronto"
+          src="/angular-toronto.svg"
+          height="110"
+          width="103"
+          loading="lazy"
+        />
+      </a>
+
+      <a href="https://ngrome.io/" title="Angular Rome" target="_blank">
+        <img
+          alt="Angular Rome"
+          src="/angular-rome.svg"
+          height="110"
+          width="110"
+          loading="lazy"
+        />
+      </a>
+
+      <a href="https://www.jetbrains.com/" title="JetBrains" target="_blank">
+        <img
+          alt="JetBrains"
+          src="/jet-brains.svg"
+          height="110"
+          width="110"
+          loading="lazy"
+        />
+      </a>
+
+      <a href="https://cityjsconf.org/" title="CityJS" target="_blank">
+        <img
+          alt="CityJS"
+          src="/city-js.svg"
+          height="70"
+          width="254"
+          loading="lazy"
+        />
+      </a>
+    </bgd-partners>
   `,
+  styles: [
+    `
+      @media only screen and (min-width: 850px) {
+        .sapient-logo {
+          height: 150px;
+          width: 275px;
+        }
+
+        .webkraft-logo {
+          height: 90px;
+          width: 376px;
+        }
+      }
+    `,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class HomeComponent {

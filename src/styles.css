@@ -6,6 +6,10 @@
   background-color: #0e101c;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
