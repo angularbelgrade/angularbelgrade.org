@@ -9,8 +9,16 @@ import { FooterComponent } from './components/footer.component';
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
   template: `
     <bgd-header />
+    <div class="buffer"></div>
     <router-outlet />
     <bgd-footer />
   `,
+  styles: [
+    `
+      .buffer {
+        height: 4rem;
+      }
+    `,
+  ],
 })
 export class AppComponent {}

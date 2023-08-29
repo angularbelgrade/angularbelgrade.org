@@ -110,6 +110,16 @@ export { routeMeta } from './(home).meta';
         />
       </a>
 
+      <a href="https://analogjs.org/" title="AnalogJS" target="_blank">
+        <img
+          alt="AnalogJS"
+          src="/orgs/analog.svg"
+          height="90"
+          width="127"
+          loading="lazy"
+        />
+      </a>
+
       <a href="https://www.jetbrains.com/" title="JetBrains" target="_blank">
         <img
           alt="JetBrains"
@@ -158,7 +168,7 @@ export default class HomeComponent {
       name: 'Manfred Steyer',
       headline: 'Trainer and Consultant<br/>GDE in Angular • Microsoft MVP',
       talkTitle: 'How will Signals influence your Architecture?',
-      photoUrl: '/people/manfred.png',
+      photoUrl: '/people/manfred.jpg',
     },
     {
       name: 'Mladen Jakovljević',

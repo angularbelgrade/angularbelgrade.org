@@ -1,97 +1,152 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  HostListener,
+  DestroyRef,
+  inject,
+  OnInit,
+  PLATFORM_ID,
+  signal,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgClass } from '@angular/common';
+import { isPlatformServer, NgIf } from '@angular/common';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 
 @Component({
   selector: 'bgd-header',
   standalone: true,
-  imports: [RouterLink, NgClass],
+  imports: [RouterLink, NgIf],
   template: `
-    <nav [ngClass]="{ header: !hideNav, 'header-hidden': hideNav }">
-      <div class="header">
-        <button class="menu-button" (click)="toggleNav()">
-          <img
-            class="menu"
-            src="/icons/menu.svg"
-            fetchPriority="high"
-            loading="eager"
-            height="30"
-            width="30"
-          />
-        </button>
-        <a class="home-link" routerLink="/">
-          <img
-            class="logo"
-            alt="Angular Belgrade Logo"
-            src="/angular-belgrade.svg"
-            fetchPriority="high"
-            loading="eager"
-            height="40"
-            width="40"
-          />
-        </a>
-      </div>
+    <nav [class]="isNavVisible() ? 'visible-nav' : 'hidden-nav'">
+      <a class="home-link" routerLink="/">
+        <img
+          alt="Angular Belgrade Logo"
+          src="/angular-belgrade.svg"
+          fetchPriority="high"
+          loading="eager"
+          height="40"
+          width="40"
+        />
+      </a>
 
-      <ul class="nav-list">
+      <button
+        class="menu-button"
+        [class.hidden]="!isMenuOpen()"
+        (click)="toggleMenu()"
+      >
+        <img
+          alt="Close Menu Icon"
+          src="/icons/close.svg"
+          loading="lazy"
+          height="33"
+          width="33"
+        />
+      </button>
+
+      <button
+        class="menu-button"
+        [class.hidden]="isMenuOpen()"
+        (click)="toggleMenu()"
+      >
+        <img
+          alt="Open Menu Icon"
+          src="/icons/menu.svg"
+          fetchPriority="high"
+          loading="eager"
+          height="40"
+          width="40"
+        />
+      </button>
+
+      <ul class="desktop-links">
         <li><a routerLink="/" fragment="speakers">Speakers</a></li>
         <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
+        <li><a routerLink="/" fragment="partners">Partners</a></li>
       </ul>
 
-      <div class="sidenav" [class.open]="isNavOpen">
-        <div class="sidenav-items">
-          <a class="home-link" routerLink="/">
-            <img
-              class="logo"
-              alt="Angular Belgrade Logo"
-              src="/angular-belgrade.svg"
-              fetchPriority="high"
-              loading="eager"
-              height="30"
-              width="30"
-            />
+      <ul
+        class="mobile-links"
+        [class]="isMenuOpen() ? 'visible-menu' : 'hidden-menu'"
+      >
+        <li>
+          <a routerLink="/" fragment="speakers" (click)="toggleMenu()">
+            Speakers
           </a>
-          <button class="menu-button" (click)="toggleNav()">
-            <img
-              class="menu"
-              src="/icons/close.svg"
-              fetchPriority="high"
-              loading="eager"
-              height="20"
-              width="20"
-            />
-          </button>
-        </div>
-        <ul>
-          <li><a routerLink="/" fragment="speakers">Speakers</a></li>
-          <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
-        </ul>
-      </div>
+        </li>
+        <li>
+          <a routerLink="/" fragment="sponsors" (click)="toggleMenu()">
+            Sponsors
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="partners" (click)="toggleMenu()">
+            Partners
+          </a>
+        </li>
+      </ul>
     </nav>
   `,
   styles: [
     `
       nav {
-        padding: 0.75rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 0.75rem 1rem;
         border-bottom: 1px solid #303b57;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        transition: transform 0.7s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+        background-color: #0e101c;
       }
 
-      ul {
+      .hidden {
+        display: none;
+      }
+
+      .visible-nav {
+        transform: translateY(0);
+      }
+
+      .hidden-nav {
+        transform: translateY(-100%);
+      }
+
+      .visible-menu {
+        transform: translateX(0);
+      }
+
+      .hidden-menu {
+        transform: translateX(-100%);
+      }
+
+      .desktop-links {
+        display: none;
+      }
+
+      .mobile-links {
         list-style: none;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+        flex-direction: column;
         align-items: center;
         gap: 2rem;
-        margin: 0 1.25rem 0 0;
+        position: absolute;
+        right: 0;
+        top: 4rem;
+        width: 100%;
+        background: #0e101c;
+        padding: 1rem 0 2rem 0;
+        border-bottom: 1px solid #303b57;
+        margin: 0;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .menu-button {
+        background: none;
+        border: none;
+        cursor: pointer;
         padding: 0;
       }
 
@@ -99,83 +154,27 @@ import { NgClass } from '@angular/common';
         text-decoration: none;
       }
 
-      .header {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        transform: translateY(0);
-      }
-
-      .header-hidden {
-        transform: translateY(-100%);
-      }
-
-      .menu-button {
-        margin-right: 1rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        display: none;
-      }
-
-      .sidenav {
-        width: 0;
-        background: linear-gradient(to top, #171a29, #0e101c);
-        transition: width 0.7s ease-in-out;
-        overflow: hidden;
-        position: fixed;
-        height: 100vh;
-        bottom: 0;
-        left: 0;
-        top: 0;
-      }
-
-      .sidenav-items {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .sidenav-items button {
-        margin-left: auto;
-      }
-
-      .sidenav a {
-        padding: 15px 25px;
-        text-align: center;
-        display: block;
-        transition: 0.3s;
-      }
-
-      .sidenav a:hover {
-        background-color: #ddd;
-      }
-
-      .sidenav ul {
-        top: 2rem;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .sidenav.open {
-        width: 80vw;
-      }
-
       .home-link {
         justify-self: flex-start;
       }
 
-      .logo:hover,
-      .sidenav a:hover {
-        filter: drop-shadow(0 0 1rem #a6abbd);
-      }
-
-      @media only screen and (max-width: 992px) {
-        .menu-button {
-          display: inline;
+      @media only screen and (min-width: 850px) {
+        .desktop-links {
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 2rem;
+          margin: 0 1.25rem 0 0;
+          padding: 0;
         }
 
-        .nav-list {
+        .mobile-links {
+          display: none;
+        }
+
+        .menu-button {
           display: none;
         }
       }
@@ -183,16 +182,38 @@ import { NgClass } from '@angular/common';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent {
-  hideNav = false;
-  isNavOpen = false;
+export class HeaderComponent implements OnInit {
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly destroyRef = inject(DestroyRef);
 
-  toggleNav() {
-    this.isNavOpen = !this.isNavOpen;
+  readonly isNavVisible = signal(true);
+  readonly isMenuOpen = signal(false);
+
+  ngOnInit(): void {
+    if (isPlatformServer(this.platformId)) {
+      return;
+    }
+
+    this.toggleHeaderOnScroll();
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event) {
-    this.hideNav = window.scrollY > 0;
+  toggleMenu(): void {
+    this.isMenuOpen.update((isOpen) => !isOpen);
+  }
+
+  private toggleHeaderOnScroll(): void {
+    fromEvent(window, 'scroll')
+      .pipe(
+        map(() => window.scrollY),
+        pairwise(),
+        filter(() => !this.isMenuOpen()),
+        tap(([previousPosition, currentPosition]) => {
+          const isNavVisible =
+            currentPosition <= 79 || currentPosition < previousPosition;
+          this.isNavVisible.set(isNavVisible);
+        }),
+        takeUntilDestroyed(this.destroyRef)
+      )
+      .subscribe();
   }
 }
