@@ -38,8 +38,8 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
           alt="Close Menu Icon"
           src="/icons/close.svg"
           loading="lazy"
-          height="33"
-          width="33"
+          height="30"
+          width="30"
         />
       </button>
 
@@ -53,8 +53,8 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
           src="/icons/menu.svg"
           fetchPriority="high"
           loading="eager"
-          height="40"
-          width="40"
+          height="35"
+          width="35"
         />
       </button>
 
