@@ -3,7 +3,7 @@ import { RouteMeta } from '@analogjs/router';
 const title = 'Angular Belgrade Day 2023';
 const description =
   'Welcome to Angular Belgrade Day 2023! Join us on November 4 to explore the latest trends and best practices in the Angular ecosystem.';
-const image = 'https://angularbelgrade.com/banners/angular-belgrade-day-23.jpg';
+const image = 'https://angularbelgrade.org/banners/angular-belgrade-day-23.jpg';
 
 export const routeMeta: RouteMeta = {
   title,
