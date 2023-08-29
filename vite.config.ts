@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => ({
         routes: ['/'],
         sitemap: { host: 'https://angularbelgrade.org/' },
       },
+      nitro: { serveStatic: false },
     }),
   ],
   test: {
