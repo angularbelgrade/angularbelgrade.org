@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => ({
     analog({
       static: true,
       prerender: {
-        routes: async () => ['/', '/404', ...getSpeakersRoutes()],
+        routes: async () => ['/', '/not-found', ...getSpeakersRoutes()],
         sitemap: { host: 'https://angularbelgrade.org/' },
       },
       nitro: { serveStatic: false },

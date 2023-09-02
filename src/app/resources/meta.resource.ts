@@ -62,7 +62,7 @@ export function getRouteMetaBySpeaker(): RouteMeta {
     canActivate: [
       (route) =>
         !!getSpeakerById(route.params['id']) ||
-        inject(Router).createUrlTree(['/']),
+        inject(Router).createUrlTree(['/not-found']),
     ],
   };
 }
