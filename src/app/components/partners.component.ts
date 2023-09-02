@@ -21,12 +21,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         gap: 2rem;
         max-width: 600px;
         margin: 0 auto;
+        padding: 0 1rem;
       }
 
       :host {
         display: block;
         padding-bottom: 2rem;
-        border-bottom: 1px solid #303b57;
       }
     `,
   ],

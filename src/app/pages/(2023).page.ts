@@ -2,14 +2,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BannerComponent } from '../components/banner.component';
 import { EventDetailsComponent } from '../components/event-details.component';
 import { SpeakersComponent } from '../components/speakers.component';
-import { Speaker } from '../models/speaker';
 import { SponsorsComponent } from '../components/sponsors.component';
 import { PartnersComponent } from '../components/partners.component';
+import { AgendaComponent } from '../components/agenda.component';
+import { getSpeakersByYear } from '../resources/speakers.resource';
+import { getRouteMetaByYear } from '../resources/meta.resource';
 
-export { routeMeta } from './(home).meta';
+export const routeMeta = getRouteMetaByYear(2023);
 
 @Component({
-  selector: 'bgd-home',
   standalone: true,
   imports: [
     BannerComponent,
@@ -17,6 +18,7 @@ export { routeMeta } from './(home).meta';
     SpeakersComponent,
     SponsorsComponent,
     PartnersComponent,
+    AgendaComponent,
   ],
   template: `
     <bgd-banner [year]="2023" />
@@ -28,6 +30,8 @@ export { routeMeta } from './(home).meta';
     />
 
     <bgd-speakers [speakers]="speakers" [showMore]="true" />
+
+    <!--    <bgd-agenda />-->
 
     <bgd-sponsors>
       <a
@@ -158,30 +162,9 @@ export { routeMeta } from './(home).meta';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class HomeComponent {
+export default class NgBgDay2023Page {
   readonly eventDate = new Date('2023-11-04');
   readonly locationLink = 'https://goo.gl/maps/4eCq4Yi5WQqHEZnV6';
   readonly registrationLink = 'https://forms.gle/ovKuPnRnBuKuQ8tKA';
-
-  readonly speakers: Speaker[] = [
-    {
-      name: 'Manfred Steyer',
-      headline: 'Trainer and Consultant<br/>GDE in Angular • Microsoft MVP',
-      talkTitle: 'How will Signals influence your Architecture?',
-      photoUrl: '/people/manfred.jpg',
-    },
-    {
-      name: 'Mladen Jakovljević',
-      headline: 'Senior Frontend Developer at goUrban<br/>RxJS Core Team',
-      talkTitle: 'Infinite Scrolling Implemented Using RxJS',
-      photoUrl: '/people/mladen.jpg',
-    },
-    {
-      name: 'Marko Stanimirović',
-      headline:
-        'Principal Frontend Engineer at SMG<br/>NgRx Core Team • GDE in Angular',
-      talkTitle: 'NgRx SignalStore -<br />Journey from Vision to First Release',
-      photoUrl: '/people/marko.jpg',
-    },
-  ];
+  readonly speakers = getSpeakersByYear(2023);
 }

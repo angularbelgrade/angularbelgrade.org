@@ -60,6 +60,7 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 
       <ul class="desktop-links">
         <li><a routerLink="/" fragment="speakers">Speakers</a></li>
+        <!--        <li><a routerLink="/" fragment="agenda">Agenda</a></li>-->
         <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
         <li><a routerLink="/" fragment="partners">Partners</a></li>
       </ul>
@@ -73,6 +74,11 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
             Speakers
           </a>
         </li>
+        <!--        <li>-->
+        <!--          <a routerLink="/" fragment="agenda" (click)="toggleMenu()">-->
+        <!--            Agenda-->
+        <!--          </a>-->
+        <!--        </li>-->
         <li>
           <a routerLink="/" fragment="sponsors" (click)="toggleMenu()">
             Sponsors

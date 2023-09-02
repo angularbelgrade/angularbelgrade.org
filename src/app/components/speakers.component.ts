@@ -1,18 +1,20 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { Speaker } from '../models/speaker';
 
 @Component({
   selector: 'bgd-speakers',
   standalone: true,
-  imports: [NgIf, NgFor],
+  imports: [NgIf, NgFor, RouterLink],
   template: `
     <h2 id="speakers" class="section-title">Speakers</h2>
 
     <div class="speaker-list">
-      <div
+      <a
         class="speaker"
-        *ngFor="let speaker of speakers; trackBy: trackByName"
+        *ngFor="let speaker of speakers; trackBy: trackById"
+        routerLink="/speakers/{{ speaker.id }}"
       >
         <img
           class="speaker-photo"
@@ -29,9 +31,9 @@ import { Speaker } from '../models/speaker';
             <p class="speaker-headline" [innerHTML]="speaker.headline"></p>
           </div>
 
-          <p class="speaker-talk-title" [innerHTML]="speaker.talkTitle"></p>
+          <p class="speaker-talk-title">{{ speaker.talkTitle }}</p>
         </div>
-      </div>
+      </a>
     </div>
 
     <p class="more-speakers" *ngIf="showMore">
@@ -51,11 +53,11 @@ import { Speaker } from '../models/speaker';
         flex-direction: column;
         align-items: center;
         gap: 2rem;
-        margin: 0 2rem;
+        margin: 0 1rem;
       }
 
       .speaker {
-        padding: 2rem;
+        padding: 2rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -63,10 +65,11 @@ import { Speaker } from '../models/speaker';
         border: 1px solid #303b57;
         border-radius: 0.5rem;
         width: 100%;
-        cursor: pointer;
+        text-decoration: none;
       }
 
       .speaker:hover {
+        color: inherit;
         border-color: #d62f39;
       }
 
@@ -103,7 +106,6 @@ import { Speaker } from '../models/speaker';
         font-size: 1.25rem;
         margin: 0;
         line-height: 1.4;
-        font-style: italic;
       }
 
       .more-speakers {
@@ -122,6 +124,7 @@ import { Speaker } from '../models/speaker';
         }
 
         .speaker {
+          padding: 2rem;
           flex-direction: row;
           align-items: stretch;
         }
@@ -140,7 +143,7 @@ export class SpeakersComponent {
   @Input() speakers: Speaker[] = [];
   @Input() showMore = false;
 
-  trackByName(_: number, speaker: Speaker): string {
-    return speaker.name;
+  trackById(_: number, speaker: Speaker): string {
+    return speaker.id;
   }
 }

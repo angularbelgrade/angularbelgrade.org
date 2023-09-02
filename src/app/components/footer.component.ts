@@ -75,12 +75,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     `
       footer {
         text-align: center;
-        margin: 1rem 0;
+        padding: 1rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1rem;
+        border-top: 1px solid #303b57;
       }
 
       p {
