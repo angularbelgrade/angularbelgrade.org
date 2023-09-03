@@ -4,7 +4,7 @@ import { RouteMeta } from '@analogjs/router';
 import { getSpeakerById } from './speakers.resource';
 
 const descriptions: Record<string, string> = {
-  2023: 'Welcome to Angular Belgrade Day 2023, the first edition of the Angular conference in Belgrade, Serbia. Join us on November 4 to explore the latest trends and best practices in the Angular ecosystem. The event is free for all attendees!',
+  2023: 'Welcome to Angular Belgrade Day 2023, the first edition of the Angular conference in Belgrade, Serbia. Join us on November 4th to explore the latest trends and best practices in the Angular ecosystem. The event is free for all attendees!',
 };
 
 export function getRouteMetaByYear(year: number): RouteMeta {

@@ -32,10 +32,10 @@ const speakers: Record<string, Speaker> = {
     name: 'Marko Stanimirović',
     headline:
       'Principal Frontend Engineer at SMG<br/>NgRx Core Team • GDE in Angular',
-    bio: 'Marko is a core member of the NgRx and AnalogJS teams, a Google Developer Expert in Angular, and an organizer of the Angular Belgrade group. He actively contributes to open-source software, shares knowledge through technical articles and talks, and enjoys playing the guitar. Marko holds a Master of Science in Software Engineering from the University of Belgrade.',
+    bio: 'Marko is a Principal Frontend Engineer at Swiss Marketplace Group. He is also a core member of the NgRx and AnalogJS teams, a Google Developer Expert in Angular, and an organizer of the Angular Belgrade group. Marko actively contributes to open-source software, shares knowledge through technical articles and talks, and enjoys playing the guitar. He holds a Master of Science in Software Engineering from the University of Belgrade.',
     talkTitle: 'NgRx SignalStore - Journey from Vision to First Release',
     talkDescription:
-      "NgRx SignalStore is a new state management solution in the Angular ecosystem that provides first-class support for Angular Signals. Join me in this talk to learn more about the journey of developing the `@ngrx/signals` library, from the initial idea to the first official release. We'll discuss the challenges, design considerations, and key decisions that shaped this state management library and explore its core features.",
+      "NgRx SignalStore is a new state management solution in the Angular ecosystem that provides first-class support for Angular Signals. Join me in this talk to learn more about the journey of developing the `@ngrx/signals` library, from the initial idea to the first official release. We'll explore its core features and discuss the challenges, design considerations, and key decisions that shaped this state management library.",
     photoUrl: '/people/marko.jpg',
     twitterUrl: 'https://twitter.com/MarkoStDev/',
     linkedinUrl: 'https://linkedin.com/in/markostanimirovic/',
