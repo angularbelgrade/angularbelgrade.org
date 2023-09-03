@@ -30,7 +30,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
       }
 
       .banner-title {
-        color: #d62f39;
+        color: #dd0031;
         font-size: 3.25rem;
         font-weight: 800;
         margin-top: 2rem;
@@ -46,7 +46,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
       }
 
       .banner-year {
-        background-color: #d62f39;
+        background-color: #dd0031;
         font-size: 2.75rem;
         font-weight: 600;
         margin: 0;

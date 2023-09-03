@@ -70,7 +70,7 @@ import { Speaker } from '../models/speaker';
 
       .speaker:hover {
         color: inherit;
-        border-color: #d62f39;
+        border-color: #dd0031;
       }
 
       .speaker-photo {

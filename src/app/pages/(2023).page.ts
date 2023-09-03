@@ -6,7 +6,10 @@ import { SponsorsComponent } from '../components/sponsors.component';
 import { PartnersComponent } from '../components/partners.component';
 import { AgendaComponent } from '../components/agenda.component';
 import { getSpeakersByYear } from '../resources/speakers.resource';
-import { getRouteMetaByYear } from '../resources/meta.resource';
+import {
+  getDescriptionByYear,
+  getRouteMetaByYear,
+} from '../resources/meta.resource';
 
 export const routeMeta = getRouteMetaByYear(2023);
 
@@ -24,7 +27,9 @@ export const routeMeta = getRouteMetaByYear(2023);
     <bgd-banner [year]="2023" />
 
     <bgd-event-details
+      [eventDescription]="eventDescription"
       [eventDate]="eventDate"
+      [locationName]="locationName"
       [locationLink]="locationLink"
       [registrationLink]="registrationLink"
     />
@@ -163,7 +168,9 @@ export const routeMeta = getRouteMetaByYear(2023);
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class NgBgDay2023Page {
+  readonly eventDescription = getDescriptionByYear(2023);
   readonly eventDate = new Date('2023-11-04');
+  readonly locationName = 'Startit Centar';
   readonly locationLink = 'https://goo.gl/maps/4eCq4Yi5WQqHEZnV6';
   readonly registrationLink = 'https://forms.gle/ovKuPnRnBuKuQ8tKA';
   readonly speakers = getSpeakersByYear(2023);
