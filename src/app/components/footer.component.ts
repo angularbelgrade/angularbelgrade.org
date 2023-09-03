@@ -95,6 +95,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         align-items: center;
         justify-content: center;
       }
+
+      .social-media-links a {
+        display: flex;
+      }
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
