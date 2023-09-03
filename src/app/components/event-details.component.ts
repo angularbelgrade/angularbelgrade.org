@@ -105,6 +105,7 @@ import { DatePipe } from '@angular/common';
       @media only screen and (min-width: 850px) {
         .event-description {
           width: 720px;
+          font-size: 1.25rem;
         }
       }
     `,

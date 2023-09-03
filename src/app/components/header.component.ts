@@ -96,6 +96,7 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
     `
       nav {
         position: fixed;
+        z-index: 1;
         top: 0;
         width: 100%;
         padding: 0.75rem 1rem;
