@@ -94,10 +94,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         gap: 1rem;
         align-items: center;
         justify-content: center;
-      }
 
-      .social-media-links a {
-        display: flex;
+        > a {
+          display: flex;
+        }
       }
     `,
   ],

@@ -148,6 +148,20 @@ export const routeMeta = getRouteMetaByYear(2023);
           loading="lazy"
         />
       </a>
+
+      <a
+        href="https://www.packtpub.com/"
+        title="Packt Publishing"
+        target="_blank"
+      >
+        <img
+          alt="Packt Publishing"
+          src="/orgs/packt-publishing.svg"
+          height="65"
+          width="241"
+          loading="lazy"
+        />
+      </a>
     </bgd-partners>
   `,
   styles: [

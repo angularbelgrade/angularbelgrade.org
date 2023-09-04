@@ -98,6 +98,10 @@ export const routeMeta = getRouteMetaBySpeaker();
         align-items: center;
         justify-content: center;
         margin: 1rem 0 2rem 0;
+
+        > a {
+          display: flex;
+        }
       }
 
       .speaker-bio {
