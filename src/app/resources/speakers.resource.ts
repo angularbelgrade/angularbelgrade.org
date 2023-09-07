@@ -14,6 +14,20 @@ const speakers: Record<string, Speaker> = {
     linkedinUrl: 'https://linkedin.com/in/manfred-steyer-84645821/',
     githubUrl: 'https://github.com/manfredsteyer/',
   },
+  '2023-alex': {
+    id: '2023-alex',
+    name: 'Alex Okrushko',
+    headline:
+      'Principal UI Architect at Cisco<br/>NgRx Core Team • GDE in Angular',
+    bio: 'Alex is a Principal Architect at Cisco CX - Customer Experience. He is part of the NgRx team, GDE in Angular, Angular Toronto organizer and co-organizer of the official Angular Discord. In his free time, he loves to learn & share the knowledge, provides NgRx workshops and helps with ts.dev/style - the TypeScript style guide.',
+    talkTitle: 'Signals and NgRx: will it blend?',
+    talkDescription:
+      'One of the main purposes for NgRx and ComponentStore is to be a reactive container of state. With Signals being introduced into Angular, does it make NgRx obsolete?<br/><br/>In this talk we’ll go over how Signals and NgRx complement each other and how the responsibilities of NgRx shift.',
+    photoUrl: '/people/alex.jpg',
+    twitterUrl: 'https://twitter.com/AlexOkrushko/',
+    linkedinUrl: 'https://linkedin.com/in/alex-okrushko-64262a33/',
+    githubUrl: 'https://github.com/alex-okrushko/',
+  },
   '2023-mladen': {
     id: '2023-mladen',
     name: 'Mladen Jakovljević',
@@ -26,6 +40,18 @@ const speakers: Record<string, Speaker> = {
     twitterUrl: 'https://twitter.com/jakovljevicMla/',
     linkedinUrl: 'https://linkedin.com/in/jakovljevic-mladen/',
     githubUrl: 'https://github.com/jakovljevic-mladen/',
+  },
+  '2023-ana': {
+    id: '2023-ana',
+    name: 'Ana Kljajić',
+    headline: 'Frontend Engineer at JobCloud',
+    bio: "Ana is a Frontend Engineer at JobCloud. With a background also in Java and a passion for all things code, Ana holds a Master of Science in Software Engineering from the Faculty of Organizational Sciences. She's not just a tech whiz; she's also a table tennis enthusiast who loves spending time in nature. Ana's impressive journey includes being a contributor to an IEEE article, and she's excited to make her debut as a speaker at our event.",
+    talkTitle: 'Unleashing the Power of File-Based Routing in Analog',
+    talkDescription:
+      "Welcome to the world of Analog, the robust meta-framework designed to supercharge your Angular development journey. Analog empowers developers to effortlessly incorporate the cutting-edge features of the JavaScript ecosystem into their Angular applications. Not only that, but it also simplifies server-side rendering and static site generation, requiring minimal effort on your part. In our upcoming discussion, we'll dive deep into the realm of file-based routing. Say goodbye to manual route configuration – Analog streamlines the process for you, making dynamic route generation a breeze.",
+    photoUrl: '/people/ana.jpg',
+    linkedinUrl: 'https://linkedin.com/in/kljajicana/',
+    githubUrl: 'https://github.com/anakljajic/',
   },
   '2023-marko': {
     id: '2023-marko',

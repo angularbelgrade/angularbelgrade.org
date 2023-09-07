@@ -157,8 +157,8 @@ export const routeMeta = getRouteMetaByYear(2023);
         <img
           alt="Packt Publishing"
           src="/orgs/packt-publishing.svg"
-          height="65"
-          width="241"
+          height="55"
+          width="204"
           loading="lazy"
         />
       </a>
