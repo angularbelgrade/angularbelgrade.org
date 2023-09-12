@@ -19,7 +19,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        max-width: 600px;
+        max-width: 720px;
         margin: 0 auto;
         padding: 0 1rem;
       }

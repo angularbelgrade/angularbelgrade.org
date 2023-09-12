@@ -53,6 +53,19 @@ const speakers: Record<string, Speaker> = {
     linkedinUrl: 'https://linkedin.com/in/kljajicana/',
     githubUrl: 'https://github.com/anakljajic/',
   },
+  '2023-mateusz': {
+    id: '2023-mateusz',
+    name: 'Mateusz Stefańczyk',
+    headline: 'Team Leader at House of Angular',
+    bio: 'Team leader of the Angular team at House of Angular company and a blogger on the angular.love blog, where he shares knowledge and experience about Angular. He develops Angular web applications and is passionate about business analysis and designing custom web application architectures. Mateusz is also keen on gaining expertise in the field of reverse engineering.',
+    talkTitle:
+      'Enhancing Angular Apps: A Deep Dive into SSR and Data Hydration',
+    talkDescription:
+      "SSR lately is experiencing its renaissance and is becoming the leading trend of frontend engineering. Angular's Universal module has significant improvements, including non-destructive hydration, which plays a crucial role in optimizing Core Web Vitals scores. This innovation empowers developers to create faster, more user-friendly web applications.",
+    photoUrl: '/people/mateusz.jpg',
+    twitterUrl: 'https://twitter.com/m_stefanczyk/',
+    githubUrl: 'https://github.com/va-stefanek/',
+  },
   '2023-marko': {
     id: '2023-marko',
     name: 'Marko Stanimirović',

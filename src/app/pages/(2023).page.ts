@@ -119,6 +119,20 @@ export const routeMeta = getRouteMetaByYear(2023);
         />
       </a>
 
+      <a
+        href="https://www.meetup.com/angular-athens/"
+        title="Angular Athens"
+        target="_blank"
+      >
+        <img
+          alt="Angular Athens"
+          src="/orgs/angular-athens.svg"
+          height="110"
+          width="110"
+          loading="lazy"
+        />
+      </a>
+
       <a href="https://analogjs.org/" title="AnalogJS" target="_blank">
         <img
           alt="AnalogJS"
