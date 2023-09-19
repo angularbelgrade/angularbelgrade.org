@@ -53,6 +53,18 @@ const speakers: Record<string, Speaker> = {
     linkedinUrl: 'https://linkedin.com/in/kljajicana/',
     githubUrl: 'https://github.com/anakljajic/',
   },
+  '2023-nenad': {
+    id: '2023-nenad',
+    name: 'Nenad Drobac',
+    headline: 'Engineering Manager at SMG',
+    bio: "Nenad is an Engineering Manager at Swiss Marketplace Group with a proven track record in the tech industry. Previously, he honed his skills as a versatile Frontend developer proficient in all three major Javascript frameworks. Notably, during his tenure as a Frontend developer, his passion was dedicated to crafting and perfecting design systems. Beyond his professional life, Nenad's interests extend to the world of sports, where he's a passionate spectator and enthusiast. While he once harbored dreams of becoming a professional gamer, life took a different turn, and he transitioned to the world of software development. In addition to his technical prowess, Nenad possesses a keen interest in exploring the dynamic realms of business and marketing. With a deep appreciation for both the creative and analytical sides of these domains, he's continually broadening his horizons and embracing new challenges.",
+    talkTitle:
+      'Navigating Cross-Brand UI Development: Challenges and Strategies for Multi-Tenancy Integration',
+    talkDescription:
+      "Discover the journey of merging two independent Swiss real estate projects onto a single tech foundation. This narrative dives deep into our decision-making process and the remarkable evolution of our design system to accommodate multiple brands and beyond.<br/><br/>In this narrative, we'll uncover the strategic insights and considerations behind the decision to consolidate these projects. Witness the transformation of our design system as it expands to seamlessly empower both brands. We'll share the strategies, insights, and practical lessons learned in achieving this delicate balance between customization and standardization.",
+    photoUrl: '/people/nenad.jpg',
+    linkedinUrl: 'https://linkedin.com/in/nenaddrobac/',
+  },
   '2023-mateusz': {
     id: '2023-mateusz',
     name: 'Mateusz Stefańczyk',
@@ -64,6 +76,7 @@ const speakers: Record<string, Speaker> = {
       "SSR lately is experiencing its renaissance and is becoming the leading trend of frontend engineering. Angular's Universal module has significant improvements, including non-destructive hydration, which plays a crucial role in optimizing Core Web Vitals scores. This innovation empowers developers to create faster, more user-friendly web applications.",
     photoUrl: '/people/mateusz.jpg',
     twitterUrl: 'https://twitter.com/m_stefanczyk/',
+    linkedinUrl: 'https://linkedin.com/in/m-stefanczyk/',
     githubUrl: 'https://github.com/va-stefanek/',
   },
   '2023-marko': {

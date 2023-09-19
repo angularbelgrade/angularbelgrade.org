@@ -34,7 +34,7 @@ export const routeMeta = getRouteMetaByYear(2023);
       [registrationLink]="registrationLink"
     />
 
-    <bgd-speakers [speakers]="speakers" [showMore]="true" />
+    <bgd-speakers [speakers]="speakers" [showMore]="false" />
 
     <!--    <bgd-agenda />-->
 
