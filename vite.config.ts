@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => ({
       prerender: {
         routes: async () => ['/', '/not-found', ...getSpeakersRoutes()],
         sitemap: { host: 'https://angularbelgrade.org/' },
+        robots: { host: 'https://angularbelgrade.org/' },
       },
       nitro: { serveStatic: false },
     }),
