@@ -60,7 +60,7 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 
       <ul class="desktop-links">
         <li><a routerLink="/" fragment="speakers">Speakers</a></li>
-        <!--        <li><a routerLink="/" fragment="agenda">Agenda</a></li>-->
+        <li><a routerLink="/" fragment="agenda">Agenda</a></li>
         <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
         <li><a routerLink="/" fragment="partners">Partners</a></li>
       </ul>
@@ -70,22 +70,20 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         [class]="isMenuOpen() ? 'visible-menu' : 'hidden-menu'"
       >
         <li>
-          <a routerLink="/" fragment="speakers" (click)="toggleMenu()">
+          <a routerLink="/" fragment="speakers" (click)="closeMenu()">
             Speakers
           </a>
         </li>
-        <!--        <li>-->
-        <!--          <a routerLink="/" fragment="agenda" (click)="toggleMenu()">-->
-        <!--            Agenda-->
-        <!--          </a>-->
-        <!--        </li>-->
         <li>
-          <a routerLink="/" fragment="sponsors" (click)="toggleMenu()">
+          <a routerLink="/" fragment="agenda" (click)="closeMenu()"> Agenda </a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="sponsors" (click)="closeMenu()">
             Sponsors
           </a>
         </li>
         <li>
-          <a routerLink="/" fragment="partners" (click)="toggleMenu()">
+          <a routerLink="/" fragment="partners" (click)="closeMenu()">
             Partners
           </a>
         </li>
@@ -206,6 +204,10 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu(): void {
     this.isMenuOpen.update((isOpen) => !isOpen);
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen.set(false);
   }
 
   private toggleHeaderOnScroll(): void {

@@ -10,6 +10,7 @@ import {
   getDescriptionByYear,
   getRouteMetaByYear,
 } from '../resources/meta.resource';
+import { getAgendaByYear } from '../resources/agenda.resource';
 
 export const routeMeta = getRouteMetaByYear(2023);
 
@@ -36,7 +37,7 @@ export const routeMeta = getRouteMetaByYear(2023);
 
     <bgd-speakers [speakers]="speakers" [showMore]="false" />
 
-    <!--    <bgd-agenda />-->
+    <bgd-agenda [agenda]="agenda" />
 
     <bgd-sponsors>
       <a
@@ -202,4 +203,5 @@ export default class NgBgDay2023Page {
   readonly locationLink = 'https://goo.gl/maps/4eCq4Yi5WQqHEZnV6';
   readonly registrationLink = 'https://forms.gle/ovKuPnRnBuKuQ8tKA';
   readonly speakers = getSpeakersByYear(2023);
+  readonly agenda = getAgendaByYear(2023);
 }
