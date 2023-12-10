@@ -77,6 +77,16 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         border-radius: 1.5rem 0;
       }
 
+      .banner-tickets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .banner-tickets > p {
+        margin-bottom: 0.75rem;
+      }
+
       @media only screen and (min-width: 850px) {
         :host {
           padding: 4rem 0;
