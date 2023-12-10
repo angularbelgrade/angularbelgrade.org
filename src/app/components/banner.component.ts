@@ -20,7 +20,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </div>
 
     <div class="banner-tickets">
-      <p>Ticket sales starts soon!</p>
+      <p>Ticket sales will start soon!</p>
       <a
         class="cta-link"
         href="https://forms.gle/U9fzYwoDZqBgzfxQ6"

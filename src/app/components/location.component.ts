@@ -6,15 +6,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <h2 id="location" class="section-title">Location</h2>
 
-    <h3>Mona Plaza Hotel</h3>
+    <div class="location-details">
+      <h3>Mona Plaza Hotel</h3>
 
-    <a
-      class="location-address"
-      href="https://maps.app.goo.gl/RG3DihiaRCDpEMQK6"
-      target="_blank"
-    >
-      Cara Uroša 62-64, Belgrade, Serbia
-    </a>
+      <a
+        class="location-address"
+        href="https://maps.app.goo.gl/RG3DihiaRCDpEMQK6"
+        target="_blank"
+      >
+        Cara Uroša 62-64, Belgrade, Serbia
+      </a>
+    </div>
 
     <div class="gallery">
       <img src="/location/mona1.jpg" loading="lazy" alt="Mona Plaza Photo 1" />
@@ -30,16 +32,20 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         border-bottom: 1px solid #232125;
       }
 
+      .location-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+      }
+
       h3 {
         text-align: center;
         font-size: 1.25rem;
-      }
-
-      .location-address {
-        display: block;
-        text-align: center;
-        margin-bottom: 2rem;
-        padding: 0 1rem;
+        margin: 0;
       }
 
       .gallery {
