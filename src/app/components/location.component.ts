@@ -50,12 +50,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         align-items: center;
         justify-content: center;
         gap: 1rem;
+      }
 
-        > img {
-          width: 100%;
-          max-width: 400px;
-          height: auto;
-        }
+      .gallery > img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
       }
 
       @media only screen and (min-width: 850px) {

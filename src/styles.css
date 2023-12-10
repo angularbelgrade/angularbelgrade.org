@@ -70,9 +70,9 @@ a:hover > img {
   background-image: var(--angular-gradient);
   font-weight: 600;
   text-decoration: none;
+}
 
-  &:hover {
-    color: inherit;
-    opacity: 0.9;
-  }
+.cta-link:hover {
+  color: inherit;
+  opacity: 0.9;
 }

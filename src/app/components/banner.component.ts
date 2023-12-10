@@ -62,11 +62,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         flex-direction: column;
         gap: 0.5rem;
         margin-bottom: 2rem;
+      }
 
-        > p {
-          margin: 0;
-          text-align: center;
-        }
+      .banner-details > p {
+        margin: 0;
+        text-align: center;
       }
 
       @media only screen and (min-width: 850px) {

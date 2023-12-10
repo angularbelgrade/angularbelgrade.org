@@ -14,22 +14,22 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </p>
 
     <div class="event-stats">
-      <div>
+      <div class="event-stats-item">
         <span class="highlighted-text">2</span>
         <span class="event-stats-label">days</span>
       </div>
 
-      <div>
+      <div class="event-stats-item">
         <span class="highlighted-text">300</span>
         <span class="event-stats-label">participants</span>
       </div>
 
-      <div>
+      <div class="event-stats-item">
         <span class="highlighted-text">12+</span>
         <span class="event-stats-label">tech talks</span>
       </div>
 
-      <div>
+      <div class="event-stats-item">
         <span class="highlighted-text">1</span>
         <span class="event-stats-label">workshop</span>
       </div>
@@ -66,16 +66,16 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         display: flex;
         flex-direction: column;
         gap: 2rem;
+      }
 
-        > * {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
+      .event-stats-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .highlighted-text {
-          font-size: 3rem;
-        }
+      .event-stats-item > .highlighted-text {
+        font-size: 3rem;
       }
 
       @media only screen and (min-width: 850px) {
@@ -90,14 +90,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           justify-content: space-between;
           width: 100%;
           max-width: 1000px;
+        }
 
-          .highlighted-text {
-            font-size: 4rem;
-          }
+        .event-stats-item > .highlighted-text {
+          font-size: 4rem;
+        }
 
-          .event-stats-label {
-            font-size: 1.25rem;
-          }
+        .event-stats-label {
+          font-size: 1.25rem;
         }
       }
     `,
