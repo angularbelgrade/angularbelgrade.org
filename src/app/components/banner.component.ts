@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'bgd-banner',
@@ -6,17 +6,29 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   template: `
     <img
       alt="Angular Belgrade Logo"
-      src="/angular-belgrade.svg"
+      src="/ng-belgrade-conf.svg"
       class="banner-logo"
       fetchPriority="high"
       loading="eager"
-      height="150"
-      width="140"
     />
 
-    <h1 class="banner-title">ANGULAR</h1>
-    <p class="banner-subtitle">BELGRADE DAY</p>
-    <p class="banner-year">{{ year }}</p>
+    <p class="banner-title">The Largest Angular Conference in the Balkans</p>
+
+    <div class="banner-details">
+      <p><b>Conference Day:</b> May 24, 2024</p>
+      <p><b>Workshop Day:</b> May 23, 2024</p>
+    </div>
+
+    <div class="banner-tickets">
+      <p>Ticket sales starts soon!</p>
+      <a
+        class="cta-link"
+        href="https://forms.gle/U9fzYwoDZqBgzfxQ6"
+        target="_blank"
+      >
+        Join the Waiting List
+      </a>
+    </div>
   `,
   styles: [
     `
@@ -24,33 +36,37 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2rem 0;
-        border-bottom: 1px solid #303b57;
-        background: linear-gradient(to top, #171a29, #0e101c);
+        padding: 2rem 1rem;
+        border-bottom: 1px solid #232125;
+        background-image: url(ng-belgrade-conf-cover.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .banner-logo {
+        width: 100%;
+        height: auto;
+        max-width: 505px;
       }
 
       .banner-title {
-        color: #dd0031;
-        font-size: 3.25rem;
-        font-weight: 800;
-        margin-top: 2rem;
-        margin-bottom: 0;
-        line-height: 0.8;
-      }
-
-      .banner-subtitle {
-        font-size: 2.1rem;
+        margin: 2rem 0 4rem 0;
         font-weight: 600;
-        margin: 0 0 0.2rem 0;
+        font-size: 1.25rem;
         text-align: center;
       }
 
-      .banner-year {
-        background-color: #dd0031;
-        font-size: 2.75rem;
-        font-weight: 600;
+      .banner-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .banner-details > p {
         margin: 0;
-        padding: 0 2rem;
+        text-align: center;
       }
 
       @media only screen and (min-width: 850px) {
@@ -59,26 +75,20 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
         }
 
         .banner-logo {
-          height: 200px;
-          width: 186px;
+          max-width: 670px;
         }
 
         .banner-title {
-          font-size: 6rem;
+          font-size: 2rem;
         }
 
-        .banner-subtitle {
-          font-size: 4rem;
-        }
-
-        .banner-year {
-          font-size: 5rem;
+        .banner-details,
+        .banner-tickets {
+          font-size: 1.5rem;
         }
       }
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BannerComponent {
-  @Input({ required: true }) year!: number;
-}
+export class BannerComponent {}

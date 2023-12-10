@@ -1,6 +1,6 @@
-import { RouteMeta } from '@analogjs/router';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { RouteMeta } from '@analogjs/router';
 
 export const routeMeta: RouteMeta = {
   title: 'Not Found | Angular Belgrade',
@@ -28,4 +28,4 @@ export const routeMeta: RouteMeta = {
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class Page404 {}
+export default class NotFoundPage {}
