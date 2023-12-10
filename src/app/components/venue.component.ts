@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'bgd-location',
+  selector: 'bgd-venue',
   standalone: true,
   template: `
-    <h2 id="location" class="section-title">Location</h2>
+    <h2 id="venue" class="section-title">Venue</h2>
 
-    <div class="location-details">
+    <div class="venue-details">
       <h3>Mona Plaza Hotel</h3>
 
       <a
-        class="location-address"
+        class="venue-address"
         href="https://maps.app.goo.gl/RG3DihiaRCDpEMQK6"
         target="_blank"
       >
@@ -19,9 +19,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </div>
 
     <div class="gallery">
-      <img src="/location/mona1.jpg" loading="lazy" alt="Mona Plaza Photo 1" />
-      <img src="/location/mona2.jpg" loading="lazy" alt="Mona Plaza Photo 2" />
-      <img src="/location/mona3.jpg" loading="lazy" alt="Mona Plaza Photo 3" />
+      <img src="/venue/mona1.jpg" loading="lazy" alt="Mona Plaza Photo 1" />
+      <img src="/venue/mona2.jpg" loading="lazy" alt="Mona Plaza Photo 2" />
+      <img src="/venue/mona3.jpg" loading="lazy" alt="Mona Plaza Photo 3" />
     </div>
   `,
   styles: [
@@ -32,7 +32,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         border-bottom: 1px solid #232125;
       }
 
-      .location-details {
+      .venue-details {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -69,7 +69,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           font-size: 1.5rem;
         }
 
-        .location-address {
+        .venue-address {
           font-size: 1.25rem;
         }
       }
@@ -77,4 +77,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LocationComponent {}
+export class VenueComponent {}

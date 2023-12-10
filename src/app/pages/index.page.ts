@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouteMeta } from '@analogjs/router';
 import { BannerComponent } from '../components/banner.component';
 import { EventDetailsComponent } from '../components/event-details.component';
-import { LocationComponent } from '../components/location.component';
+import { VenueComponent } from '../components/venue.component';
 
 const title = 'NG Belgrade Conf 2024';
 const image = 'https://angularbelgrade.org/banners/ng-belgrade-conf-2024.jpg';
@@ -27,11 +27,11 @@ export const routeMeta: RouteMeta = {
 
 @Component({
   standalone: true,
-  imports: [BannerComponent, EventDetailsComponent, LocationComponent],
+  imports: [BannerComponent, EventDetailsComponent, VenueComponent],
   template: `
     <bgd-banner />
     <bgd-event-details />
-    <bgd-location />
+    <bgd-venue />
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

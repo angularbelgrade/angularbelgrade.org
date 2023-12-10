@@ -41,7 +41,7 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
       </button>
 
       <ul class="desktop-links">
-        <li><a routerLink="/" fragment="location">Location</a></li>
+        <li><a routerLink="/" fragment="venue">Venue</a></li>
         <li><a [href]="cfpLink" target="_blank">Call for Papers</a></li>
         <li><a [href]="previousEventLink" target="_blank">2023</a></li>
         <li>
@@ -56,9 +56,7 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         [class]="isMenuOpen() ? 'visible-menu' : 'hidden-menu'"
       >
         <li>
-          <a routerLink="/" fragment="location" (click)="closeMenu()">
-            Location
-          </a>
+          <a routerLink="/" fragment="venue" (click)="closeMenu()"> Venue </a>
         </li>
         <li><a [href]="cfpLink" target="_blank">Call for Papers</a></li>
         <li><a [href]="previousEventLink" target="_blank">2023</a></li>
