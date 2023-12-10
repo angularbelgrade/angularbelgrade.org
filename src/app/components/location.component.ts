@@ -17,9 +17,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </a>
 
     <div class="gallery">
-      <img src="/location/mona1.jpg" loading="lazy" />
-      <img src="/location/mona2.jpg" loading="lazy" />
-      <img src="/location/mona3.jpg" loading="lazy" />
+      <img src="/location/mona1.jpg" loading="lazy" alt="Mona Plaza Photo 1" />
+      <img src="/location/mona2.jpg" loading="lazy" alt="Mona Plaza Photo 2" />
+      <img src="/location/mona3.jpg" loading="lazy" alt="Mona Plaza Photo 3" />
     </div>
   `,
   styles: [
