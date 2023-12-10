@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <h2 id="location" class="section-title">Location</h2>
 
-    <h3>Hotel Mona Plaza</h3>
+    <h3>Mona Plaza Hotel</h3>
 
     <a
       class="location-address"

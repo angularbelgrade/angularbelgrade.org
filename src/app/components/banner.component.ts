@@ -15,8 +15,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <p class="banner-title">The Largest Angular Conference in the Balkans</p>
 
     <div class="banner-details">
-      <p><b>Workshop Day:</b> May 23, 2024</p>
       <p><b>Conference Day:</b> May 24, 2024</p>
+      <p><b>Workshop Day:</b> May 23, 2024</p>
     </div>
 
     <div class="banner-tickets">
