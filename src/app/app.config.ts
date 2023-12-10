@@ -1,11 +1,11 @@
-import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
-import { provideFileRouter } from '@analogjs/router';
 import {
   withComponentInputBinding,
   withInMemoryScrolling,
 } from '@angular/router';
+import { provideFileRouter } from '@analogjs/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [

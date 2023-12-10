@@ -81,7 +81,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        border-top: 1px solid #303b57;
+        border-top: 1px solid #232125;
       }
 
       p {

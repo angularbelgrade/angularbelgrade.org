@@ -1,9 +1,24 @@
 :root {
+  --angular-gradient: linear-gradient(
+    to right,
+    #ef4444,
+    #f34054,
+    #f43e64,
+    #f43e74,
+    #f24184,
+    #f03f92,
+    #ed3fa0,
+    #e742ae,
+    #df42bf,
+    #d245d2,
+    #c14ce4,
+    #a855f7
+  );
   font-family: Montserrat, sans-serif;
 
   color-scheme: dark;
   color: #ffffff;
-  background-color: #0e101c;
+  background-color: #0f0f11;
 }
 
 * {
@@ -24,7 +39,7 @@ a {
 }
 
 a:hover {
-  color: #dd0031;
+  color: #f11553;
 }
 
 .section-title {
@@ -39,4 +54,25 @@ a > img {
 
 a:hover > img {
   transform: scale(1.1);
+}
+
+.highlighted-text {
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: var(--angular-gradient);
+  font-weight: 600;
+}
+
+.cta-link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  background-image: var(--angular-gradient);
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+    opacity: 0.9;
+  }
 }

@@ -2,7 +2,6 @@
 
 import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
-import { getSpeakersRoutes } from './src/app/resources/speakers.resource';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -17,7 +16,7 @@ export default defineConfig(({ mode }) => ({
     analog({
       static: true,
       prerender: {
-        routes: async () => ['/', '/not-found', ...getSpeakersRoutes()],
+        routes: async () => ['/', '/not-found'],
         sitemap: { host: 'https://angularbelgrade.org/' },
       },
       nitro: { serveStatic: false },

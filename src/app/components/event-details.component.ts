@@ -1,41 +1,38 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'bgd-event-details',
   standalone: true,
-  imports: [DatePipe],
   template: `
-    <p class="event-description">{{ eventDescription }}</p>
+    <p class="event-description">
+      <span class="highlighted-text">NG Belgrade Conf 2024</span> is the largest
+      Angular conference in the Balkans. It takes place in <b>Belgrade</b>,
+      Serbia, including a <span class="highlighted-text">Workshop Day</span> on
+      <b>May 23rd</b> and a
+      <span class="highlighted-text">Conference Day</span> on <b>May 24th</b>.
+      Join us to explore the latest trends and best practices in Angular!
+    </p>
 
-    <div class="event-links">
-      <div class="event-date">
-        <img
-          alt="Calendar Icon"
-          src="/icons/calendar.svg"
-          fetchPriority="high"
-          loading="eager"
-          height="30"
-          width="30"
-        />
-        <span>{{ eventDate | date }}</span>
+    <div class="event-stats">
+      <div>
+        <span class="highlighted-text">2</span>
+        <span class="event-stats-label">days</span>
       </div>
 
-      <div class="event-location">
-        <img
-          alt="Location Icon"
-          src="/icons/location.svg"
-          fetchPriority="high"
-          loading="eager"
-          height="30"
-          width="30"
-        />
-        <a [href]="locationLink" target="_blank">{{ locationName }}</a>
+      <div>
+        <span class="highlighted-text">300</span>
+        <span class="event-stats-label">participants</span>
       </div>
 
-      <a class="reserve-button" [href]="registrationLink" target="_blank">
-        Reserve Your Spot
-      </a>
+      <div>
+        <span class="highlighted-text">12+</span>
+        <span class="event-stats-label">tech talks</span>
+      </div>
+
+      <div>
+        <span class="highlighted-text">1</span>
+        <span class="event-stats-label">workshop</span>
+      </div>
     </div>
 
     <p class="event-organization">
@@ -51,71 +48,60 @@ import { DatePipe } from '@angular/common';
         justify-content: center;
         gap: 2rem;
         padding: 2rem 1rem;
-        border-bottom: 1px solid #303b57;
+        border-bottom: 1px solid #232125;
       }
 
       .event-description,
       .event-organization {
-        line-height: 1.4;
+        line-height: 1.7;
         margin: 0;
-      }
-
-      .event-description {
-        text-align: justify;
       }
 
       .event-organization {
         text-align: center;
+        margin-top: 1rem;
       }
 
-      .event-links {
+      .event-stats {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-      }
+        flex-direction: column;
+        gap: 2rem;
 
-      .event-date,
-      .event-location {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 1.25rem;
-      }
+        > * {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
 
-      .reserve-button {
-        background-color: #dd0031;
-        color: #fff;
-        padding: 0.75rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 1.25rem;
-        font-weight: 600;
-        text-decoration: none;
-      }
-
-      .reserve-button:hover {
-        text-decoration: none;
-        opacity: 0.9;
-        color: white;
+        .highlighted-text {
+          font-size: 3rem;
+        }
       }
 
       @media only screen and (min-width: 850px) {
-        .event-description {
-          width: 720px;
+        .event-description,
+        .event-organization {
+          max-width: 900px;
           font-size: 1.25rem;
+        }
+
+        .event-stats {
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          max-width: 1000px;
+
+          .highlighted-text {
+            font-size: 4rem;
+          }
+
+          .event-stats-label {
+            font-size: 1.25rem;
+          }
         }
       }
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class EventDetailsComponent {
-  @Input({ required: true }) eventDescription!: string;
-  @Input({ required: true }) eventDate!: Date;
-  @Input({ required: true }) locationName!: string;
-  @Input({ required: true }) locationLink!: string;
-  @Input({ required: true }) registrationLink!: string;
-}
+export class EventDetailsComponent {}

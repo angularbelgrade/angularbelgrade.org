@@ -8,14 +8,14 @@ import {
   signal,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { isPlatformServer, NgIf } from '@angular/common';
+import { isPlatformServer } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 
 @Component({
   selector: 'bgd-header',
   standalone: true,
-  imports: [RouterLink, NgIf],
+  imports: [RouterLink],
   template: `
     <nav [class]="isNavVisible() ? 'visible-nav' : 'hidden-nav'">
       <a class="home-link" routerLink="/">
@@ -25,29 +25,11 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
           fetchPriority="high"
           loading="eager"
           height="40"
-          width="40"
+          width="34"
         />
       </a>
 
-      <button
-        class="menu-button"
-        [class.hidden]="!isMenuOpen()"
-        (click)="toggleMenu()"
-      >
-        <img
-          alt="Close Menu Icon"
-          src="/icons/close.svg"
-          loading="lazy"
-          height="30"
-          width="30"
-        />
-      </button>
-
-      <button
-        class="menu-button"
-        [class.hidden]="isMenuOpen()"
-        (click)="toggleMenu()"
-      >
+      <button class="menu-button" (click)="toggleMenu()">
         <img
           alt="Open Menu Icon"
           src="/icons/menu.svg"
@@ -59,10 +41,14 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
       </button>
 
       <ul class="desktop-links">
-        <li><a routerLink="/" fragment="speakers">Speakers</a></li>
-        <li><a routerLink="/" fragment="agenda">Agenda</a></li>
-        <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
-        <li><a routerLink="/" fragment="partners">Partners</a></li>
+        <li><a routerLink="/" fragment="location">Location</a></li>
+        <li><a [href]="cfpLink" target="_blank">Call for Papers</a></li>
+        <li><a [href]="previousEventLink" target="_blank">2023</a></li>
+        <li>
+          <a class="cta-link" [href]="waitingListLink" target="_blank">
+            Waiting List
+          </a>
+        </li>
       </ul>
 
       <ul
@@ -70,21 +56,15 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         [class]="isMenuOpen() ? 'visible-menu' : 'hidden-menu'"
       >
         <li>
-          <a routerLink="/" fragment="speakers" (click)="closeMenu()">
-            Speakers
+          <a routerLink="/" fragment="location" (click)="closeMenu()">
+            Location
           </a>
         </li>
+        <li><a [href]="cfpLink" target="_blank">Call for Papers</a></li>
+        <li><a [href]="previousEventLink" target="_blank">2023</a></li>
         <li>
-          <a routerLink="/" fragment="agenda" (click)="closeMenu()"> Agenda </a>
-        </li>
-        <li>
-          <a routerLink="/" fragment="sponsors" (click)="closeMenu()">
-            Sponsors
-          </a>
-        </li>
-        <li>
-          <a routerLink="/" fragment="partners" (click)="closeMenu()">
-            Partners
+          <a class="cta-link" [href]="waitingListLink" target="_blank">
+            Waiting List
           </a>
         </li>
       </ul>
@@ -98,17 +78,13 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         top: 0;
         width: 100%;
         padding: 0.75rem 1rem;
-        border-bottom: 1px solid #303b57;
+        border-bottom: 1px solid #232125;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         transition: transform 0.3s ease-in-out;
-        background-color: #0e101c;
-      }
-
-      .hidden {
-        display: none;
+        background-color: #0f0f11;
       }
 
       .visible-nav {
@@ -141,9 +117,9 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         right: 0;
         top: 4rem;
         width: 100%;
-        background: #0e101c;
+        background: #0f0f11;
         padding: 1rem 0 2rem 0;
-        border-bottom: 1px solid #303b57;
+        border-bottom: 1px solid #232125;
         margin: 0;
         transition: transform 0.3s ease-in-out;
       }
@@ -190,6 +166,10 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 export class HeaderComponent implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly destroyRef = inject(DestroyRef);
+
+  readonly cfpLink = 'https://forms.gle/CtiYUbP3JfjyTFzt8';
+  readonly waitingListLink = 'https://forms.gle/U9fzYwoDZqBgzfxQ6';
+  readonly previousEventLink = 'https://2023.angularbelgrade.org';
 
   readonly isNavVisible = signal(true);
   readonly isMenuOpen = signal(false);
