@@ -15,8 +15,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <p class="banner-title">The Largest Angular Conference in the Balkans</p>
 
     <div class="banner-details">
-      <p class="conference-day"><b>CONFERENCE DAY :</b> May 24, 2024</p>
-      <p><b>WORKSHOP DAY :</b> May 23, 2024</p>
+      <p class="conference-day"><b>CONFERENCE DAY</b> : May 24, 2024</p>
+      <p><b>WORKSHOP DAY</b> : May 23, 2024</p>
     </div>
 
     <div class="banner-tickets">
@@ -67,13 +67,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       .banner-details > p {
         margin: 0;
         text-align: center;
+        font-weight: 600;
       }
 
       .conference-day {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 1.5rem;
         background: white;
         color: #0f0f11;
-        border-radius: 0.75rem 0;
+        border-radius: 1.5rem 0;
       }
 
       @media only screen and (min-width: 850px) {

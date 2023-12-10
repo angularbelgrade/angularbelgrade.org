@@ -45,6 +45,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       h3 {
         text-align: center;
         font-size: 1.25rem;
+        font-weight: 600;
         margin: 0;
       }
 
