@@ -4,8 +4,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'bgd-banner',
   standalone: true,
   template: `
+    <h1 style="display: none">NG Belgrade Conf 2024</h1>
+
     <img
-      alt="Angular Belgrade Logo"
+      alt="NG Belgrade Conf 2024 Logo"
       src="/ng-belgrade-conf.svg"
       class="banner-logo"
       fetchPriority="high"
