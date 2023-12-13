@@ -51,16 +51,21 @@ export const routeMeta: RouteMeta = {
       To monitor our communications, we sometimes request confirmation of
       receiving an e-mail. If you do not want to receive emails or other mail
       from us, you can review your newsletter settings and notification
-      preferences. Personal data received from other sources We may receive your
-      personal information from other sources and add them to your account
-      information.
+      preferences.
+    </p>
+
+    <h2>Personal data received from other sources</h2>
+
+    <p>
+      We may receive your personal information from other sources and add them
+      to your account information.
     </p>
 
     <h2>Cookies</h2>
 
     <p>
-      To allow our systems to recognize your device and to provide you with
-      features we use cookies.
+      We do not utilize cookies to collect or store any personal information
+      about our users.
     </p>
 
     <p>
@@ -81,15 +86,11 @@ export const routeMeta: RouteMeta = {
     <p>
       We strive to protect the security of your personal information when
       sending them, using Secure Sockets Layer (SSL) software, which encrypts
-      the information you enter. At the time of payment we only show the last
-      four digits of your credit card number. Of course, we send, during the
-      processing of the order, the full credit card number to the issuing
-      financial institution credit card. Our security procedures imply that
-      occasionally you may be asked to prove your identity before disclosing
-      personal information. It is important that you take appropriate
-      protections against unauthorized access to your password and your
-      computer. Always make sure that you are disconnected when using a shared
-      computer with other users.
+      the information you enter. Our security procedures imply that occasionally
+      you may be asked to prove your identity before disclosing personal
+      information. It is important that you take appropriate protections against
+      unauthorized access to your password and your computer. Always make sure
+      that you are disconnected when using a shared computer with other users.
     </p>
 
     <h2>Link to other web sites</h2>
@@ -153,7 +154,7 @@ export const routeMeta: RouteMeta = {
 
     <p>
       Holder of the treatment is Webkraft Studio Doo., Vranjska 21 Stan 01,
-      11050 Zvezdara, Belgrade - Company Number 10168160 - email:
+      11050 Zvezdara, Belgrade - Company Number 21724858 - email:
       office@webkraft.studio
     </p>
 
