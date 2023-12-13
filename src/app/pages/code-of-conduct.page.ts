@@ -74,10 +74,6 @@ export const routeMeta: RouteMeta = {
         heckling or inappropriate interruption during presentations or
         discussions, is not acceptable.
       </li>
-      <li>
-        <strong>Unauthorized Recording or Photography:</strong> Recording or
-        photographing without permission is prohibited.
-      </li>
     </ol>
 
     <h2>Reporting and Enforcement</h2>
