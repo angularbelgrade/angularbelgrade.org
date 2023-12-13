@@ -8,9 +8,9 @@ export const routeMeta: RouteMeta = {
 @Component({
   standalone: true,
   template: `
-    <h1 class="page-heading">Code of Conduct</h1>
+    <h1 class="section-title">Code of Conduct</h1>
 
-    <h2>Overview</h2>
+    <h2 class="section-subtitle">Overview</h2>
 
     <p>
       Angular Belgrade is committed to providing a safe and inclusive
@@ -21,7 +21,7 @@ export const routeMeta: RouteMeta = {
       participants.
     </p>
 
-    <h2>Expected Behavior</h2>
+    <h2 class="section-subtitle">Expected Behavior</h2>
 
     <p>All participants are expected to:</p>
 
@@ -54,7 +54,7 @@ export const routeMeta: RouteMeta = {
       </li>
     </ol>
 
-    <h2>Unacceptable Behavior</h2>
+    <h2 class="section-subtitle">Unacceptable Behavior</h2>
 
     <p>Unacceptable behavior includes, but is not limited to:</p>
 
@@ -76,28 +76,28 @@ export const routeMeta: RouteMeta = {
       </li>
     </ol>
 
-    <h2>Reporting and Enforcement</h2>
+    <h2 class="section-subtitle">Reporting and Enforcement</h2>
 
     <p>
       If you experience or witness a violation of this Code of Conduct, please
       report it to the conference staff. Reports will be kept confidential to
       the extent possible.
     </p>
-
     <p>
       Violations may result in a range of actions, including verbal warnings,
       expulsion from the conference without a refund, or reporting the incident
       to the appropriate authorities.
     </p>
 
-    <h2>Contact Information</h2>
+    <h2 class="section-subtitle">Contact Information</h2>
 
     <p>
       If you need to report an incident or have any questions about this Code of
-      Conduct, please contact us at angularbelgrade@gmail.com
+      Conduct, please contact us at
+      <a href="mailto:angularbelgrade@gmail.com">angularbelgrade@gmail.com</a>.
     </p>
 
-    <h2>Acknowledgment</h2>
+    <h2 class="section-subtitle">Acknowledgment</h2>
 
     <p>
       By attending <strong>NG Belgrade Conf</strong>, you agree to adhere to
@@ -111,8 +111,25 @@ export const routeMeta: RouteMeta = {
         display: flex;
         flex-direction: column;
         margin: auto;
-        max-width: 80rem;
+        max-width: 1200px;
         padding: 0 2rem 2rem;
+      }
+
+      p,
+      ol {
+        line-height: 1.5;
+      }
+
+      p + p {
+        margin-top: 0;
+      }
+
+      ol {
+        margin: 0 0 1rem 0;
+      }
+
+      li:not(:last-child) {
+        margin-bottom: 0.5rem;
       }
     `,
   ],

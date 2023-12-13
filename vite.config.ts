@@ -16,7 +16,12 @@ export default defineConfig(({ mode }) => ({
     analog({
       static: true,
       prerender: {
-        routes: async () => ['/', '/not-found'],
+        routes: async () => [
+          '/',
+          '/code-of-conduct',
+          '/terms-and-privacy',
+          '/not-found',
+        ],
         sitemap: { host: 'https://angularbelgrade.org/' },
       },
       nitro: { serveStatic: false },

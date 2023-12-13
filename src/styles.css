@@ -38,7 +38,8 @@ a {
   color: #ffffff;
 }
 
-a:hover, .active-link {
+a:hover,
+.active-link {
   color: #ec4899;
 }
 
@@ -47,6 +48,12 @@ a:hover, .active-link {
   font-size: 2rem;
   font-weight: 600;
   margin: 2rem;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.25rem 0;
 }
 
 a > img {
@@ -76,13 +83,4 @@ a:hover > img {
 .cta-link:hover {
   color: inherit;
   opacity: 0.9;
-}
-
-.page-heading {
-  margin: 2rem;
-  text-align: center;
-}
-
-ol li {
-  line-height: 2rem;
 }

@@ -71,18 +71,17 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         <a routerLink="/code-of-conduct" routerLinkActive="active-link"
           >Code of Conduct</a
         >
-        <span>&middot;</span>
+        <span>|</span>
         <a routerLink="/terms-and-privacy" routerLinkActive="active-link"
           >Terms & Privacy</a
         >
       </nav>
       <p class="footer-copy">
-        2020-{{ year }} Angular Belgrade © Webkraft Studio DOO All rights
+        2020-{{ year }} Angular Belgrade © Webkraft Studio. All rights
         reserved.
       </p>
     </footer>
   `,
-
   styles: [
     `
       footer {
