@@ -200,4 +200,4 @@ export const routeMeta: RouteMeta = {
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class CodeOfConductPage {}
+export default class TermsAndPrivacyPage {}
