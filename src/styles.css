@@ -38,7 +38,7 @@ a {
   color: #ffffff;
 }
 
-a:hover {
+a:hover, .active-link {
   color: #ec4899;
 }
 
@@ -76,4 +76,13 @@ a:hover > img {
 .cta-link:hover {
   color: inherit;
   opacity: 0.9;
+}
+
+.page-heading {
+  margin: 2rem;
+  text-align: center;
+}
+
+ol li {
+  line-height: 2rem;
 }
