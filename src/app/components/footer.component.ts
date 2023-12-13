@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'bgd-footer',
@@ -9,7 +10,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         Made with <a href="https://analogjs.org" target="_blank">AnalogJS</a> ❤️
       </p>
 
-      <div class="social-media-links">
+      <div class="footer-links">
         <a
           href="https://twitter.com/angularbelgrade/"
           target="_blank"
@@ -66,8 +67,19 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           />
         </a>
       </div>
-
-      <p>© 2020-{{ year }} Angular Belgrade</p>
+      <nav class="footer-links">
+        <a routerLink="/code-of-conduct" routerLinkActive="active-link"
+          >Code of Conduct</a
+        >
+        <span>&middot;</span>
+        <a routerLink="/terms-and-privacy" routerLinkActive="active-link"
+          >Terms & Privacy</a
+        >
+      </nav>
+      <p class="footer-copy">
+        2020-{{ year }} Angular Belgrade © Webkraft Studio DOO All rights
+        reserved.
+      </p>
     </footer>
   `,
 
@@ -88,7 +100,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         margin: 0;
       }
 
-      .social-media-links {
+      .footer-links {
         display: flex;
         flex-direction: row;
         gap: 1rem;
@@ -96,12 +108,18 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         justify-content: center;
       }
 
-      .social-media-links > a {
+      .footer-links > a {
         display: flex;
+      }
+
+      .footer-copy {
+        padding: 0 1rem;
+        word-break: break-word;
       }
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterLink, RouterLinkActive],
 })
 export class FooterComponent {
   readonly year = new Date().getFullYear();
