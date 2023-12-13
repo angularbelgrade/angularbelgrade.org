@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouteMeta } from '@analogjs/router';
+import { RouterLink } from '@angular/router';
 
 export const routeMeta: RouteMeta = {
   title: 'Terms and Privacy | Angular Belgrade',
@@ -19,46 +20,47 @@ export const routeMeta: RouteMeta = {
     </p>
 
     <p>
-      Your access to and use of the Service is conditioned on your acceptance of
-      and compliance with these Terms. These Terms apply to all visitors, users
-      and others who access or use the Service.
+      By purchasing a ticket or attending the Conference, you agree to comply
+      with these terms and conditions.
+    </p>
+
+    <h2>Ticket Purchases and Confirmation</h2>
+
+    <p>
+      All ticket sales for the Conference and/or Workshop are final. No refunds
+      or exchanges are allowed.
+    </p>
+    <p>
+      Your ticket is valid only for the event date and location for which it was
+      issued.
+    </p>
+
+    <h2>Event Details</h2>
+
+    <p>
+      The event schedule, speakers, and workshop topics are subject to change
+      without prior notice.
     </p>
 
     <p>
-      By accessing or using the Service you agree to be bound by these Terms. If
-      you disagree with any part of the terms then you may not access the
-      Service.
+      The organizers reserve the right to cancel the Conference or Workshop for
+      any reason. In such a case, a full refund will be issued to all ticket
+      holders.
     </p>
 
-    <h2>What personal information are collected on angularbelgrade.org?</h2>
+    <h2>Conduct</h2>
 
     <p>
-      The personal information we receive from our customers helps us to
-      personalize and continually improve the provision of information services.
-      We use this information in particular to manage and provide information
-      services to create and process web sites, communicate with you about these
-      services, update our records, and advise on products and services that may
-      be of interest to you (check if the entries are correct or you have to
-      edit / add). We also use this data to improve our service to prevent or
-      detect fraud or abuse of our website and to allow third parties to engage
-      in technical, logistic and other activities on our behalf. Here are some
-      categories of personal information that we collect.
+      All attendees are expected to behave professionally and adhere to the
+      <a routerLink="/code-of-conduct">Code of Conduct.</a>
     </p>
 
-    <h2>Email communications</h2>
+    <h2>Media Release</h2>
 
     <p>
-      To monitor our communications, we sometimes request confirmation of
-      receiving an e-mail. If you do not want to receive emails or other mail
-      from us, you can review your newsletter settings and notification
-      preferences.
-    </p>
-
-    <h2>Personal data received from other sources</h2>
-
-    <p>
-      We may receive your personal information from other sources and add them
-      to your account information.
+      Photographs and/or video may be taken during the Conference and Workshop.
+      By attending, you grant the organizers full rights to use the images and
+      footage for promotional purposes.
     </p>
 
     <h2>Cookies</h2>
@@ -68,35 +70,17 @@ export const routeMeta: RouteMeta = {
       about our users.
     </p>
 
-    <p>
-      Personal data collected from other sources From other sources we may
-      receive data such as up-to-date information that we use to make changes to
-      update our records or make the next communications more quickly; account
-      information, information on visited pages by some traders with whom we
-      handle certain co-branding operations or for whom we provide technical,
-      implementation, advertising or other service; data on search terms and
-      related results collected through searches conducted in web search
-      engines; research results and links, lucrative data from central risk, to
-      which we resort to offering credit or financial services to some customers
-      as well as to prevent and detect fraud.
-    </p>
-
-    <h2>Is my personal data security guaranteed?</h2>
+    <h2>Personal data received from other sources</h2>
 
     <p>
-      We strive to protect the security of your personal information when
-      sending them, using Secure Sockets Layer (SSL) software, which encrypts
-      the information you enter. Our security procedures imply that occasionally
-      you may be asked to prove your identity before disclosing personal
-      information. It is important that you take appropriate protections against
-      unauthorized access to your password and your computer. Always make sure
-      that you are disconnected when using a shared computer with other users.
+      We may receive your personal information from other sources and add them
+      to your account information.
     </p>
 
     <h2>Link to other web sites</h2>
 
     <p>
-      Our Service may contain links to third-party web sites or services that
+      Our Website may contain links to third-party web sites or services that
       are not owned or controlled by Angular Belgrade.
     </p>
 
@@ -115,21 +99,6 @@ export const routeMeta: RouteMeta = {
       policies of any third-party web sites or services that you visit.
     </p>
 
-    <h2>Termination</h2>
-
-    <p>
-      We may terminate or suspend access to our Service immediately, without
-      prior notice or liability, for any reason whatsoever, including without
-      limitation if you breach the Terms.
-    </p>
-
-    <p>
-      All provisions of the Terms which by their nature should survive
-      termination shall survive termination, including, without limitation,
-      ownership provisions, warranty disclaimers, indemnity and limitations of
-      liability.
-    </p>
-
     <h2>Governing Law</h2>
 
     <p>
@@ -146,24 +115,12 @@ export const routeMeta: RouteMeta = {
       prior agreements we might have between us regarding the Service.
     </p>
 
-    <h2>Refund Policies</h2>
-
-    <p>I understand that tickets for this event are nonrefundable.</p>
-
     <h2>Holder of the treatment</h2>
 
     <p>
-      Holder of the treatment is Webkraft Studio Doo., Vranjska 21 Stan 01,
-      11050 Zvezdara, Belgrade - Company Number 21724858 - email:
+      Holder of the treatment is Webkraft Studio DOO, Vranjska 21 Apt 01, 11050
+      Zvezdara, Belgrade - Company Number 21724858 - email:
       office@webkraft.studio
-    </p>
-
-    <h2>Data Protection Manager</h2>
-
-    <p>
-      Webkraft Studio Doo. as a result of assessing their risk profile on
-      personal data processed, decided to have a Personal Data Protection
-      Manager available at office@webkraft.studio.
     </p>
 
     <h2>Changes</h2>
@@ -200,5 +157,6 @@ export const routeMeta: RouteMeta = {
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterLink],
 })
 export default class TermsAndPrivacyPage {}
