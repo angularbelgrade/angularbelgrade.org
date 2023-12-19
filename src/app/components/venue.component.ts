@@ -29,7 +29,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       :host {
         display: block;
         padding-bottom: 2rem;
-        border-bottom: 1px solid #232125;
       }
 
       .venue-details {
@@ -49,6 +48,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         margin: 0;
       }
 
+      .venue-address {
+        text-align: center;
+      }
+
       .gallery {
         margin: 0 1rem;
         display: flex;
@@ -63,6 +66,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         width: 100%;
         max-width: 400px;
         height: auto;
+        border-radius: 0.5rem;
       }
 
       @media only screen and (min-width: 850px) {

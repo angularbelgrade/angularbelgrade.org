@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouteMeta } from '@analogjs/router';
 import { RouterLink } from '@angular/router';
+import { RouteMeta } from '@analogjs/router';
+import { metaResource } from '../resources/meta.resource';
 
 export const routeMeta: RouteMeta = {
-  title: 'Terms and Privacy | Angular Belgrade',
+  title: `Terms and Privacy | ${metaResource.title}`,
 };
 
 @Component({

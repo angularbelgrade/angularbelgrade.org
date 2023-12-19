@@ -14,11 +14,17 @@
     #c14ce4,
     #a855f7
   );
+  --red-color: #ef4444;
+  --accent-color: #ec4899;
+  --purple-color: #a855f7;
+  --background-color: #0f0f11;
+  --border-color: #232125;
+
   font-family: Montserrat, sans-serif;
 
   color-scheme: dark;
-  color: #ffffff;
-  background-color: #0f0f11;
+  color: white;
+  background-color: var(--background-color);
 }
 
 * {
@@ -35,12 +41,12 @@ body {
 }
 
 a {
-  color: #ffffff;
+  color: white;
 }
 
 a:hover,
 .active-link {
-  color: #ec4899;
+  color: var(--accent-color);
 }
 
 .section-title {
@@ -69,18 +75,4 @@ a:hover > img {
   color: transparent;
   background-image: var(--angular-gradient);
   font-weight: 600;
-}
-
-.cta-link {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  color: white;
-  background-image: var(--angular-gradient);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.cta-link:hover {
-  color: inherit;
-  opacity: 0.9;
 }

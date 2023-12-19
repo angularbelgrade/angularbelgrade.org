@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouteMeta } from '@analogjs/router';
+import { metaResource } from '../resources/meta.resource';
 
 export const routeMeta: RouteMeta = {
-  title: 'Code of Conduct | Angular Belgrade',
+  title: `Code of Conduct | ${metaResource.title}`,
 };
 
 @Component({

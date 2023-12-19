@@ -1,13 +1,15 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'bgd-banner',
   standalone: true,
+  imports: [RouterLink],
   template: `
     <h1 style="display: none">NG Belgrade Conf 2024</h1>
 
     <img
-      alt="NG Belgrade Conf 2024 Logo"
+      alt="NG Belgrade Conf 2024"
       src="/ng-belgrade-conf.svg"
       class="banner-logo"
       fetchPriority="high"
@@ -21,16 +23,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <p><b>WORKSHOP DAY</b> : May 23, 2024</p>
     </div>
 
-    <div class="banner-tickets">
-      <p>Ticket sales will start soon!</p>
-      <a
-        class="cta-link"
-        href="https://forms.gle/U9fzYwoDZqBgzfxQ6"
-        target="_blank"
-      >
-        Join the Waiting List
-      </a>
-    </div>
+    <a class="tickets-button" routerLink="/" fragment="tickets">
+      Get Your Ticket
+    </a>
   `,
   styles: [
     `
@@ -39,7 +34,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         flex-direction: column;
         align-items: center;
         padding: 2rem 1rem;
-        border-bottom: 1px solid #232125;
+        border-bottom: 1px solid var(--border-color);
         background-image: url(ng-belgrade-conf-cover.svg);
         background-repeat: no-repeat;
         background-position: center;
@@ -63,7 +58,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
       }
 
       .banner-details > p {
@@ -75,18 +70,22 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       .conference-day {
         padding: 0.5rem 1.5rem;
         background: white;
-        color: #0f0f11;
+        color: var(--background-color);
         border-radius: 1.5rem 0;
       }
 
-      .banner-tickets {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      .tickets-button {
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid var(--accent-color);
+        border-radius: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        box-shadow: 0 0 14px 0 var(--accent-color);
       }
 
-      .banner-tickets > p {
-        margin-bottom: 0.75rem;
+      .tickets-button:hover {
+        color: inherit;
+        opacity: 0.9;
       }
 
       @media only screen and (min-width: 850px) {
@@ -103,7 +102,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         }
 
         .banner-details,
-        .banner-tickets {
+        .tickets-button {
           font-size: 1.5rem;
         }
       }

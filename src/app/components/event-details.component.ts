@@ -48,7 +48,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         justify-content: center;
         gap: 2rem;
         padding: 2rem 1rem;
-        border-bottom: 1px solid #232125;
+        border-bottom: 1px solid var(--border-color);
       }
 
       .event-description,
@@ -60,6 +60,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       .event-organization {
         text-align: center;
         margin-top: 1rem;
+        font-weight: 600;
       }
 
       .event-stats {

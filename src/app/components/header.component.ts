@@ -20,7 +20,7 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
     <nav [class]="isNavVisible() ? 'visible-nav' : 'hidden-nav'">
       <a class="home-link" routerLink="/">
         <img
-          alt="Angular Belgrade Logo"
+          alt="Angular Belgrade"
           src="/angular-belgrade.svg"
           fetchPriority="high"
           loading="eager"
@@ -41,12 +41,15 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
       </button>
 
       <ul class="desktop-links">
+        <li><a routerLink="/" fragment="speakers">Speakers</a></li>
+        <li><a routerLink="/" fragment="workshop">Workshop</a></li>
+        <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
         <li><a routerLink="/" fragment="venue">Venue</a></li>
-        <li><a [href]="cfpLink" target="_blank">Call for Papers</a></li>
+        <li><a [href]="cfpLink" target="_blank">CFP</a></li>
         <li><a [href]="previousEventLink" target="_blank">2023</a></li>
         <li>
-          <a class="cta-link" [href]="waitingListLink" target="_blank">
-            Waiting List
+          <a class="tickets-button" routerLink="/" fragment="tickets">
+            Tickets
           </a>
         </li>
       </ul>
@@ -56,13 +59,28 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         [class]="isMenuOpen() ? 'visible-menu' : 'hidden-menu'"
       >
         <li>
-          <a routerLink="/" fragment="venue" (click)="closeMenu()"> Venue </a>
+          <a routerLink="/" fragment="speakers" (click)="closeMenu()">
+            Speakers
+          </a>
         </li>
-        <li><a [href]="cfpLink" target="_blank">Call for Papers</a></li>
+        <li>
+          <a routerLink="/" fragment="workshop" (click)="closeMenu()">
+            Workshop
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="sponsors" (click)="closeMenu()">
+            Sponsors
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="venue" (click)="closeMenu()">Venue</a>
+        </li>
+        <li><a [href]="cfpLink" target="_blank">CFP</a></li>
         <li><a [href]="previousEventLink" target="_blank">2023</a></li>
         <li>
-          <a class="cta-link" [href]="waitingListLink" target="_blank">
-            Waiting List
+          <a class="tickets-button" routerLink="/" fragment="tickets">
+            Tickets
           </a>
         </li>
       </ul>
@@ -76,13 +94,13 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         top: 0;
         width: 100%;
         padding: 0.75rem 1rem;
-        border-bottom: 1px solid #232125;
+        border-bottom: 1px solid var(--border-color);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         transition: transform 0.3s ease-in-out;
-        background-color: #0f0f11;
+        background-color: var(--background-color);
       }
 
       .visible-nav {
@@ -115,9 +133,9 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         right: 0;
         top: 4rem;
         width: 100%;
-        background: #0f0f11;
+        background-color: var(--background-color);
         padding: 1rem 0 2rem 0;
-        border-bottom: 1px solid #232125;
+        border-bottom: 1px solid var(--border-color);
         margin: 0;
         transition: transform 0.3s ease-in-out;
       }
@@ -135,6 +153,19 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 
       .home-link {
         justify-self: flex-start;
+      }
+
+      .tickets-button {
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.5rem;
+        background: var(--angular-gradient);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .tickets-button:hover {
+        color: inherit;
+        opacity: 0.9;
       }
 
       @media only screen and (min-width: 850px) {
@@ -166,7 +197,6 @@ export class HeaderComponent implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
 
   readonly cfpLink = 'https://forms.gle/CtiYUbP3JfjyTFzt8';
-  readonly waitingListLink = 'https://forms.gle/U9fzYwoDZqBgzfxQ6';
   readonly previousEventLink = 'https://2023.angularbelgrade.org';
 
   readonly isNavVisible = signal(true);

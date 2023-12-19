@@ -2,6 +2,7 @@
 
 import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
+import { speakersResource } from './src/app/resources/speakers.resource';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -21,6 +22,7 @@ export default defineConfig(({ mode }) => ({
           '/code-of-conduct',
           '/terms-and-privacy',
           '/not-found',
+          ...speakersResource.getSpeakers().map(({ id }) => `/speakers/${id}`),
         ],
         sitemap: { host: 'https://angularbelgrade.org/' },
       },

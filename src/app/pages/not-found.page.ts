@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { RouteMeta } from '@analogjs/router';
+import { metaResource } from '../resources/meta.resource';
 
 export const routeMeta: RouteMeta = {
-  title: 'Not Found | Angular Belgrade',
+  title: `Not Found | ${metaResource.title}`,
 };
 
 @Component({

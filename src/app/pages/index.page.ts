@@ -1,36 +1,50 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouteMeta } from '@analogjs/router';
+import { metaResource } from '../resources/meta.resource';
 import { BannerComponent } from '../components/banner.component';
 import { EventDetailsComponent } from '../components/event-details.component';
+import { SpeakersComponent } from '../components/speakers.component';
+import { WorkshopComponent } from '../components/workshop.component';
+import { TicketsComponent } from '../components/tickets.component';
+import { SponsorsComponent } from '../components/sponsors.component';
+import { PartnersComponent } from '../components/partners.component';
 import { VenueComponent } from '../components/venue.component';
 
-const title = 'NG Belgrade Conf 2024';
-const image = 'https://angularbelgrade.org/banners/ng-belgrade-conf-2024.jpg';
-
-export const description =
-  'NG Belgrade Conf 2024 is the largest Angular conference in the Balkans. It takes place in Belgrade, Serbia, including a Workshop Day on May 23rd and a Conference Day on May 24th. Join us to explore the latest trends and best practices in Angular!';
-
 export const routeMeta: RouteMeta = {
-  title,
+  title: metaResource.title,
   meta: [
-    { name: 'description', content: description },
-    { property: 'og:title', content: title },
-    { property: 'og:description', content: description },
-    { property: 'og:image', content: image },
-    { property: 'og:image:alt', content: title },
-    { name: 'twitter:title', content: title },
-    { name: 'twitter:description', content: description },
-    { name: 'twitter:image', content: image },
-    { name: 'twitter:image:alt', content: title },
+    { name: 'description', content: metaResource.description },
+    { property: 'og:title', content: metaResource.title },
+    { property: 'og:description', content: metaResource.description },
+    { property: 'og:image', content: metaResource.banner },
+    { property: 'og:image:alt', content: metaResource.title },
+    { name: 'twitter:title', content: metaResource.title },
+    { name: 'twitter:description', content: metaResource.description },
+    { name: 'twitter:image', content: metaResource.banner },
+    { name: 'twitter:image:alt', content: metaResource.title },
   ],
 };
 
 @Component({
   standalone: true,
-  imports: [BannerComponent, EventDetailsComponent, VenueComponent],
+  imports: [
+    BannerComponent,
+    EventDetailsComponent,
+    SpeakersComponent,
+    WorkshopComponent,
+    TicketsComponent,
+    SponsorsComponent,
+    PartnersComponent,
+    VenueComponent,
+  ],
   template: `
     <bgd-banner />
     <bgd-event-details />
+    <bgd-speakers />
+    <bgd-workshop />
+    <bgd-tickets />
+    <bgd-sponsors />
+    <bgd-partners />
     <bgd-venue />
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

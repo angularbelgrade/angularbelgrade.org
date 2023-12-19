@@ -92,7 +92,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        border-top: 1px solid #232125;
+        border-top: 1px solid var(--border-color);
       }
 
       p {
