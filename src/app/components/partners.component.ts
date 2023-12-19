@@ -62,6 +62,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           style="max-height: 102px"
         />
       </a>
+
+      <a href="https://www.angular.love/en/" target="_blank">
+        <img
+          alt="Angular Love"
+          src="/orgs/angular-love.svg"
+          loading="lazy"
+          style="max-height: 102px"
+        />
+      </a>
     </div>
   `,
   styles: [
