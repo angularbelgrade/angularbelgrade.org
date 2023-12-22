@@ -6,13 +6,22 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <h2 id="partners" class="section-title">Partners</h2>
 
-    <div class="partners-container">
+    <div class="main-partners-container">
       <a href="https://angular.dev/" target="_blank">
         <img
           alt="Angular"
           src="/orgs/angular.png"
           loading="lazy"
-          style="max-height: 120px"
+          style="max-width: 123px"
+        />
+      </a>
+
+      <a href="https://nx.dev/" target="_blank">
+        <img
+          alt="Nx"
+          src="/orgs/nx.svg"
+          loading="lazy"
+          style="max-width: 153px"
         />
       </a>
     </div>
@@ -23,7 +32,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           alt="NgRx"
           src="/orgs/ngrx.svg"
           loading="lazy"
-          style="max-height: 110px"
+          style="max-width: 96px"
         />
       </a>
 
@@ -32,7 +41,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           alt="Analog"
           src="/orgs/analog.svg"
           loading="lazy"
-          style="max-height: 100px"
+          style="max-width: 135px"
         />
       </a>
 
@@ -41,7 +50,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           alt="NG Rome"
           src="/orgs/ng-rome.svg"
           loading="lazy"
-          style="max-height: 102px"
+          style="max-width: 96px"
         />
       </a>
 
@@ -50,7 +59,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           alt="Angular Graz"
           src="/orgs/angular-graz.svg"
           loading="lazy"
-          style="max-height: 102px"
+          style="max-width: 95px"
         />
       </a>
 
@@ -59,7 +68,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           alt="Angular Toronto"
           src="/orgs/angular-toronto.svg"
           loading="lazy"
-          style="max-height: 102px"
+          style="max-width: 96px"
         />
       </a>
 
@@ -68,7 +77,34 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           alt="Angular Love"
           src="/orgs/angular-love.svg"
           loading="lazy"
-          style="max-height: 102px"
+          style="max-width: 101px"
+        />
+      </a>
+
+      <a href="https://www.meetup.com/angular-macedonia/" target="_blank">
+        <img
+          alt="Angular Macedonia"
+          src="/orgs/angular-macedonia.svg"
+          loading="lazy"
+          style="max-width: 90px"
+        />
+      </a>
+
+      <a href="https://ng-be.org/" target="_blank">
+        <img
+          alt="NG-BE"
+          src="/orgs/ng-be.png"
+          loading="lazy"
+          style="max-width: 95px"
+        />
+      </a>
+
+      <a href="https://www.meetup.com/angular-athens/" target="_blank">
+        <img
+          alt="Angular Athens"
+          src="/orgs/angular-athens.svg"
+          loading="lazy"
+          style="max-width: 95px"
         />
       </a>
     </div>
@@ -81,16 +117,21 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         border-bottom: 1px solid var(--border-color);
       }
 
+      .main-partners-container,
       .partners-container {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 2rem;
       }
 
-      .partners-container + .partners-container {
+      .main-partners-container {
+        flex-direction: column;
+      }
+
+      .partners-container {
+        flex-direction: row;
         margin-top: 2rem;
       }
 
@@ -100,6 +141,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       @media only screen and (min-width: 850px) {
+        .main-partners-container {
+          flex-direction: row;
+          gap: 4rem;
+        }
+
+        .partners-container {
+          max-width: 700px;
+          margin: 2rem auto 0 auto;
+        }
       }
     `,
   ],
