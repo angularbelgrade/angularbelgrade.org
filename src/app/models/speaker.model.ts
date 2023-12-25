@@ -6,6 +6,7 @@ export type Speaker = {
   talkTitle: string;
   talkDescription: string;
   photoUrl: string;
+  bannerUrl?: string;
   twitterUrl?: string;
   linkedinUrl?: string;
   githubUrl?: string;

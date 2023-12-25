@@ -6,9 +6,11 @@ const speakerMap: Record<string, Speaker> = {
     name: 'Minko Gechev',
     headline: 'Engineering Product Lead at Angular Team, Google',
     bio: "Minko leads the Angular product at Google where he works on what's next for web frameworks. Before joining Google, he was a co-founder and CTO at the EdTech startup, which in 2019 got acquired by Coursera.",
-    talkTitle: 'Talk: TBD',
+    talkTitle: 'Opening Keynote: TBD',
     talkDescription: '',
     photoUrl: '/people/minko-gechev.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-minko-gechev.jpg',
     twitterUrl: 'https://twitter.com/mgechev/',
     linkedinUrl: 'https://www.linkedin.com/in/mgechev/',
     githubUrl: 'https://github.com/mgechev/',
@@ -22,6 +24,8 @@ const speakerMap: Record<string, Speaker> = {
     talkTitle: 'Talk: TBD',
     talkDescription: '',
     photoUrl: '/people/alex-okrushko.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-alex-okrushko.jpg',
     twitterUrl: 'https://twitter.com/AlexOkrushko/',
     linkedinUrl: 'https://linkedin.com/in/alex-okrushko-64262a33/',
     githubUrl: 'https://github.com/alex-okrushko/',

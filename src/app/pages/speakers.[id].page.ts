@@ -22,16 +22,19 @@ export const routeMeta: RouteMeta = {
   title: getTitle,
   meta: (route) => {
     const title = getTitle(route);
+    const banner =
+      speakersResource.getSpeakerById(route.params['id']).photoUrl ||
+      metaResource.banner;
 
     return [
       { name: 'description', content: metaResource.description },
       { property: 'og:title', content: title },
       { property: 'og:description', content: metaResource.description },
-      { property: 'og:image', content: metaResource.banner },
+      { property: 'og:image', content: banner },
       { property: 'og:image:alt', content: title },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: metaResource.description },
-      { name: 'twitter:image', content: metaResource.banner },
+      { name: 'twitter:image', content: banner },
       { name: 'twitter:image:alt', content: title },
     ];
   },

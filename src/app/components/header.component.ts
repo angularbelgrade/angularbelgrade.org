@@ -79,7 +79,12 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         <li><a [href]="cfpLink" target="_blank">CFP</a></li>
         <li><a [href]="previousEventLink" target="_blank">2023</a></li>
         <li>
-          <a class="tickets-button" routerLink="/" fragment="tickets">
+          <a
+            class="tickets-button"
+            routerLink="/"
+            fragment="tickets"
+            (click)="closeMenu()"
+          >
             Tickets
           </a>
         </li>
