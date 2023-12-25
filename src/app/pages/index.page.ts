@@ -16,11 +16,11 @@ export const routeMeta: RouteMeta = {
     { name: 'description', content: metaResource.description },
     { property: 'og:title', content: metaResource.title },
     { property: 'og:description', content: metaResource.description },
-    { property: 'og:image', content: metaResource.banner },
+    { property: 'og:image', content: metaResource.bannerUrl },
     { property: 'og:image:alt', content: metaResource.title },
     { name: 'twitter:title', content: metaResource.title },
     { name: 'twitter:description', content: metaResource.description },
-    { name: 'twitter:image', content: metaResource.banner },
+    { name: 'twitter:image', content: metaResource.bannerUrl },
     { name: 'twitter:image:alt', content: metaResource.title },
   ],
 };

@@ -22,9 +22,8 @@ export const routeMeta: RouteMeta = {
   title: getTitle,
   meta: (route) => {
     const title = getTitle(route);
-    const banner =
-      speakersResource.getSpeakerById(route.params['id']).photoUrl ||
-      metaResource.banner;
+    const speaker = speakersResource.getSpeakerById(route.params['id']);
+    const banner = speaker.bannerUrl || metaResource.bannerUrl;
 
     return [
       { name: 'description', content: metaResource.description },
