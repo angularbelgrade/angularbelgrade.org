@@ -24,24 +24,24 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           style="max-width: 153px"
         />
       </a>
-    </div>
 
-    <div class="partners-container">
       <a href="https://ngrx.io/" target="_blank">
         <img
           alt="NgRx"
           src="/orgs/ngrx.svg"
           loading="lazy"
-          style="max-width: 96px"
+          style="max-width: 123px"
         />
       </a>
+    </div>
 
+    <div class="partners-container">
       <a href="https://analogjs.org/" target="_blank">
         <img
           alt="Analog"
           src="/orgs/analog.svg"
           loading="lazy"
-          style="max-width: 135px"
+          style="max-width: 120px"
         />
       </a>
 
@@ -105,6 +105,24 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           src="/orgs/angular-athens.svg"
           loading="lazy"
           style="max-width: 95px"
+        />
+      </a>
+
+      <a href="https://www.meetup.com/angular-vienna/" target="_blank">
+        <img
+          alt="Angular Vienna"
+          src="/orgs/angular-vienna.svg"
+          loading="lazy"
+          style="max-width: 95px"
+        />
+      </a>
+
+      <a href="https://greece.cityjsconf.org/" target="_blank">
+        <img
+          alt="CityJS Athens"
+          src="/orgs/city-js-athens.svg"
+          loading="lazy"
+          style="max-width: 135px"
         />
       </a>
     </div>
