@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => ({
       prerender: {
         routes: async () => [
           '/',
+          '/team',
           '/code-of-conduct',
           '/terms-and-privacy',
           '/not-found',

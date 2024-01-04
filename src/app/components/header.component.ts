@@ -7,7 +7,7 @@ import {
   PLATFORM_ID,
   signal,
 } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { isPlatformServer } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
@@ -15,7 +15,7 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 @Component({
   selector: 'bgd-header',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   template: `
     <nav [class]="isNavVisible() ? 'visible-nav' : 'hidden-nav'">
       <a class="home-link" routerLink="/">
@@ -44,6 +44,7 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         <li><a routerLink="/" fragment="speakers">Speakers</a></li>
         <li><a routerLink="/" fragment="workshop">Workshop</a></li>
         <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
+        <li><a routerLink="/team" routerLinkActive="active-link">Team</a></li>
         <li><a routerLink="/" fragment="venue">Venue</a></li>
         <li><a [href]="cfpLink" target="_blank">CFP</a></li>
         <li><a [href]="previousEventLink" target="_blank">2023</a></li>
@@ -71,6 +72,15 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         <li>
           <a routerLink="/" fragment="sponsors" (click)="closeMenu()">
             Sponsors
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/team"
+            routerLinkActive="active-link"
+            (click)="closeMenu()"
+          >
+            Team
           </a>
         </li>
         <li>
