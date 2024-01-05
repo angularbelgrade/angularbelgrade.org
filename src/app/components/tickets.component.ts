@@ -35,7 +35,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <span class="badge">30 seats available</span>
 
         <div class="ticket-info">
-          <h3 class="ticket-name">Workshop Ticket</h3>
+          <h3 class="ticket-name">Workshop Ticket *</h3>
           <p class="ticket-price">200€</p>
         </div>
 
@@ -53,6 +53,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </a>
       </div>
     </div>
+
+    <p class="tickets-note">
+      * Workshop Ticket does not include access to the Conference Day.
+    </p>
 
     <p class="companies-note">
       <b>For companies:</b>
@@ -172,6 +176,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         background-color: var(--purple-color);
       }
 
+      .tickets-note {
+        margin: 1rem;
+      }
+
       .companies-note {
         margin: 2rem 1rem 0 1rem;
       }
@@ -190,6 +198,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
         .buy-button {
           margin-top: auto;
+        }
+
+        .tickets-note {
+          text-align: center;
         }
 
         .companies-note {

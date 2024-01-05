@@ -149,7 +149,8 @@ export const routeMeta: RouteMeta = {
           margin: 0 auto 2rem auto;
         }
 
-        .speaker-bio {
+        .speaker-bio,
+        .talk-description {
           margin: 0 1rem;
         }
       }

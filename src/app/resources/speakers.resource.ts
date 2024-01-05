@@ -6,8 +6,9 @@ const speakerMap: Record<string, Speaker> = {
     name: 'Minko Gechev',
     headline: 'Engineering Product Lead at Angular Team, Google',
     bio: "Minko leads the Angular product at Google where he works on what's next for web frameworks. Before joining Google, he was a co-founder and CTO at the EdTech startup, which in 2019 got acquired by Coursera.",
-    talkTitle: 'Opening Keynote: TBD',
-    talkDescription: '',
+    talkTitle: 'Opening Keynote: The State of Angular',
+    talkDescription:
+      'In this presentation, we’ll look at the current state of Angular and its tooling infrastructure - from an inside perspective. Along the way, Minko Gechev, Engineering Product Lead on the Angular team at Google, will dive into the theory and motivation driving the direction of the framework. In the second part of the talk, Minko will focus on the roadmap of Angular and peek into the future of the framework.<br/><br/>What lies ahead for the popular framework, how is Angular going to change?',
     photoUrl: '/people/minko-gechev.jpg',
     bannerUrl:
       'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-minko-gechev.jpg',
@@ -38,6 +39,8 @@ const speakerMap: Record<string, Speaker> = {
     talkTitle: 'Talk: TBD',
     talkDescription: '',
     photoUrl: '/people/fabian-gosebrink.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-fabian-gosebrink.jpg',
     twitterUrl: 'https://twitter.com/FabianGosebrink/',
     linkedinUrl: 'https://www.linkedin.com/in/fabian-gosebrink-71023a88/',
     githubUrl: 'https://github.com/FabianGosebrink/',

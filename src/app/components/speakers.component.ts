@@ -17,14 +17,25 @@ import { speakersResource } from '../resources/speakers.resource';
         *ngFor="let speaker of speakers; trackBy: trackById"
         routerLink="/speakers/{{ speaker.id }}"
       >
-        <img
-          class="speaker-photo"
-          [alt]="speaker.name"
-          [src]="speaker.photoUrl"
-          loading="lazy"
-          height="220"
-          width="220"
-        />
+        <div class="speaker-photo-container">
+          <img
+            class="open-link"
+            src="/icons/open-link.svg"
+            alt="Open Link"
+            loading="lazy"
+            height="26"
+            width="26"
+          />
+
+          <img
+            class="speaker-photo"
+            [alt]="speaker.name"
+            [src]="speaker.photoUrl"
+            loading="lazy"
+            height="220"
+            width="220"
+          />
+        </div>
 
         <div class="speaker-info">
           <div class="speaker-details">
@@ -67,6 +78,17 @@ import { speakersResource } from '../resources/speakers.resource';
 
       .speaker:hover {
         color: inherit;
+      }
+
+      .speaker-photo-container {
+        position: relative;
+      }
+
+      .open-link {
+        position: absolute;
+        top: 4px;
+        right: 7px;
+        z-index: 1;
       }
 
       .speaker-photo {
