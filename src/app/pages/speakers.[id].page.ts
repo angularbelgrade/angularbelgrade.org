@@ -31,6 +31,10 @@ export const routeMeta: RouteMeta = {
       { property: 'og:description', content: metaResource.description },
       { property: 'og:image', content: banner },
       { property: 'og:image:alt', content: title },
+      {
+        property: 'og:url',
+        content: speakersResource.getSpeakerUrl(route.params['id']),
+      },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: metaResource.description },
       { name: 'twitter:image', content: banner },
