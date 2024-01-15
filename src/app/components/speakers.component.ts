@@ -134,11 +134,15 @@ import { speakersResource } from '../resources/speakers.resource';
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 340px));
           justify-content: center;
-          gap: 1rem;
+          gap: 2rem;
         }
 
         .cfp-info {
           font-size: 1.25rem;
+        }
+
+        .open-link {
+          display: none;
         }
       }
     `,

@@ -12,7 +12,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
         <div class="ticket-info">
           <h3 class="ticket-name">Early Bird Ticket</h3>
-          <p class="ticket-price">100€</p>
+          <p class="ticket-price">
+            <span class="regular-price">135€</span>
+            100€
+          </p>
         </div>
 
         <hr />
@@ -121,6 +124,27 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         font-size: 2.5rem;
         font-weight: 600;
         margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .regular-price {
+        position: relative;
+        font-size: 1.5rem;
+        color: lightslategray;
+      }
+
+      .regular-price:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 50%;
+        right: 0;
+        border-top: 2px solid;
+        border-color: inherit;
+        transform: rotate(-5deg);
       }
 
       .ticket > hr {
