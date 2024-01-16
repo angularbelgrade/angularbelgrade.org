@@ -39,7 +39,7 @@ const speakerMap: Record<string, Speaker> = {
     bio: 'Fabian Gosebrink is Microsoft MVP, Google Developer Expert, Pluralsight author, Angular & ASP.NET Core web developer and international speaker. As a software engineer, consultant and trainer, he supports customers building web applications with more than 10 years of experience. Fabian is very active in the community such as leading the swiss angular community „SwissAngular“, the .NET user group in Zurich, leading the largest german speaking C#-Community (<a href="https://mycsharp.de/" target="_blank">mycsharp.de</a>), being an egghead and Pluralsight trainer as well as running his own company Offering Solutions Software with a course and learning platform <a href="https://developer-academy.ch" target="_blank">developer-academy.ch</a> and is speaking at local user groups and international conferences.',
     talkTitle: 'Angular Signals under the Hood',
     talkDescription:
-      "Dive deep into the inner workings of Angular signals with 'Angular Signals under the Hood'. This talk offers an in-depth exploration of Angular signals, uncovering the mechanics and nuances that power this advanced feature. We'll dissect the core concepts, architecture, and how signals enhance communication and performance in Angular applications. Ideal for developers seeking a thorough understanding of Angular signals, this presentation will provide you with the knowledge to leverage these tools effectively in your projects, ensuring optimized and future proof Angular applications.",
+      "Dive deep into the inner workings of Angular signals with 'Angular Signals under the Hood'. This talk offers an in-depth exploration of Angular signals, uncovering the mechanics and nuances that power this advanced feature. We'll dissect the core concepts, architecture, and how signals enhance communication and performance in Angular applications. Ideal for developers seeking a thorough understanding of Angular signals, this presentation will provide you with the knowledge to leverage these tools effectively in your projects, ensuring optimized and future-proof Angular applications.",
     photoUrl: '/people/fabian-gosebrink.jpg',
     bannerUrl:
       'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-fabian-gosebrink.jpg',
@@ -65,7 +65,7 @@ const speakerMap: Record<string, Speaker> = {
   'chau-tran': {
     id: 'chau-tran',
     name: 'Chau Tran',
-    headline: 'Senior Engineer at Nx<br/>Google Developer Expert in Angular',
+    headline: 'Senior Engineer at Nx • GDE in Angular',
     bio: 'Chau works to bring the best engineering practices to web application production. He is currently with Nx as a Senior Engineer. Previously, he was with Swimlane, a Security Automation and Orchestration platform, and ArchitectNow, launching several successful projects.<br/><br/>He is the creator of <a href="https://github.com/nartc/mapper/" target="_blank">automapper</a> for TypeScript and <a href="https://github.com/angular-threejs/angular-three/" target="_blank">angular-three</a> for Angular. Also, he is one of Angular Vietnam’s founders. He blogs, lives stream, and maintains open-source projects. Chau is also an Angular Google Developer Experts (GDE).<br/><br/>Husband, father, learner.',
     talkTitle: 'Nx: Your Blissful Path to OSS Angular Library Management',
     talkDescription:

@@ -47,6 +47,10 @@ import { speakersResource } from '../resources/speakers.resource';
     </div>
 
     <p class="cfp-info">
+      More speakers will be announced soon!
+
+      <br /><br />
+
       Interested in speaking at NG Belgrade Conf?
       <a href="https://forms.gle/CtiYUbP3JfjyTFzt8" target="_blank">
         Submit your talk!
