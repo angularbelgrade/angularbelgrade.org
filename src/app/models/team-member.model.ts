@@ -5,4 +5,5 @@ export type TeamMember = {
   twitterUrl?: string;
   linkedinUrl?: string;
   githubUrl?: string;
+  role?: string;
 };

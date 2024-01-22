@@ -117,6 +117,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
+      <a href="https://twitter.com/ngTurkiye/" target="_blank">
+        <img
+          alt="Angular Turkey"
+          src="/orgs/angular-turkey.svg"
+          loading="lazy"
+          style="max-width: 95px"
+        />
+      </a>
+
       <a href="https://greece.cityjsconf.org/" target="_blank">
         <img
           alt="CityJS Athens"

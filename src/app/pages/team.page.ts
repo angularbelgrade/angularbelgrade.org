@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgForOf, NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { RouteMeta } from '@analogjs/router';
 import { RouterLink } from '@angular/router';
 import { metaResource } from '../resources/meta.resource';
@@ -11,19 +11,23 @@ export const routeMeta: RouteMeta = {
 
 @Component({
   standalone: true,
+  imports: [NgFor, NgIf, RouterLink],
   template: `
     <h1 class="section-title">Team</h1>
 
     <div class="member-list">
       <div class="member" *ngFor="let member of members">
-        <img
-          class="member-photo"
-          [alt]="member.name"
-          [src]="member.photoUrl"
-          loading="lazy"
-          height="220"
-          width="220"
-        />
+        <div class="member-photo-container">
+          <img
+            class="member-photo"
+            [alt]="member.name"
+            [src]="member.photoUrl"
+            loading="lazy"
+            height="220"
+            width="220"
+          />
+          <span *ngIf="member.role" class="member-role">{{ member.role }}</span>
+        </div>
 
         <div class="member-details">
           <h3 class="member-name">{{ member.name }}</h3>
@@ -99,8 +103,24 @@ export const routeMeta: RouteMeta = {
         gap: 2rem;
       }
 
+      .member-photo-container {
+        position: relative;
+      }
+
       .member-photo {
         border-radius: 0.5rem;
+      }
+
+      .member-role {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 0.5rem;
+        font-size: 0.79rem;
+        font-weight: 600;
+        white-space: nowrap;
+        padding: 0.25rem 0.5rem;
+        background-color: var(--accent-color);
       }
 
       .member-details {
@@ -152,7 +172,6 @@ export const routeMeta: RouteMeta = {
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgForOf, RouterLink, NgIf],
 })
 export default class TeamPage {
   readonly members: TeamMember[] = [
@@ -197,5 +216,13 @@ export default class TeamPage {
       photoUrl: '/people/edis-sarda.jpg',
       linkedinUrl: 'https://linkedin.com/in/edissarda/',
     },
+    {
+      name: 'Luciano Murruni',
+      headline: 'Lead Software Engineer at ConTe.it<br/>NG Rome Organizer',
+      photoUrl: '/people/luciano-murruni.jpg',
+      twitterUrl: 'https://twitter.com/MrMurruni/',
+      linkedinUrl: 'https://www.linkedin.com/in/lucianomurruni/',
+      role: 'Emcee',
+    }
   ];
 }
