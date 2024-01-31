@@ -30,7 +30,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           alt="NgRx"
           src="/orgs/ngrx.svg"
           loading="lazy"
-          style="max-width: 123px"
+          style="max-width: 124px"
         />
       </a>
     </div>
