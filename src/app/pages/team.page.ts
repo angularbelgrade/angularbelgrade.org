@@ -223,6 +223,6 @@ export default class TeamPage {
       twitterUrl: 'https://twitter.com/MrMurruni/',
       linkedinUrl: 'https://www.linkedin.com/in/lucianomurruni/',
       role: 'Emcee',
-    }
+    },
   ];
 }

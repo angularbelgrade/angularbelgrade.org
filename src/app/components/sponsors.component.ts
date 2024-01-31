@@ -30,6 +30,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           style="max-width: 300px"
         />
       </a>
+
+      <a href="https://globalitfactory.com/" target="_blank">
+        <img
+          alt="Global IT Factory"
+          src="/orgs/gitf.svg"
+          loading="lazy"
+          style="max-width: 350px"
+        />
+      </a>
     </div>
 
     <div class="sponsors-actions">
@@ -92,6 +101,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       @media only screen and (min-width: 850px) {
+        .sponsors-container {
+          gap: 4rem;
+        }
+
         .sponsors-button {
           font-size: 1.25rem;
         }
