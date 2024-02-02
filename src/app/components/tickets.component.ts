@@ -13,7 +13,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <div class="ticket-info">
           <h3 class="ticket-name">Early Bird Ticket</h3>
           <p class="ticket-price">
-            <span class="regular-price">135€</span>
+            <span class="base-price">135€</span>
             100€
           </p>
         </div>
@@ -37,9 +37,38 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <div class="ticket purple-ticket">
         <span class="badge">30 seats available</span>
 
+        <div class="banner">
+          <span class="banner-text">SOLD OUT</span>
+        </div>
+
         <div class="ticket-info">
           <h3 class="ticket-name">Workshop Ticket *</h3>
-          <p class="ticket-price">200€</p>
+          <p class="ticket-price">
+            <span class="base-price">275€</span>
+            200€
+          </p>
+        </div>
+
+        <hr />
+
+        <ul>
+          <li>In-person access to the Workshop Day on <b>May 23</b></li>
+          <li>Early access to talk recordings</li>
+          <li>Coffee breaks with free drinks</li>
+          <li>Lunch</li>
+        </ul>
+
+        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
+          Buy Now
+        </a>
+      </div>
+
+      <div class="ticket blue-ticket">
+        <span class="badge">10 seats available</span>
+
+        <div class="ticket-info">
+          <h3 class="ticket-name">Final Workshop Ticket *</h3>
+          <p class="ticket-price">275€</p>
         </div>
 
         <hr />
@@ -58,7 +87,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </div>
 
     <p class="tickets-note">
-      * Workshop Ticket does not include access to the Conference Day.
+      * Workshop tickets don't include access to the Conference Day and are sold
+      separately.
     </p>
 
     <p class="companies-note">
@@ -97,8 +127,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       .badge {
-        top: -1px;
         position: absolute;
+        top: -1px;
         right: -1px;
         border-radius: 0 0.5rem;
         font-size: 0.79rem;
@@ -118,6 +148,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         font-size: 1.25rem;
         font-weight: 600;
         margin: 0;
+        text-align: center;
       }
 
       .ticket-price {
@@ -130,13 +161,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         gap: 1rem;
       }
 
-      .regular-price {
+      .base-price {
         position: relative;
         font-size: 1.5rem;
         color: lightslategray;
       }
 
-      .regular-price:before {
+      .base-price:before {
         position: absolute;
         content: '';
         left: 0;
@@ -174,6 +205,29 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         opacity: 0.9;
       }
 
+      .banner {
+        position: absolute;
+        height: calc(100% + 29px);
+        width: calc(100% + 29px);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: bold;
+        background: #0f0f11b3;
+        z-index: 1;
+        top: -15px;
+        border-radius: 0.5rem;
+      }
+
+      .banner-text {
+        transform: rotate(-40deg);
+        padding: 1rem;
+        border: 4px solid;
+        border-radius: 0.5rem;
+      }
+
       .red-ticket {
         border: 2px solid var(--red-color);
         box-shadow: 0 0 14px 0 var(--red-color);
@@ -185,6 +239,65 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
       .red-ticket > .buy-button {
         background-color: var(--red-color);
+      }
+
+      .red-ticket .banner-text {
+        color: var(--red-color);
+        border-color: var(--red-color);
+      }
+
+      .accent-ticket {
+        border: 2px solid var(--accent-color);
+        box-shadow: 0 0 14px 0 var(--accent-color);
+      }
+
+      .accent-ticket > .badge {
+        background-color: var(--accent-color);
+      }
+
+      .accent-ticket > .buy-button {
+        background-color: var(--accent-color);
+      }
+
+      .accent-ticket .banner-text {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+      }
+
+      .blue-ticket {
+        border: 2px solid var(--blue-color);
+        box-shadow: 0 0 14px 0 var(--blue-color);
+      }
+
+      .blue-ticket > .badge {
+        background-color: var(--blue-color);
+      }
+
+      .blue-ticket > .buy-button {
+        background-color: var(--blue-color);
+      }
+
+      .blue-ticket .banner-text {
+        color: var(--blue-color);
+        border-color: var(--blue-color);
+      }
+
+      .green-ticket {
+        border: 2px solid var(--green-color);
+        box-shadow: 0 0 14px 0 var(--green-color);
+      }
+
+      .green-ticket > .badge {
+        background-color: var(--green-color);
+      }
+
+      .green-ticket > .buy-button {
+        background-color: var(--green-color);
+      }
+
+      .green-ticket .banner-text {
+        color: var(--green-color);
+        border-color: var(--green-color);
       }
 
       .purple-ticket {
@@ -200,6 +313,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         background-color: var(--purple-color);
       }
 
+      .purple-ticket .banner-text {
+        color: var(--purple-color);
+        border-color: var(--purple-color);
+      }
+
       .tickets-note {
         margin: 1rem;
       }
@@ -210,7 +328,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
       @media only screen and (min-width: 850px) {
         .tickets {
-          flex-direction: row;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 300px));
           justify-content: center;
           align-items: stretch;
           gap: 4rem;
