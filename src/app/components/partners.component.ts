@@ -95,7 +95,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           alt="NG-BE"
           src="/orgs/ng-be.png"
           loading="lazy"
-          style="max-width: 95px"
+          style="max-width: 105px"
         />
       </a>
 
