@@ -53,6 +53,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
         <ul>
           <li>In-person access to the Workshop Day on <b>May 23</b></li>
+          <li>Certificate of completion</li>
           <li>Early access to talk recordings</li>
           <li>Coffee breaks with free drinks</li>
           <li>Lunch</li>
@@ -75,6 +76,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
         <ul>
           <li>In-person access to the Workshop Day on <b>May 23</b></li>
+          <li>Certificate of completion</li>
           <li>Early access to talk recordings</li>
           <li>Coffee breaks with free drinks</li>
           <li>Lunch</li>
