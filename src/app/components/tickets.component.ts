@@ -6,12 +6,68 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <h2 id="tickets" class="section-title">Tickets</h2>
 
+    <p class="tickets-note">
+      * Group discount is offered for conference tickets: 3-5 tickets (-5%), 6-9
+      tickets (-10%), 10+ tickets (-15%).
+    </p>
+
     <div class="tickets">
-      <div class="ticket red-ticket">
-        <span class="badge">until Feb 10</span>
+      <div class="ticket green-ticket">
+        <span class="badge">Group Discount</span>
 
         <div class="ticket-info">
-          <h3 class="ticket-name">Early Bird Ticket</h3>
+          <h3 class="ticket-name">Conference Ticket</h3>
+          <p class="ticket-price">135€</p>
+        </div>
+
+        <hr />
+
+        <ul>
+          <li>In-person access to the Conference Day on <b>May 24</b></li>
+          <li>Early access to talk recordings</li>
+          <li>Personalized badge</li>
+          <li>Gift bag</li>
+          <li>Coffee breaks with free drinks</li>
+          <li>Lunch</li>
+        </ul>
+
+        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
+          Buy Now
+        </a>
+      </div>
+
+      <div class="ticket blue-ticket">
+        <span class="badge">10 Seats Available</span>
+
+        <div class="ticket-info">
+          <h3 class="ticket-name">Final Workshop Ticket</h3>
+          <p class="ticket-price">275€</p>
+        </div>
+
+        <hr />
+
+        <ul>
+          <li>In-person access to the Workshop Day on <b>May 23</b></li>
+          <li>Certificate of completion</li>
+          <li>Early access to talk recordings</li>
+          <li>Coffee breaks with free drinks</li>
+          <li>Lunch</li>
+        </ul>
+
+        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
+          Buy Now
+        </a>
+      </div>
+
+      <div class="ticket red-ticket">
+        <span class="badge">Until Feb 10</span>
+
+        <div class="banner">
+          <span class="banner-text">SOLD OUT</span>
+        </div>
+
+        <div class="ticket-info">
+          <h3 class="ticket-name">Early Conference Ticket</h3>
           <p class="ticket-price">
             <span class="base-price">135€</span>
             100€
@@ -35,14 +91,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </div>
 
       <div class="ticket purple-ticket">
-        <span class="badge">30 seats available</span>
+        <span class="badge">30 Seats Available</span>
 
         <div class="banner">
           <span class="banner-text">SOLD OUT</span>
         </div>
 
         <div class="ticket-info">
-          <h3 class="ticket-name">Workshop Ticket *</h3>
+          <h3 class="ticket-name">Workshop Ticket</h3>
           <p class="ticket-price">
             <span class="base-price">275€</span>
             200€
@@ -63,35 +119,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           Buy Now
         </a>
       </div>
-
-      <div class="ticket blue-ticket">
-        <span class="badge">10 seats available</span>
-
-        <div class="ticket-info">
-          <h3 class="ticket-name">Final Workshop Ticket *</h3>
-          <p class="ticket-price">275€</p>
-        </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Workshop Day on <b>May 23</b></li>
-          <li>Certificate of completion</li>
-          <li>Early access to talk recordings</li>
-          <li>Coffee breaks with free drinks</li>
-          <li>Lunch</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
     </div>
-
-    <p class="tickets-note">
-      * Workshop tickets don't include access to the Conference Day and are sold
-      separately.
-    </p>
 
     <p class="companies-note">
       <b>For companies:</b>
@@ -321,11 +349,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       .tickets-note {
+        font-weight: 600;
         margin: 1rem;
+        line-height: 1.5;
       }
 
       .companies-note {
         margin: 2rem 1rem 0 1rem;
+        line-height: 1.5;
       }
 
       @media only screen and (min-width: 850px) {
