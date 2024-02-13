@@ -93,6 +93,23 @@ const speakerMap: Record<string, Speaker> = {
     linkedinUrl: 'https://www.linkedin.com/in/santoshyadavdev/',
     githubUrl: 'https://github.com/santoshyadavdev/',
   },
+  'mike-ryan': {
+    id: 'mike-ryan',
+    name: 'Mike Ryan',
+    headline:
+      'Principal Architect at LiveLoveApp<br/>NgRx Co-Creator • GDE in Angular',
+    bio: 'Mike Ryan is a Principal Architect at LiveLoveApp, helping companies find absolute joy in shipping apps. He is a Google Developer Expert in Web Technologies and one of the co-creators of NgRx, an open-source collection of high-quality reactive extensions for Angular.',
+    talkTitle:
+      'Closing Keynote: Divining the Future of Angular State Management',
+    talkDescription:
+      'Dive into the arcane world of Angular state management with the advent of signals and signal-based state management libraries. What lessons can we learn from our state management past to help us architect better solutions for the future?',
+    photoUrl: '/people/mike-ryan.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-mike-ryan.jpg',
+    twitterUrl: 'https://twitter.com/MikeRyanDev/',
+    linkedinUrl: 'https://linkedin.com/in/mikeryandesigns/',
+    githubUrl: 'https://github.com/MikeRyanDev/',
+  },
 };
 
 export const speakersResource = {
