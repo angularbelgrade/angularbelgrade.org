@@ -76,7 +76,7 @@ import { speakersResource } from '../resources/speakers.resource';
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
         text-decoration: none;
       }
 
