@@ -126,6 +126,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
+      <a href="https://armada-js.com/" target="_blank">
+        <img
+          alt="ArmadaJS"
+          src="/orgs/armada-js.png"
+          loading="lazy"
+          style="max-width: 90px"
+        />
+      </a>
+
       <a href="https://greece.cityjsconf.org/" target="_blank">
         <img
           alt="CityJS Athens"
@@ -174,7 +183,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         }
 
         .partners-container {
-          max-width: 700px;
+          max-width: 800px;
           margin: 2rem auto 0 auto;
         }
       }
