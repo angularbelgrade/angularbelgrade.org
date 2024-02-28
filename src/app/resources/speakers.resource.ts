@@ -113,11 +113,9 @@ const speakerMap: Record<string, Speaker> = {
   'michael-hladky': {
     id: 'michael-hladky',
     name: 'Michael Hladky',
-    headline:
-      'CEO at Push-Based<br/>GDE in Angular • Microsoft MVP',
+    headline: 'CEO at Push-Based<br/>GDE in Angular • Microsoft MVP',
     bio: 'Michael Hladky is a Google Developer Expert (GDE), Microsoft MVP, Nx champion, trainer, and consultant with a focus on Angular and RxJS. For years he has been helping companies and developers to set up scalable architectures and performant processes enabling teams to keep up with state-of-the-art development. A vibrant member of the tech community, he organizes multiple community events and workshops each year to give back.',
-    talkTitle:
-      'Angular Performance and Core Web Vitals in 2024',
+    talkTitle: 'Angular Performance and Core Web Vitals in 2024',
     talkDescription:
       'There are a couple of things that makes Angular faster. But what does faster even mean?<br/><br/>In this talk you will learn how to understand performance form a user centric perspective and what to do to impact CWV. We will not only apply and measure the latest features like defer blocks of the new control flow, but also a couple of tricks that might suprise you.<br/><br/>In the end you have a clear and practical understanding of what will and what will not get you a better performance score.',
     photoUrl: '/people/michael-hladky.jpg',

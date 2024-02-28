@@ -36,29 +36,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </a>
       </div>
 
-      <div class="ticket blue-ticket">
-        <span class="badge">10 Seats Available</span>
-
-        <div class="ticket-info">
-          <h3 class="ticket-name">Final Workshop Ticket</h3>
-          <p class="ticket-price">275€</p>
-        </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Workshop Day on <b>May 23</b></li>
-          <li>Certificate of completion</li>
-          <li>Early access to talk recordings</li>
-          <li>Coffee breaks with free drinks</li>
-          <li>Lunch</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
-
       <div class="ticket red-ticket">
         <span class="badge">Until Feb 10</span>
 
@@ -103,6 +80,33 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
             <span class="base-price">275€</span>
             200€
           </p>
+        </div>
+
+        <hr />
+
+        <ul>
+          <li>In-person access to the Workshop Day on <b>May 23</b></li>
+          <li>Certificate of completion</li>
+          <li>Early access to talk recordings</li>
+          <li>Coffee breaks with free drinks</li>
+          <li>Lunch</li>
+        </ul>
+
+        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
+          Buy Now
+        </a>
+      </div>
+
+      <div class="ticket blue-ticket">
+        <span class="badge">10 Seats Available</span>
+
+        <div class="banner">
+          <span class="banner-text">SOLD OUT</span>
+        </div>
+
+        <div class="ticket-info">
+          <h3 class="ticket-name">Final Workshop Ticket</h3>
+          <p class="ticket-price">275€</p>
         </div>
 
         <hr />
