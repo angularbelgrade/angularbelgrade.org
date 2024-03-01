@@ -46,15 +46,8 @@ import { speakersResource } from '../resources/speakers.resource';
       </a>
     </div>
 
-    <p class="cfp-info">
+    <p class="speakers-note">
       More speakers will be announced soon!
-
-      <br /><br />
-
-      Interested in speaking at NG Belgrade Conf?
-      <a href="https://forms.gle/CtiYUbP3JfjyTFzt8" target="_blank">
-        Submit your talk!
-      </a>
     </p>
   `,
   styles: [
@@ -125,7 +118,7 @@ import { speakersResource } from '../resources/speakers.resource';
         line-height: 1.4;
       }
 
-      .cfp-info {
+      .speakers-note {
         text-align: center;
         margin-top: 2rem;
         margin-bottom: 0;
@@ -141,7 +134,7 @@ import { speakersResource } from '../resources/speakers.resource';
           gap: 2rem;
         }
 
-        .cfp-info {
+        .speakers-note {
           font-size: 1.25rem;
         }
 
