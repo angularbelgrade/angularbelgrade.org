@@ -46,9 +46,7 @@ import { speakersResource } from '../resources/speakers.resource';
       </a>
     </div>
 
-    <p class="speakers-note">
-      More speakers will be announced soon!
-    </p>
+    <p class="speakers-note">More speakers will be announced soon!</p>
   `,
   styles: [
     `

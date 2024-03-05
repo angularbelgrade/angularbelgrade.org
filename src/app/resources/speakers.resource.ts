@@ -125,6 +125,22 @@ const speakerMap: Record<string, Speaker> = {
     linkedinUrl: 'https://www.linkedin.com/in/michael-hladky-519340148/',
     githubUrl: 'https://github.com/BioPhoton/',
   },
+  'natalia-venditto': {
+    id: 'natalia-venditto',
+    name: 'Natalia Venditto',
+    headline:
+      'Principal Program Manager at Microsoft<br/>GDE in Angular and Web Technologies',
+    bio: 'Natalia has worked in the roles of frontend developer, full-stack developer, technical lead, software and solutions architect. Now she leads the end-to-end developer experience for JavaScript and Node.js, on Azure. Natalia is also part of the Google Developer Experts for Angular and Web Technologies, and Google Mentors programs, and an MVP award for Developer Technologies.',
+    talkTitle: 'SSR with Angular: When, how and why it matters to us',
+    talkDescription:
+      'In this talk, let’s discuss SSR as a rendering approach to improve runtime performance. Let’s walk through some of the industry-wide most seen use cases, and explore how we can implement them with Angular while we also review hydration techniques and evaluate the benefits and trade offs.',
+    photoUrl: '/people/natalia-venditto.jpeg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-natalia-venditto.jpg',
+    twitterUrl: 'https://www.twitter.com/anfibiacreativa/',
+    linkedinUrl: 'https://www.linkedin.com/in/anfibiacreativa/',
+    githubUrl: 'https://www.github.com/anfibiacreativa/',
+  },
 };
 
 export const speakersResource = {
