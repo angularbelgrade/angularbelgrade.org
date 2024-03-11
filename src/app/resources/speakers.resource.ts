@@ -141,6 +141,21 @@ const speakerMap: Record<string, Speaker> = {
     linkedinUrl: 'https://www.linkedin.com/in/anfibiacreativa/',
     githubUrl: 'https://www.github.com/anfibiacreativa/',
   },
+  'rainer-hahnekamp': {
+    id: 'rainer-hahnekamp',
+    name: 'Rainer Hahnekamp',
+    headline: 'Trainer and Consultant • GDE in Angular',
+    bio: 'Rainer Hahnekamp is a Google Developer Expert, working as a trainer and consultant in the expert network of Angular Architects. In addition, he offers a weekly brief overview of relevant events in the Angular ecosystem on YouTube through ng-news.',
+    talkTitle: 'Testing in 2024',
+    talkDescription:
+      "As Angular accelerates, so does the testing realm. Karma steps aside for the Web Test Runner, while Jest gains official support, and Analog entices us with Vitest. Playwright claims the top spot in E2E before Cypress, leaving us to ponder the role of Jasmine.<br/><br/>Let's sort things out!<br/><br/>I'll provide a comprehensive overview of the testing landscape in 2024 — spotlighting the tools that are now at our disposal, forecasting future developments, and outlining what a contemporary testing strategy entails.<br/><br/>Stay ahead with sharp testing in Angular!",
+    photoUrl: '/people/rainer-hahnekamp.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-rainer-hahnekamp.jpg',
+    twitterUrl: 'https://twitter.com/rainerhahnekamp/',
+    linkedinUrl: 'https://www.linkedin.com/in/rainerhahnekamp/',
+    githubUrl: 'https://github.com/rainerhahnekamp/',
+  },
 };
 
 export const speakersResource = {
