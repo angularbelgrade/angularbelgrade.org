@@ -156,6 +156,21 @@ const speakerMap: Record<string, Speaker> = {
     linkedinUrl: 'https://www.linkedin.com/in/rainerhahnekamp/',
     githubUrl: 'https://github.com/rainerhahnekamp/',
   },
+  'soumaya-erradi': {
+    id: 'soumaya-erradi',
+    name: 'Soumaya Erradi',
+    headline: 'Lead Software Developer at Scaling Parrots',
+    bio: "I'm an experienced web developer and a passionate IT and electronics instructor. I'm specialized in frontend applications and currently I'm a lead software developer in a blockchain app development team. I spend most of my time exploring what's new in the tech world and helping other developers improve their skills.",
+    talkTitle: 'Solving Web3 Issues with Angular',
+    talkDescription:
+      'Developing a decentralized application with Angular can be challenging due to lack of community support. Otherwise it is possible to develop a performant application just using the right library and understanding how to communicate with Web3 tools. In this talk we’ll explore how to do it easily and make the latest tools performe the best!',
+    photoUrl: '/people/soumaya-erradi.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-soumaya-erradi.jpg',
+    twitterUrl: 'https://twitter.com/sumy92/',
+    linkedinUrl: 'https://www.linkedin.com/in/soumaya-erradi/',
+    githubUrl: 'https://github.com/soumayaerradi/',
+  },
 };
 
 export const speakersResource = {
