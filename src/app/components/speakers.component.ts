@@ -45,8 +45,6 @@ import { speakersResource } from '../resources/speakers.resource';
         </div>
       </a>
     </div>
-
-    <p class="speakers-note">More speakers will be announced soon!</p>
   `,
   styles: [
     `
@@ -116,24 +114,12 @@ import { speakersResource } from '../resources/speakers.resource';
         line-height: 1.4;
       }
 
-      .speakers-note {
-        text-align: center;
-        margin-top: 2rem;
-        margin-bottom: 0;
-        padding: 0 2rem;
-        font-weight: 600;
-      }
-
       @media only screen and (min-width: 850px) {
         .speaker-list {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 340px));
           justify-content: center;
           gap: 2rem;
-        }
-
-        .speakers-note {
-          font-size: 1.25rem;
         }
 
         .open-link {

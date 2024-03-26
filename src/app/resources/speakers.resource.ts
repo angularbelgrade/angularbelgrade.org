@@ -171,6 +171,35 @@ const speakerMap: Record<string, Speaker> = {
     linkedinUrl: 'https://www.linkedin.com/in/soumaya-erradi/',
     githubUrl: 'https://github.com/soumayaerradi/',
   },
+  'igor-ciric': {
+    id: 'igor-ciric',
+    name: 'Igor Ćirić',
+    headline: 'Angular Developer at Bitovi',
+    bio: 'Web developer with 10 years of experience building applications for professional and personal consumption. I developed a white-label online multiplayer game using Angular and PixiJS, created an OCR tool from scratch to extract data from the game, and won 1st place in Google Startup Weekend, Belgrade, Serbia.<br/><br/>I am a seasoned web developer specializing in Angular, with a proven track record of delivering high-quality solutions and training to clients worldwide. I began my journey as a developer when I was 18 by joining the Google Adsense program. My website at that time in 2008 was able to reach 1M+ visitors per month. While working with Google Adsense, I gained knowledge and experience of how SEO works in practice.<br/><br/>Throughout my career, I have demonstrated versatility and adaptability, working on a diverse range of projects from micro applications like quizzes and photo contests to groundbreaking startups. My early experience with marketing agencies honed my ability to rapidly ideate, code, and adapt to tight deadlines. This agility later translated into success on global projects, where I deepened my understanding of application scalability. A highlight of my career is my skill in delivering engaging and informative presentations for clients on Angular topics, such as “Using Arrow Functions for Communication Between Components,” “Angular Server-side Rendering (SSR) with Angular Universal,” and “NgSrc and Angular Image Optimization.” My ability to articulate complex technical concepts has made me a valuable asset in collaborative settings, often leading code pairing sessions with developers from client teams.My comprehensive approach to project development, encompassing everything from design mockups to backend development and DevOps management, stems from my responsibility for the entire development processes in various roles. This experience has not only refined my technical acumen but also my problem-solving skills and my ability to work independently. Outside of my professional life, I am happily married to my childhood sweetheart, and I passionately pursue adventures like hiking, scuba diving, traveling, and more.',
+    talkTitle:
+      'Breaking Boundaries: Unleashing the Potential of Micro Frontends with Angular and iframes',
+    talkDescription:
+      'Want to know how to build a simple microfrontend architecture without relying on additional libraries and tools? We can achieve this by using iFrame and Angular directive. The iFrame directive will manage window event communications between applications. This approach provides a significant advantage by enabling our applications to work as container-presenter patterns. By breaking down a large project into smaller ones, they can work together and share data seamlessly.',
+    photoUrl: '/people/igor-ciric.jpeg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-igor-ciric.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/igor-ciric-8ab725168/',
+  },
+  'robin-goetz': {
+    id: 'robin-goetz',
+    name: 'Robin Goetz',
+    headline: 'Full Stack Engineer at NeuroTrainer<br/>AnalogJS Core Team',
+    bio: 'Developer working with Angular, Spring and AWS. AnalogJS core team & creator of spartan/ui.',
+    talkTitle: 'AnalogJS - The Vite powered Angular meta-framework',
+    talkDescription:
+      "This talk introduces AnalogJS to the audience. It gives insight into how AnalogJS takes full-stack Angular development to the next level. It shows how it adds file-based routing and Nitro powered API routes. It introduces hybrid SSR/SSG support & zero (or minimal) config deploys to cloud providers. Finally, it goes lays out clearly the technology driving the framework, Vite, and shows, with the help of Single File Components (.analog), how incredibly powerful it is. It compares AnalogJS' embrace of going all in on Vite with Angular deciding to use Vite as a dev server, but ultimately keeping it an implementation detail of their CLI.",
+    photoUrl: '/people/robin-goetz.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-robin-goetz.jpg',
+    twitterUrl: 'https://twitter.com/goetzrobin/',
+    linkedinUrl: 'https://www.linkedin.com/in/robingoetz/',
+    githubUrl: 'https://github.com/goetzrobin/',
+  },
 };
 
 export const speakersResource = {
