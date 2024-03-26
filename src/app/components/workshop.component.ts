@@ -24,7 +24,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           <li><strong>Trainer:</strong> Alex Okrushko</li>
           <li><strong>Date:</strong> May 23, 2024</li>
           <li><strong>Time:</strong> 9:00 - 17:00</li>
-          <li><strong>Location:</strong> Belgrade, Serbia</li>
+          <li>
+            <strong>Location:</strong>&nbsp;<a
+              href="https://maps.app.goo.gl/sshp2CM1g1sapbpv7"
+              target="_blank"
+              >FON, Belgrade</a
+            >
+          </li>
         </ul>
       </div>
 

@@ -6,38 +6,55 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <h2 id="sponsors" class="section-title">Sponsors</h2>
 
+    <h3>Platinum</h3>
+
+    <div class="sponsors-container">
+      <a
+        href="https://swissmarketplace.group/"
+        target="_blank"
+        style="width: 600px; max-width: 90vw"
+      >
+        <img
+          alt="Swiss Marketplace Group"
+          src="/orgs/swiss-marketplace-group.svg"
+          loading="lazy"
+        />
+      </a>
+    </div>
+
     <h3>Silver</h3>
 
     <div class="sponsors-container">
-      <a href="https://qposoft.com/en" target="_blank">
-        <img
-          alt="QPO Soft"
-          src="/orgs/qpo-soft.svg"
-          loading="lazy"
-          style="max-width: 300px"
-        />
+      <a
+        href="https://qposoft.com/en"
+        target="_blank"
+        style="width: 300px; max-width: 55vw"
+      >
+        <img alt="QPO Soft" src="/orgs/qpo-soft.svg" loading="lazy" />
       </a>
     </div>
 
     <h3>Bronze</h3>
 
     <div class="sponsors-container">
-      <a href="https://offering.solutions/" target="_blank">
+      <a
+        href="https://offering.solutions/"
+        target="_blank"
+        style="width: 300px; max-width: 55vw"
+      >
         <img
           alt="Offering Solutions Software"
           src="/orgs/offering-solutions-software.svg"
           loading="lazy"
-          style="max-width: 300px"
         />
       </a>
 
-      <a href="https://globalitfactory.com/" target="_blank">
-        <img
-          alt="Global IT Factory"
-          src="/orgs/gitf.svg"
-          loading="lazy"
-          style="max-width: 350px"
-        />
+      <a
+        href="https://globalitfactory.com/"
+        target="_blank"
+        style="width: 350px; max-width: 62vw"
+      >
+        <img alt="Global IT Factory" src="/orgs/gitf.svg" loading="lazy" />
       </a>
     </div>
 
@@ -102,6 +119,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
       @media only screen and (min-width: 850px) {
         .sponsors-container {
+          padding: 1rem 0;
           gap: 4rem;
         }
 

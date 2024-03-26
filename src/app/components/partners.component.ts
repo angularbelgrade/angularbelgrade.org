@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <h2 id="partners" class="section-title">Partners</h2>
 
     <div class="main-partners-container">
-      <a href="https://angular.dev/" target="_blank">
+      <a href="https://angular.dev/" target="_blank" style="max-width: 23vw">
         <img
           alt="Angular"
           src="/orgs/angular.png"
@@ -16,7 +16,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://nx.dev/" target="_blank">
+      <a href="https://nx.dev/" target="_blank" style="max-width: 28vw">
         <img
           alt="Nx"
           src="/orgs/nx.svg"
@@ -25,7 +25,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://ngrx.io/" target="_blank">
+      <a href="https://ngrx.io/" target="_blank" style="max-width: 23vw">
         <img
           alt="NgRx"
           src="/orgs/ngrx.svg"
@@ -33,10 +33,23 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           style="max-width: 124px"
         />
       </a>
+
+      <a
+        href="https://en.fon.bg.ac.rs/"
+        target="_blank"
+        style="max-width: 50vw"
+      >
+        <img
+          alt="Faculty of Organizational Sciences"
+          src="/orgs/fon.svg"
+          loading="lazy"
+          style="max-width: 230px"
+        />
+      </a>
     </div>
 
     <div class="partners-container">
-      <a href="https://analogjs.org/" target="_blank">
+      <a href="https://analogjs.org/" target="_blank" style="max-width: 22vw">
         <img
           alt="Analog"
           src="/orgs/analog.svg"
@@ -45,7 +58,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://ngrome.io/" target="_blank">
+      <a href="https://ngrome.io/" target="_blank" style="max-width: 17vw">
         <img
           alt="NG Rome"
           src="/orgs/ng-rome.svg"
@@ -54,7 +67,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://www.meetup.com/angular-meetup-graz/" target="_blank">
+      <a
+        href="https://www.meetup.com/angular-meetup-graz/"
+        target="_blank"
+        style="max-width: 17vw"
+      >
         <img
           alt="Angular Graz"
           src="/orgs/angular-graz.svg"
@@ -63,7 +80,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://www.meetup.com/angulartoronto/" target="_blank">
+      <a
+        href="https://www.meetup.com/angulartoronto/"
+        target="_blank"
+        style="max-width: 17vw"
+      >
         <img
           alt="Angular Toronto"
           src="/orgs/angular-toronto.svg"
@@ -72,7 +93,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://www.angular.love/en/" target="_blank">
+      <a
+        href="https://www.angular.love/en/"
+        target="_blank"
+        style="max-width: 18vw"
+      >
         <img
           alt="Angular Love"
           src="/orgs/angular-love.svg"
@@ -81,7 +106,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://www.meetup.com/angular-macedonia/" target="_blank">
+      <a
+        href="https://www.meetup.com/angular-macedonia/"
+        target="_blank"
+        style="max-width: 16vw"
+      >
         <img
           alt="Angular Macedonia"
           src="/orgs/angular-macedonia.svg"
@@ -90,7 +119,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://ng-be.org/" target="_blank">
+      <a href="https://ng-be.org/" target="_blank" style="max-width: 19vw">
         <img
           alt="NG-BE"
           src="/orgs/ng-be.png"
@@ -99,7 +128,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://www.meetup.com/angular-athens/" target="_blank">
+      <a
+        href="https://www.meetup.com/angular-athens/"
+        target="_blank"
+        style="max-width: 17vw"
+      >
         <img
           alt="Angular Athens"
           src="/orgs/angular-athens.svg"
@@ -108,7 +141,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://www.meetup.com/angular-vienna/" target="_blank">
+      <a
+        href="https://www.meetup.com/angular-vienna/"
+        target="_blank"
+        style="max-width: 17vw"
+      >
         <img
           alt="Angular Vienna"
           src="/orgs/angular-vienna.svg"
@@ -117,7 +154,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://twitter.com/ngTurkiye/" target="_blank">
+      <a
+        href="https://twitter.com/ngTurkiye/"
+        target="_blank"
+        style="max-width: 17vw"
+      >
         <img
           alt="Angular Turkey"
           src="/orgs/angular-turkey.svg"
@@ -126,7 +167,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://armada-js.com/" target="_blank">
+      <a href="https://armada-js.com/" target="_blank" style="max-width: 16vw">
         <img
           alt="ArmadaJS"
           src="/orgs/armada-js.png"
@@ -135,7 +176,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         />
       </a>
 
-      <a href="https://greece.cityjsconf.org/" target="_blank">
+      <a
+        href="https://greece.cityjsconf.org/"
+        target="_blank"
+        style="max-width: 25vw"
+      >
         <img
           alt="CityJS Athens"
           src="/orgs/city-js-athens.svg"
@@ -156,18 +201,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       .main-partners-container,
       .partners-container {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 2rem;
       }
 
-      .main-partners-container {
-        flex-direction: column;
-      }
-
       .partners-container {
-        flex-direction: row;
         margin-top: 2rem;
       }
 
@@ -178,7 +219,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
       @media only screen and (min-width: 850px) {
         .main-partners-container {
-          flex-direction: row;
           gap: 4rem;
         }
 
