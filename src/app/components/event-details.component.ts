@@ -25,7 +25,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </div>
 
       <div class="event-stats-item">
-        <span class="highlighted-text">12+</span>
+        <span class="highlighted-text">14</span>
         <span class="event-stats-label">tech talks</span>
       </div>
 
