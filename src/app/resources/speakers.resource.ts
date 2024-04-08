@@ -200,6 +200,19 @@ const speakerMap: Record<string, Speaker> = {
     linkedinUrl: 'https://www.linkedin.com/in/robingoetz/',
     githubUrl: 'https://github.com/goetzrobin/',
   },
+  'nenad-drobac': {
+    id: 'nenad-drobac',
+    name: 'Nenad Drobac',
+    headline: 'Engineering Manager at SMG',
+    bio: "Nenad is an Engineering Manager at Swiss Marketplace Group with a proven track record in the tech industry. Previously, he honed his skills as a versatile Frontend developer proficient in all three major Javascript frameworks. Notably, during his tenure as a Frontend developer, his passion was dedicated to crafting and perfecting design systems. Beyond his professional life, Nenad's interests extend to the world of sports, where he's a passionate spectator and enthusiast. While he once harbored dreams of becoming a professional gamer, life took a different turn, and he transitioned to the world of software development. In addition to his technical prowess, Nenad possesses a keen interest in exploring the dynamic realms of business and marketing. With a deep appreciation for both the creative and analytical sides of these domains, he's continually broadening his horizons and embracing new challenges.",
+    talkTitle: 'SEO for Two Websites on One Platform? Don’t Get Duped!',
+    talkDescription:
+      'This talk tackles the challenge of ranking websites built on the same platform. Learn how clear differentiation in target audience, content, and SEO strategy can help both websites thrive in search results.',
+    photoUrl: '/people/nenad-drobac.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-nenad-drobac.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/nenaddrobac/',
+  },
 };
 
 export const speakersResource = {
