@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { RouteMeta } from '@analogjs/router';
-import { RouterLink } from '@angular/router';
 import { metaResource } from '../resources/meta.resource';
 import { TeamMember } from '../models/team-member.model';
 
@@ -11,7 +10,7 @@ export const routeMeta: RouteMeta = {
 
 @Component({
   standalone: true,
-  imports: [NgFor, NgIf, RouterLink],
+  imports: [NgFor, NgIf],
   template: `
     <h1 class="section-title">Team</h1>
 
@@ -26,7 +25,6 @@ export const routeMeta: RouteMeta = {
             height="220"
             width="220"
           />
-          <span *ngIf="member.role" class="member-role">{{ member.role }}</span>
         </div>
 
         <div class="member-details">
@@ -109,18 +107,6 @@ export const routeMeta: RouteMeta = {
 
       .member-photo {
         border-radius: 0.5rem;
-      }
-
-      .member-role {
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-radius: 0 0.5rem;
-        font-size: 0.79rem;
-        font-weight: 600;
-        white-space: nowrap;
-        padding: 0.25rem 0.5rem;
-        background-color: var(--accent-color);
       }
 
       .member-details {
@@ -215,14 +201,6 @@ export default class TeamPage {
       headline: 'Senior Software Engineer at SAP',
       photoUrl: '/people/edis-sarda.jpg',
       linkedinUrl: 'https://linkedin.com/in/edissarda/',
-    },
-    {
-      name: 'Luciano Murruni',
-      headline: 'Lead Software Engineer at ConTe.it<br/>NG Rome Organizer',
-      photoUrl: '/people/luciano-murruni.jpg',
-      twitterUrl: 'https://twitter.com/MrMurruni/',
-      linkedinUrl: 'https://www.linkedin.com/in/lucianomurruni/',
-      role: 'Emcee',
     },
   ];
 }

@@ -22,13 +22,29 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </a>
     </div>
 
+    <h3>Gold</h3>
+
+    <div class="sponsors-container">
+      <a
+        href="https://www.publicissapient.com/"
+        target="_blank"
+        style="width: 350px; max-width: 57vw"
+      >
+        <img
+          alt="Publicis Sapient"
+          src="/orgs/publicis-sapient.svg"
+          loading="lazy"
+        />
+      </a>
+    </div>
+
     <h3>Silver</h3>
 
     <div class="sponsors-container">
       <a
         href="https://qposoft.com/en"
         target="_blank"
-        style="width: 300px; max-width: 55vw"
+        style="width: 300px; max-width: 50vw"
       >
         <img alt="QPO Soft" src="/orgs/qpo-soft.svg" loading="lazy" />
       </a>
@@ -40,7 +56,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <a
         href="https://offering.solutions/"
         target="_blank"
-        style="width: 300px; max-width: 55vw"
+        style="width: 300px; max-width: 50vw"
       >
         <img
           alt="Offering Solutions Software"
@@ -52,7 +68,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <a
         href="https://globalitfactory.com/"
         target="_blank"
-        style="width: 350px; max-width: 62vw"
+        style="width: 350px; max-width: 57vw"
       >
         <img alt="Global IT Factory" src="/orgs/gitf.svg" loading="lazy" />
       </a>
