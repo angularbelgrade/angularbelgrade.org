@@ -28,7 +28,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <a
         href="https://www.publicissapient.com/"
         target="_blank"
-        style="width: 350px; max-width: 57vw"
+        style="width: 330px; max-width: 54vw"
       >
         <img
           alt="Publicis Sapient"

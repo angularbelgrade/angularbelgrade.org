@@ -182,6 +182,7 @@ export default class TeamPage {
       headline: 'Technical PM at Publicis Sapient',
       photoUrl: '/people/milos-rujevic.jpg',
       twitterUrl: 'https://twitter.com/MikeTechnicalPM/',
+      linkedinUrl: 'https://www.linkedin.com/in/aitechpm/',
       githubUrl: 'https://github.com/itmilos/',
     },
     {
