@@ -72,6 +72,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <div class="ticket accent-ticket">
         <span class="badge">30 Seats Available</span>
 
+        <div class="banner">
+          <span class="banner-text">SOLD OUT</span>
+        </div>
+
         <div class="ticket-info">
           <h3 class="ticket-name">Final Conference Ticket</h3>
           <p class="ticket-price">175€</p>
@@ -157,6 +161,16 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       directly to our account. Contact us at
       <a href="mailto:angularbelgrade@gmail.com">angularbelgrade@gmail.com</a>.
     </p>
+
+    <div class="tickets-cta">
+      <a
+        class="waiting-list-button"
+        href="https://forms.gle/gadtnNczZu3YSa5u9"
+        target="_blank"
+      >
+        Join The Waiting List
+      </a>
+    </div>
   `,
   styles: [
     `
@@ -383,6 +397,26 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         line-height: 1.5;
       }
 
+      .tickets-cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+
+      .waiting-list-button {
+        background: var(--angular-gradient);
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+      }
+
+      .waiting-list-button:hover {
+        color: inherit;
+        opacity: 0.9;
+      }
+
       @media only screen and (min-width: 850px) {
         .tickets {
           display: grid;
@@ -404,6 +438,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           margin: 2rem auto 0 auto;
           text-align: center;
           max-width: 800px;
+          font-size: 1.25rem;
+        }
+
+        .waiting-list-button {
           font-size: 1.25rem;
         }
       }
