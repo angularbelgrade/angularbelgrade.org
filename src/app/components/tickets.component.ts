@@ -168,7 +168,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         href="https://forms.gle/gadtnNczZu3YSa5u9"
         target="_blank"
       >
-        Join The Waiting List
+        Join the Waiting List
       </a>
     </div>
   `,

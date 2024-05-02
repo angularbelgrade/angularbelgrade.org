@@ -125,21 +125,19 @@ const speakerMap: Record<string, Speaker> = {
     linkedinUrl: 'https://www.linkedin.com/in/michael-hladky-519340148/',
     githubUrl: 'https://github.com/BioPhoton/',
   },
-  'natalia-venditto': {
-    id: 'natalia-venditto',
-    name: 'Natalia Venditto',
-    headline:
-      'Principal Program Manager at Microsoft<br/>GDE in Angular and Web Technologies',
-    bio: 'Natalia has worked in the roles of frontend developer, full-stack developer, technical lead, software and solutions architect. Now she leads the end-to-end developer experience for JavaScript and Node.js, on Azure. Natalia is also part of the Google Developer Experts for Angular and Web Technologies, and Google Mentors programs, and an MVP award for Developer Technologies.',
-    talkTitle: 'SSR with Angular: When, how and why it matters to us',
+  'michael-egger-zikes': {
+    id: 'michael-egger-zikes',
+    name: 'Michael Egger-Zikes',
+    headline: 'Trainer and Consultant at AngularArchitects',
+    bio: 'Michael Egger-Zikes is an experienced software architect, trainer, and consultant with a focus on Angular in the field of business applications. As a member of the ANGULARarchitects expert network, he has supervised and implemented large enterprise-scale Angular projects in the public and private sectors. As an external (part-time) lecturer, he also teaches this topic at a university of applied sciences in Graz, Austria. The business informatics graduate has a lot of experience with software engineering and automating business processes.',
+    talkTitle: 'Mastering Angular’s Dependency Injection: Practical Insights to Level Up',
     talkDescription:
-      'In this talk, let’s discuss SSR as a rendering approach to improve runtime performance. Let’s walk through some of the industry-wide most seen use cases, and explore how we can implement them with Angular while we also review hydration techniques and evaluate the benefits and trade offs.',
-    photoUrl: '/people/natalia-venditto.jpeg',
+      'The Angular Framework features a built-in Dependency Injection mechanism that has been integral since its inception. This aspect is one of the core elements for which the JavaScript ecosystem lauds Angular. While many developers are adept at employing DI for services provisioned in the root scope, its utility extends well beyond this conventional application.<br/><br/>Through practical insights, this lightning talk will empower developers to unlock the full potential of Angular\'s DI system. From comprehending provider hierarchies to leveraging dependency inversion for cleaner code, participants will acquire knowledge to enhance their Angular applications.<br/><br/>Additionally, we will demystify the internals of the Injection tree, shedding light on the lifecycle of nodes and providing clarity on their utilization.<br/><br/>Join my talk as we uncover the features of Angular\'s Dependency Injection system, paving the way for more efficient and streamlined development workflows.',
+    photoUrl: '/people/michael-egger-zikes.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-natalia-venditto.jpg',
-    twitterUrl: 'https://www.twitter.com/anfibiacreativa/',
-    linkedinUrl: 'https://www.linkedin.com/in/anfibiacreativa/',
-    githubUrl: 'https://www.github.com/anfibiacreativa/',
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-michael-egger-zikes.jpg',
+    twitterUrl: 'https://twitter.com/MikeZks/',
+    linkedinUrl: 'https://www.linkedin.com/in/michael-egger-zikes/',
   },
   'rainer-hahnekamp': {
     id: 'rainer-hahnekamp',

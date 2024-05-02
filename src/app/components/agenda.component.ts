@@ -110,11 +110,11 @@ export class AgendaComponent {
     },
     {
       time: { from: '10:35', to: '11:00' },
-      speaker: speakersResource.getSpeakerById('natalia-venditto'),
+      speaker: speakersResource.getSpeakerById('robin-goetz'),
     },
     {
       time: { from: '11:00', to: '11:15' },
-      details: 'Q&A Panel with Minko, Fabian, and Natalia',
+      details: 'Q&A Panel with Minko, Fabian, and Robin',
     },
     {
       time: { from: '11:15', to: '11:45' },
@@ -130,7 +130,7 @@ export class AgendaComponent {
     },
     {
       time: { from: '12:20', to: '12:45' },
-      speaker: speakersResource.getSpeakerById('robin-goetz'),
+      speaker: speakersResource.getSpeakerById('chau-tran'),
     },
     {
       time: { from: '12:45', to: '12:55' },
@@ -142,7 +142,7 @@ export class AgendaComponent {
     },
     {
       time: { from: '13:05', to: '13:20' },
-      details: 'Q&A Panel with Manfred, Robin, Santosh, and Igor',
+      details: 'Q&A Panel with Manfred, Chau, Santosh, and Igor',
     },
     {
       time: { from: '13:20', to: '14:35' },
@@ -158,7 +158,7 @@ export class AgendaComponent {
     },
     {
       time: { from: '15:05', to: '15:30' },
-      speaker: speakersResource.getSpeakerById('chau-tran'),
+      speaker: speakersResource.getSpeakerById('rainer-hahnekamp'),
     },
     {
       time: { from: '15:30', to: '15:40' },
@@ -170,7 +170,7 @@ export class AgendaComponent {
     },
     {
       time: { from: '15:50', to: '16:05' },
-      details: 'Q&A Panel with Alex, Chau, Soumaya, and Nenad',
+      details: 'Q&A Panel with Alex, Rainer, Soumaya, and Nenad',
     },
     {
       time: { from: '16:05', to: '16:35' },
@@ -181,19 +181,19 @@ export class AgendaComponent {
       speaker: speakersResource.getSpeakerById('michael-hladky'),
     },
     {
-      time: { from: '17:00', to: '17:25' },
-      speaker: speakersResource.getSpeakerById('rainer-hahnekamp'),
+      time: { from: '17:00', to: '17:10' },
+      speaker: speakersResource.getSpeakerById('michael-egger-zikes'),
     },
     {
-      time: { from: '17:25', to: '17:55' },
+      time: { from: '17:10', to: '17:40' },
       speaker: speakersResource.getSpeakerById('mike-ryan'),
     },
     {
-      time: { from: '17:55', to: '18:10' },
-      details: 'Q&A Panel with Michael, Rainer, and Mike',
+      time: { from: '17:40', to: '17:55' },
+      details: 'Q&A Panel with Michael H., Michael E., and Mike',
     },
     {
-      time: { from: '18:10', to: '18:20' },
+      time: { from: '17:55', to: '18:05' },
       details: 'Closing Remarks',
     },
   ];
