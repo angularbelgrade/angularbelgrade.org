@@ -65,9 +65,7 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
           </a>
         </li>
         <li>
-          <a routerLink="/" fragment="agenda" (click)="closeMenu()">
-            Agenda
-          </a>
+          <a routerLink="/" fragment="agenda" (click)="closeMenu()"> Agenda </a>
         </li>
         <li>
           <a routerLink="/" fragment="workshop" (click)="closeMenu()">

@@ -188,6 +188,24 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           style="max-width: 135px"
         />
       </a>
+
+      <a href="https://startit.rs/" target="_blank" style="max-width: 19vw">
+        <img
+          alt="Startit Centar"
+          src="/orgs/startit.png"
+          loading="lazy"
+          style="max-width: 120px"
+        />
+      </a>
+
+      <a href="https://ekapija.com/" target="_blank" style="max-width: 23vw">
+        <img
+          alt="eKapija"
+          src="/orgs/ekapija.svg"
+          loading="lazy"
+          style="max-width: 140px"
+        />
+      </a>
     </div>
   `,
   styles: [

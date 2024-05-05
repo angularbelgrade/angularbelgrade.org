@@ -20,8 +20,8 @@ const speakerMap: Record<string, Speaker> = {
     id: 'alex-okrushko',
     name: 'Alex Okrushko',
     headline:
-      'Principal UI Architect at Cisco<br/>NgRx Core Team • GDE in Angular',
-    bio: 'Alex is a Principal Architect at Cisco CX - Customer Experience. He is part of the NgRx team, GDE in Angular, Angular Toronto organizer and co-organizer of the official Angular Discord. In his free time, he loves to learn & share the knowledge, provides NgRx workshops and helps with <a href="https://ts.dev/style/" target="_blank">ts.dev/style</a> - the TypeScript style guide.',
+      'Senior Software Engineer at Snowflake<br/>NgRx Core Team • GDE in Angular',
+    bio: 'Alex is a Senior Software Engineer II at Snowflake. He is part of the NgRx team, GDE in Angular, Angular Toronto organizer and co-organizer of the official Angular Discord. In his free time, he loves to learn & share the knowledge, provides NgRx workshops and helps with <a href="https://ts.dev/style/" target="_blank">ts.dev/style</a> - the TypeScript style guide.',
     talkTitle: 'Custom Features of NgRx SignalStore',
     talkDescription:
       'The extensibility of the SignalStore is one of its biggest superpowers. In this talk, we will go over some of the extensions provided by NgRx and create a few from scratch.',
@@ -130,9 +130,10 @@ const speakerMap: Record<string, Speaker> = {
     name: 'Michael Egger-Zikes',
     headline: 'Trainer and Consultant at AngularArchitects',
     bio: 'Michael Egger-Zikes is an experienced software architect, trainer, and consultant with a focus on Angular in the field of business applications. As a member of the ANGULARarchitects expert network, he has supervised and implemented large enterprise-scale Angular projects in the public and private sectors. As an external (part-time) lecturer, he also teaches this topic at a university of applied sciences in Graz, Austria. The business informatics graduate has a lot of experience with software engineering and automating business processes.',
-    talkTitle: 'Mastering Angular’s Dependency Injection: Practical Insights to Level Up',
+    talkTitle:
+      'Mastering Angular’s Dependency Injection: Practical Insights to Level Up',
     talkDescription:
-      'The Angular Framework features a built-in Dependency Injection mechanism that has been integral since its inception. This aspect is one of the core elements for which the JavaScript ecosystem lauds Angular. While many developers are adept at employing DI for services provisioned in the root scope, its utility extends well beyond this conventional application.<br/><br/>Through practical insights, this lightning talk will empower developers to unlock the full potential of Angular\'s DI system. From comprehending provider hierarchies to leveraging dependency inversion for cleaner code, participants will acquire knowledge to enhance their Angular applications.<br/><br/>Additionally, we will demystify the internals of the Injection tree, shedding light on the lifecycle of nodes and providing clarity on their utilization.<br/><br/>Join my talk as we uncover the features of Angular\'s Dependency Injection system, paving the way for more efficient and streamlined development workflows.',
+      "The Angular Framework features a built-in Dependency Injection mechanism that has been integral since its inception. This aspect is one of the core elements for which the JavaScript ecosystem lauds Angular. While many developers are adept at employing DI for services provisioned in the root scope, its utility extends well beyond this conventional application.<br/><br/>Through practical insights, this lightning talk will empower developers to unlock the full potential of Angular's DI system. From comprehending provider hierarchies to leveraging dependency inversion for cleaner code, participants will acquire knowledge to enhance their Angular applications.<br/><br/>Additionally, we will demystify the internals of the Injection tree, shedding light on the lifecycle of nodes and providing clarity on their utilization.<br/><br/>Join my talk as we uncover the features of Angular's Dependency Injection system, paving the way for more efficient and streamlined development workflows.",
     photoUrl: '/people/michael-egger-zikes.jpg',
     bannerUrl:
       'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-michael-egger-zikes.jpg',
@@ -157,7 +158,7 @@ const speakerMap: Record<string, Speaker> = {
   'soumaya-erradi': {
     id: 'soumaya-erradi',
     name: 'Soumaya Erradi',
-    headline: 'Lead Software Developer at Scaling Parrots',
+    headline: 'Senior Software Developer at Atlantis',
     bio: "I'm an experienced web developer and a passionate IT and electronics instructor. I'm specialized in frontend applications and currently I'm a lead software developer in a blockchain app development team. I spend most of my time exploring what's new in the tech world and helping other developers improve their skills.",
     talkTitle: 'Solving Web3 Issues with Angular',
     talkDescription:
