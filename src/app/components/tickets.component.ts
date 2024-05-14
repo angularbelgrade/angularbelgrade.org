@@ -161,16 +161,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       directly to our account. Contact us at
       <a href="mailto:angularbelgrade@gmail.com">angularbelgrade@gmail.com</a>.
     </p>
-
-    <div class="tickets-cta">
-      <a
-        class="waiting-list-button"
-        href="https://forms.gle/gadtnNczZu3YSa5u9"
-        target="_blank"
-      >
-        Join the Waiting List
-      </a>
-    </div>
   `,
   styles: [
     `
@@ -395,13 +385,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       .companies-note {
         margin: 2rem 1rem 0 1rem;
         line-height: 1.5;
-      }
-
-      .tickets-cta {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 3rem;
       }
 
       .waiting-list-button {
