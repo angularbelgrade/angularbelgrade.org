@@ -1,62 +1,55 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
 import { TeamMember } from '../models/team-member.model';
 
 @Component({
   selector: 'bgd-mcs',
-  standalone: true,
-  imports: [NgFor, NgIf],
   template: `
     <h2 id="mcs" class="section-title">MCs</h2>
 
     <div class="mc-list">
-      <div class="mc" *ngFor="let mc of mcs">
-        <div class="mc-photo-container">
-          <img
-            class="mc-photo"
-            [alt]="mc.name"
-            [src]="mc.photoUrl"
-            loading="lazy"
-            height="220"
-            width="220"
-          />
-        </div>
+      @for (mc of mcs; track mc.name) {
+        <div class="mc">
+          <div class="mc-photo-container">
+            <img
+              class="mc-photo"
+              [alt]="mc.name"
+              [src]="mc.photoUrl"
+              loading="lazy"
+              height="220"
+              width="220"
+            />
+          </div>
 
-        <div class="mc-details">
-          <h3 class="mc-name">{{ mc.name }}</h3>
-          <p class="mc-headline" [innerHTML]="mc.headline"></p>
+          <div class="mc-details">
+            <h3 class="mc-name">{{ mc.name }}</h3>
+            <p class="mc-headline" [innerHTML]="mc.headline"></p>
 
-          <div class="social-media-links">
-            <a
-              *ngIf="mc.twitterUrl"
-              [href]="mc.twitterUrl"
-              target="_blank"
-              title="Twitter"
-            >
-              <img
-                src="/icons/twitter.svg"
-                alt="Twitter"
-                height="24"
-                width="24"
-              />
-            </a>
+            <div class="social-media-links">
+              @if (mc.twitterUrl) {
+                <a [href]="mc.twitterUrl" target="_blank" title="Twitter">
+                  <img
+                    src="/icons/twitter.svg"
+                    alt="Twitter"
+                    height="24"
+                    width="24"
+                  />
+                </a>
+              }
 
-            <a
-              *ngIf="mc.linkedinUrl"
-              [href]="mc.linkedinUrl"
-              target="_blank"
-              title="LinkedIn"
-            >
-              <img
-                src="/icons/linkedin.svg"
-                alt="LinkedIn"
-                height="24"
-                width="24"
-              />
-            </a>
+              @if (mc.linkedinUrl) {
+                <a [href]="mc.linkedinUrl" target="_blank" title="LinkedIn">
+                  <img
+                    src="/icons/linkedin.svg"
+                    alt="LinkedIn"
+                    height="24"
+                    width="24"
+                  />
+                </a>
+              }
+            </div>
           </div>
         </div>
-      </div>
+      }
     </div>
   `,
   styles: [

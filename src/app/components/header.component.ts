@@ -14,7 +14,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 
 @Component({
   selector: 'bgd-header',
-  standalone: true,
   imports: [RouterLink, RouterLinkActive],
   template: `
     <nav [class]="isNavVisible() ? 'visible-nav' : 'hidden-nav'">

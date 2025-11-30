@@ -7,7 +7,6 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-  standalone: true,
   template: `
     <h1 class="section-title">Code of Conduct</h1>
 

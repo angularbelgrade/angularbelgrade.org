@@ -1,49 +1,44 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { Speaker } from '../models/speaker.model';
 import { speakersResource } from '../resources/speakers.resource';
 
 @Component({
   selector: 'bgd-speakers',
-  standalone: true,
-  imports: [NgFor, RouterLink],
+  imports: [RouterLink],
   template: `
     <h2 id="speakers" class="section-title">Speakers</h2>
 
     <div class="speaker-list">
-      <a
-        class="speaker"
-        *ngFor="let speaker of speakers; trackBy: trackById"
-        routerLink="/speakers/{{ speaker.id }}"
-      >
-        <div class="speaker-photo-container">
-          <img
-            class="open-link"
-            src="/icons/open-link.svg"
-            alt="Open Link"
-            loading="lazy"
-            height="26"
-            width="26"
-          />
+      @for (speaker of speakers; track speaker.id) {
+        <a class="speaker" routerLink="/speakers/{{ speaker.id }}">
+          <div class="speaker-photo-container">
+            <img
+              class="open-link"
+              src="/icons/open-link.svg"
+              alt="Open Link"
+              loading="lazy"
+              height="26"
+              width="26"
+            />
 
-          <img
-            class="speaker-photo"
-            [alt]="speaker.name"
-            [src]="speaker.photoUrl"
-            loading="lazy"
-            height="220"
-            width="220"
-          />
-        </div>
-
-        <div class="speaker-info">
-          <div class="speaker-details">
-            <h3 class="speaker-name">{{ speaker.name }}</h3>
-            <p class="speaker-headline" [innerHTML]="speaker.headline"></p>
+            <img
+              class="speaker-photo"
+              [alt]="speaker.name"
+              [src]="speaker.photoUrl"
+              loading="lazy"
+              height="220"
+              width="220"
+            />
           </div>
-        </div>
-      </a>
+
+          <div class="speaker-info">
+            <div class="speaker-details">
+              <h3 class="speaker-name">{{ speaker.name }}</h3>
+              <p class="speaker-headline" [innerHTML]="speaker.headline"></p>
+            </div>
+          </div>
+        </a>
+      }
     </div>
   `,
   styles: [
@@ -132,8 +127,4 @@ import { speakersResource } from '../resources/speakers.resource';
 })
 export class SpeakersComponent {
   readonly speakers = speakersResource.getSpeakers();
-
-  trackById(_: number, speaker: Speaker): string {
-    return speaker.id;
-  }
 }

@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'bgd-workshop',
-  standalone: true,
   template: `
     <h2 id="workshop" class="section-title">Workshop</h2>
 

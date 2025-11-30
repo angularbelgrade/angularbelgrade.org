@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
 import { RouteMeta } from '@analogjs/router';
 import { metaResource } from '../resources/meta.resource';
 import { TeamMember } from '../models/team-member.model';
@@ -9,73 +8,64 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-  standalone: true,
-  imports: [NgFor, NgIf],
   template: `
     <h1 class="section-title">Team</h1>
 
     <div class="member-list">
-      <div class="member" *ngFor="let member of members">
-        <div class="member-photo-container">
-          <img
-            class="member-photo"
-            [alt]="member.name"
-            [src]="member.photoUrl"
-            loading="lazy"
-            height="220"
-            width="220"
-          />
-        </div>
+      @for (member of members; track member.name) {
+        <div class="member">
+          <div class="member-photo-container">
+            <img
+              class="member-photo"
+              [alt]="member.name"
+              [src]="member.photoUrl"
+              loading="lazy"
+              height="220"
+              width="220"
+            />
+          </div>
 
-        <div class="member-details">
-          <h3 class="member-name">{{ member.name }}</h3>
-          <p class="member-headline" [innerHTML]="member.headline"></p>
+          <div class="member-details">
+            <h3 class="member-name">{{ member.name }}</h3>
+            <p class="member-headline" [innerHTML]="member.headline"></p>
 
-          <div class="social-media-links">
-            <a
-              *ngIf="member.twitterUrl"
-              [href]="member.twitterUrl"
-              target="_blank"
-              title="Twitter"
-            >
-              <img
-                src="/icons/twitter.svg"
-                alt="Twitter"
-                height="24"
-                width="24"
-              />
-            </a>
+            <div class="social-media-links">
+              @if (member.twitterUrl) {
+                <a [href]="member.twitterUrl" target="_blank" title="Twitter">
+                  <img
+                    src="/icons/twitter.svg"
+                    alt="Twitter"
+                    height="24"
+                    width="24"
+                  />
+                </a>
+              }
 
-            <a
-              *ngIf="member.linkedinUrl"
-              [href]="member.linkedinUrl"
-              target="_blank"
-              title="LinkedIn"
-            >
-              <img
-                src="/icons/linkedin.svg"
-                alt="LinkedIn"
-                height="24"
-                width="24"
-              />
-            </a>
+              @if (member.linkedinUrl) {
+                <a [href]="member.linkedinUrl" target="_blank" title="LinkedIn">
+                  <img
+                    src="/icons/linkedin.svg"
+                    alt="LinkedIn"
+                    height="24"
+                    width="24"
+                  />
+                </a>
+              }
 
-            <a
-              *ngIf="member.githubUrl"
-              [href]="member.githubUrl"
-              target="_blank"
-              title="GitHub"
-            >
-              <img
-                src="/icons/github.svg"
-                alt="GitHub"
-                height="24"
-                width="24"
-              />
-            </a>
+              @if (member.githubUrl) {
+                <a [href]="member.githubUrl" target="_blank" title="GitHub">
+                  <img
+                    src="/icons/github.svg"
+                    alt="GitHub"
+                    height="24"
+                    width="24"
+                  />
+                </a>
+              }
+            </div>
           </div>
         </div>
-      </div>
+      }
     </div>
   `,
   styles: [

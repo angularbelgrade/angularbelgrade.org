@@ -6,7 +6,6 @@ import {
   Input as RouteInput,
   signal,
 } from '@angular/core';
-import { NgIf } from '@angular/common';
 import { ActivatedRouteSnapshot, Router } from '@angular/router';
 import { RouteMeta } from '@analogjs/router';
 import { metaResource } from '../resources/meta.resource';
@@ -49,8 +48,6 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-  standalone: true,
-  imports: [NgIf],
   template: `
     <h1 class="section-title">{{ speaker().name }}</h1>
 
@@ -67,32 +64,28 @@ export const routeMeta: RouteMeta = {
     <p class="speaker-headline" [innerHTML]="speaker().headline"></p>
 
     <div class="social-media-links">
-      <a
-        *ngIf="speaker().twitterUrl"
-        [href]="speaker().twitterUrl"
-        target="_blank"
-        title="Twitter"
-      >
-        <img src="/icons/twitter.svg" alt="Twitter" height="24" width="24" />
-      </a>
+      @if (speaker().twitterUrl) {
+        <a [href]="speaker().twitterUrl" target="_blank" title="Twitter">
+          <img src="/icons/twitter.svg" alt="Twitter" height="24" width="24" />
+        </a>
+      }
 
-      <a
-        *ngIf="speaker().linkedinUrl"
-        [href]="speaker().linkedinUrl"
-        target="_blank"
-        title="LinkedIn"
-      >
-        <img src="/icons/linkedin.svg" alt="LinkedIn" height="24" width="24" />
-      </a>
+      @if (speaker().linkedinUrl) {
+        <a [href]="speaker().linkedinUrl" target="_blank" title="LinkedIn">
+          <img
+            src="/icons/linkedin.svg"
+            alt="LinkedIn"
+            height="24"
+            width="24"
+          />
+        </a>
+      }
 
-      <a
-        *ngIf="speaker().githubUrl"
-        [href]="speaker().githubUrl"
-        target="_blank"
-        title="GitHub"
-      >
-        <img src="/icons/github.svg" alt="GitHub" height="24" width="24" />
-      </a>
+      @if (speaker().githubUrl) {
+        <a [href]="speaker().githubUrl" target="_blank" title="GitHub">
+          <img src="/icons/github.svg" alt="GitHub" height="24" width="24" />
+        </a>
+      }
     </div>
 
     <p class="speaker-bio" [innerHTML]="speaker().bio"></p>

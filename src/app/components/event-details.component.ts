@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'bgd-event-details',
-  standalone: true,
   template: `
     <p class="event-description">
       <span class="highlighted-text">NG Belgrade Conf 2024</span> is the largest

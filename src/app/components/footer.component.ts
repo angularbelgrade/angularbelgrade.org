@@ -3,7 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'bgd-footer',
-  standalone: true,
+  imports: [RouterLink, RouterLinkActive],
   template: `
     <footer>
       <p>
@@ -77,8 +77,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         >
       </nav>
       <p class="footer-copy">
-        2020-{{ year }} Angular Belgrade © Webkraft Studio. All rights
-        reserved.
+        2020-{{ year }} Angular Belgrade © Webkraft Studio. All rights reserved.
       </p>
     </footer>
   `,
@@ -118,7 +117,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, RouterLinkActive],
 })
 export class FooterComponent {
   readonly year = new Date().getFullYear();

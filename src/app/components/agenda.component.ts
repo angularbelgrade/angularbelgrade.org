@@ -1,30 +1,29 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { AgendaItem, SpeakerAgendaItem } from '../models/agenda-item.model';
 import { speakersResource } from '../resources/speakers.resource';
 
 @Component({
   selector: 'bgd-agenda',
-  standalone: true,
-  imports: [NgIf, NgFor, RouterLink],
   template: `
     <h2 id="agenda" class="section-title">Agenda</h2>
 
     <table>
       <tbody>
-        <tr *ngFor="let agendaItem of agenda">
-          <td class="agenda-item-time">
-            {{ agendaItem.time.from }} <span>-</span> {{ agendaItem.time.to }}
-          </td>
-          <td class="agenda-item-details">
-            <ng-container *ngIf="isSpeaker(agendaItem)">
-              <p>{{ agendaItem.speaker.name }}</p>
-              {{ agendaItem.speaker.talkTitle }}
-            </ng-container>
-            <span *ngIf="!isSpeaker(agendaItem)">{{ agendaItem.details }}</span>
-          </td>
-        </tr>
+        @for (agendaItem of agenda; track $index) {
+          <tr>
+            <td class="agenda-item-time">
+              {{ agendaItem.time.from }} <span>-</span> {{ agendaItem.time.to }}
+            </td>
+            <td class="agenda-item-details">
+              @if (isSpeaker(agendaItem)) {
+                <p>{{ agendaItem.speaker.name }}</p>
+                {{ agendaItem.speaker.talkTitle }}
+              } @else {
+                <span>{{ agendaItem.details }}</span>
+              }
+            </td>
+          </tr>
+        }
       </tbody>
     </table>
   `,

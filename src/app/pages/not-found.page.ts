@@ -8,7 +8,6 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-  standalone: true,
   imports: [RouterLink],
   template: `
     <h1>Oops! Something went wrong.</h1>

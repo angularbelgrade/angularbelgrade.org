@@ -1,5 +1,3 @@
-/// <reference types="vitest" />
-
 import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
 import { speakersResource } from './src/app/resources/speakers.resource';
@@ -30,13 +28,4 @@ export default defineConfig(({ mode }) => ({
       nitro: { serveStatic: false },
     }),
   ],
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['src/test.ts'],
-    include: ['**/*.spec.ts'],
-  },
-  define: {
-    'import.meta.vitest': mode !== 'production',
-  },
 }));

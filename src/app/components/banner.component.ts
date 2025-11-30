@@ -3,7 +3,6 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'bgd-banner',
-  standalone: true,
   imports: [RouterLink],
   template: `
     <h1 style="display: none">NG Belgrade Conf 2024</h1>

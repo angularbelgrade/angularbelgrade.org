@@ -28,7 +28,6 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-  standalone: true,
   imports: [
     BannerComponent,
     EventDetailsComponent,
