@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => ({
           '/not-found',
           ...speakersResource.getSpeakers().map(({ id }) => `/speakers/${id}`),
         ],
-        sitemap: { host: 'https://angularbelgrade.org/' },
+        sitemap: { host: 'https://2024.angularbelgrade.org/' },
       },
       nitro: { serveStatic: false },
     }),

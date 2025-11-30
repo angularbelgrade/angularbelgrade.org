@@ -11,7 +11,7 @@ const speakerMap: Record<string, Speaker> = {
       'In this presentation, we’ll look at the current state of Angular and its tooling infrastructure - from an inside perspective. Along the way, Minko Gechev, Engineering Product Lead on the Angular team at Google, will dive into the theory and motivation driving the direction of the framework. In the second part of the talk, Minko will focus on the roadmap of Angular and peek into the future of the framework.<br/><br/>What lies ahead for the popular framework, how is Angular going to change?',
     photoUrl: '/people/minko-gechev.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-minko-gechev.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-minko-gechev.jpg',
     twitterUrl: 'https://twitter.com/mgechev/',
     linkedinUrl: 'https://www.linkedin.com/in/mgechev/',
     githubUrl: 'https://github.com/mgechev/',
@@ -27,7 +27,7 @@ const speakerMap: Record<string, Speaker> = {
       'The extensibility of the SignalStore is one of its biggest superpowers. In this talk, we will go over some of the extensions provided by NgRx and create a few from scratch.',
     photoUrl: '/people/alex-okrushko.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-alex-okrushko.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-alex-okrushko.jpg',
     twitterUrl: 'https://twitter.com/AlexOkrushko/',
     linkedinUrl: 'https://linkedin.com/in/alex-okrushko-64262a33/',
     githubUrl: 'https://github.com/alex-okrushko/',
@@ -42,7 +42,7 @@ const speakerMap: Record<string, Speaker> = {
       "Dive deep into the inner workings of Angular signals with 'Angular Signals under the Hood'. This talk offers an in-depth exploration of Angular signals, uncovering the mechanics and nuances that power this advanced feature. We'll dissect the core concepts, architecture, and how signals enhance communication and performance in Angular applications. Ideal for developers seeking a thorough understanding of Angular signals, this presentation will provide you with the knowledge to leverage these tools effectively in your projects, ensuring optimized and future-proof Angular applications.",
     photoUrl: '/people/fabian-gosebrink.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-fabian-gosebrink.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-fabian-gosebrink.jpg',
     twitterUrl: 'https://twitter.com/FabianGosebrink/',
     linkedinUrl: 'https://www.linkedin.com/in/fabian-gosebrink-71023a88/',
     githubUrl: 'https://github.com/FabianGosebrink/',
@@ -57,7 +57,7 @@ const speakerMap: Record<string, Speaker> = {
       'Lightweight Stores are easy to use and highly flexible. However, they also change several rules known from traditional Redux-based solutions. In this session, we shed some light on this.<br/><br/>We start with an Nx-based architecture and implement a use case with the new NGRX Signal Store. Thanks to the store’s fantastic extensibility mechanism, this is accomplished in just a few lines of code. Then, both worlds come together: We discuss several options, changed rules, and no-goes for using lightweight stores in such solutions.<br/><br/>By the end, you know how to leverage Nx and lightweight stores for your architecture and understand the differences to already known Redux-based solutions.',
     photoUrl: '/people/manfred-steyer.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-manfred-steyer.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-manfred-steyer.jpg',
     twitterUrl: 'https://twitter.com/ManfredSteyer/',
     linkedinUrl: 'https://linkedin.com/in/manfred-steyer-84645821/',
     githubUrl: 'https://github.com/manfredsteyer/',
@@ -72,7 +72,7 @@ const speakerMap: Record<string, Speaker> = {
       "As an OSS maintainer, are you tired of the constant struggle to manage your Angular libraries? Nx is here to offer a path to blissful enlightenment. In this talk, you'll discover how Nx can help you create, maintain, and share your libraries with the world with ease and serenity.",
     photoUrl: '/people/chau-tran.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-chau-tran.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-chau-tran.jpg',
     twitterUrl: 'https://twitter.com/Nartc1410/',
     linkedinUrl: 'https://www.linkedin.com/in/chauntran/',
     githubUrl: 'https://github.com/nartc/',
@@ -88,7 +88,7 @@ const speakerMap: Record<string, Speaker> = {
       "After working on many enterprise apps, one common thing is the challenge of using strict mode. Most apps start without strict mode or divert from strict mode at some point.<br/><br/>Once the code base becomes more extensive, it becomes hard to adopt strict mode. At Celonis, we have more than 26 apps and close to 100 libs, with more than 100k lines of code, and we had the same challenge.<br/><br/>Strict mode brings more type-checking to the code base, which means delivering apps with more confidence.<br/><br/>In this talk, I will share how we incrementally planned our migration so we don't block the entire team, only doing the strict mode migration and delivering once they have a resource.<br/><br/>So join me in this lightning talk and move your apps towards strict mode.",
     photoUrl: '/people/santosh-yadav.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-santosh-yadav.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-santosh-yadav.jpg',
     twitterUrl: 'https://twitter.com/SantoshYadavDev/',
     linkedinUrl: 'https://www.linkedin.com/in/santoshyadavdev/',
     githubUrl: 'https://github.com/santoshyadavdev/',
@@ -105,7 +105,7 @@ const speakerMap: Record<string, Speaker> = {
       'Dive into the arcane world of Angular state management with the advent of signals and signal-based state management libraries. What lessons can we learn from our state management past to help us architect better solutions for the future?',
     photoUrl: '/people/mike-ryan.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-mike-ryan.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-mike-ryan.jpg',
     twitterUrl: 'https://twitter.com/MikeRyanDev/',
     linkedinUrl: 'https://linkedin.com/in/mikeryandesigns/',
     githubUrl: 'https://github.com/MikeRyanDev/',
@@ -120,7 +120,7 @@ const speakerMap: Record<string, Speaker> = {
       'There are a couple of things that makes Angular faster. But what does faster even mean?<br/><br/>In this talk you will learn how to understand performance form a user centric perspective and what to do to impact CWV. We will not only apply and measure the latest features like defer blocks of the new control flow, but also a couple of tricks that might suprise you.<br/><br/>In the end you have a clear and practical understanding of what will and what will not get you a better performance score.',
     photoUrl: '/people/michael-hladky.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-michael-hladky.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-michael-hladky.jpg',
     twitterUrl: 'https://twitter.com/Michael_Hladky/',
     linkedinUrl: 'https://www.linkedin.com/in/michael-hladky-519340148/',
     githubUrl: 'https://github.com/BioPhoton/',
@@ -136,7 +136,7 @@ const speakerMap: Record<string, Speaker> = {
       "The Angular Framework features a built-in Dependency Injection mechanism that has been integral since its inception. This aspect is one of the core elements for which the JavaScript ecosystem lauds Angular. While many developers are adept at employing DI for services provisioned in the root scope, its utility extends well beyond this conventional application.<br/><br/>Through practical insights, this lightning talk will empower developers to unlock the full potential of Angular's DI system. From comprehending provider hierarchies to leveraging dependency inversion for cleaner code, participants will acquire knowledge to enhance their Angular applications.<br/><br/>Additionally, we will demystify the internals of the Injection tree, shedding light on the lifecycle of nodes and providing clarity on their utilization.<br/><br/>Join my talk as we uncover the features of Angular's Dependency Injection system, paving the way for more efficient and streamlined development workflows.",
     photoUrl: '/people/michael-egger-zikes.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-michael-egger-zikes.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-michael-egger-zikes.jpg',
     twitterUrl: 'https://twitter.com/MikeZks/',
     linkedinUrl: 'https://www.linkedin.com/in/michael-egger-zikes/',
   },
@@ -150,7 +150,7 @@ const speakerMap: Record<string, Speaker> = {
       "As Angular accelerates, so does the testing realm. Karma steps aside for the Web Test Runner, while Jest gains official support, and Analog entices us with Vitest. Playwright claims the top spot in E2E before Cypress, leaving us to ponder the role of Jasmine.<br/><br/>Let's sort things out!<br/><br/>I'll provide a comprehensive overview of the testing landscape in 2024 — spotlighting the tools that are now at our disposal, forecasting future developments, and outlining what a contemporary testing strategy entails.<br/><br/>Stay ahead with sharp testing in Angular!",
     photoUrl: '/people/rainer-hahnekamp.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-rainer-hahnekamp.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-rainer-hahnekamp.jpg',
     twitterUrl: 'https://twitter.com/rainerhahnekamp/',
     linkedinUrl: 'https://www.linkedin.com/in/rainerhahnekamp/',
     githubUrl: 'https://github.com/rainerhahnekamp/',
@@ -165,7 +165,7 @@ const speakerMap: Record<string, Speaker> = {
       'Developing a decentralized application with Angular can be challenging due to lack of community support. Otherwise it is possible to develop a performant application just using the right library and understanding how to communicate with Web3 tools. In this talk we’ll explore how to do it easily and make the latest tools performe the best!',
     photoUrl: '/people/soumaya-erradi.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-soumaya-erradi.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-soumaya-erradi.jpg',
     twitterUrl: 'https://twitter.com/sumy92/',
     linkedinUrl: 'https://www.linkedin.com/in/soumaya-erradi/',
     githubUrl: 'https://github.com/soumayaerradi/',
@@ -181,7 +181,7 @@ const speakerMap: Record<string, Speaker> = {
       'Want to know how to build a simple microfrontend architecture without relying on additional libraries and tools? We can achieve this by using iFrame and Angular directive. The iFrame directive will manage window event communications between applications. This approach provides a significant advantage by enabling our applications to work as container-presenter patterns. By breaking down a large project into smaller ones, they can work together and share data seamlessly.',
     photoUrl: '/people/igor-ciric.jpeg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-igor-ciric.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-igor-ciric.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/igor-ciric-8ab725168/',
   },
   'robin-goetz': {
@@ -194,7 +194,7 @@ const speakerMap: Record<string, Speaker> = {
       "This talk introduces AnalogJS to the audience. It gives insight into how AnalogJS takes full-stack Angular development to the next level. It shows how it adds file-based routing and Nitro powered API routes. It introduces hybrid SSR/SSG support & zero (or minimal) config deploys to cloud providers. Finally, it goes lays out clearly the technology driving the framework, Vite, and shows, with the help of Single File Components (.analog), how incredibly powerful it is. It compares AnalogJS' embrace of going all in on Vite with Angular deciding to use Vite as a dev server, but ultimately keeping it an implementation detail of their CLI.",
     photoUrl: '/people/robin-goetz.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-robin-goetz.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-robin-goetz.jpg',
     twitterUrl: 'https://twitter.com/goetzrobin/',
     linkedinUrl: 'https://www.linkedin.com/in/robingoetz/',
     githubUrl: 'https://github.com/goetzrobin/',
@@ -209,7 +209,7 @@ const speakerMap: Record<string, Speaker> = {
       'This talk tackles the challenge of ranking websites built on the same platform. Learn how clear differentiation in target audience, content, and SEO strategy can help both websites thrive in search results.',
     photoUrl: '/people/nenad-drobac.jpg',
     bannerUrl:
-      'https://angularbelgrade.org/banners/ng-belgrade-conf-2024-nenad-drobac.jpg',
+      'https://2024.angularbelgrade.org/banners/ng-belgrade-conf-2024-nenad-drobac.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/nenaddrobac/',
   },
 };
@@ -217,5 +217,6 @@ const speakerMap: Record<string, Speaker> = {
 export const speakersResource = {
   getSpeakers: () => Object.values(speakerMap),
   getSpeakerById: (id: string) => speakerMap[id],
-  getSpeakerUrl: (id: string) => `https://angularbelgrade.org/speakers/${id}`,
+  getSpeakerUrl: (id: string) =>
+    `https://2024.angularbelgrade.org/speakers/${id}`,
 } as const;
