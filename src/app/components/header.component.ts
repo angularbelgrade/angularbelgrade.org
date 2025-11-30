@@ -48,11 +48,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         <li><a routerLink="/team" routerLinkActive="active-link">Team</a></li>
         <li><a routerLink="/" fragment="venue">Venue</a></li>
         <li><a [href]="previousEventLink" target="_blank">2023</a></li>
-        <li>
-          <a class="tickets-button" routerLink="/" fragment="tickets">
-            Tickets
-          </a>
-        </li>
       </ul>
 
       <ul
@@ -90,16 +85,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
           <a routerLink="/" fragment="venue" (click)="closeMenu()">Venue</a>
         </li>
         <li><a [href]="previousEventLink" target="_blank">2023</a></li>
-        <li>
-          <a
-            class="tickets-button"
-            routerLink="/"
-            fragment="tickets"
-            (click)="closeMenu()"
-          >
-            Tickets
-          </a>
-        </li>
       </ul>
     </nav>
   `,
@@ -170,19 +155,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 
       .home-link {
         justify-self: flex-start;
-      }
-
-      .tickets-button {
-        padding: 0.5rem 1.5rem;
-        border-radius: 0.5rem;
-        background: var(--angular-gradient);
-        font-weight: 600;
-        text-decoration: none;
-      }
-
-      .tickets-button:hover {
-        color: inherit;
-        opacity: 0.9;
       }
 
       @media only screen and (min-width: 850px) {

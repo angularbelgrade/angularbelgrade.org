@@ -22,10 +22,6 @@ import { RouterLink } from '@angular/router';
       <p class="conference-day"><b>CONFERENCE DAY</b> : May 24, 2024</p>
       <p><b>WORKSHOP DAY</b> : May 23, 2024</p>
     </div>
-
-    <a class="tickets-button" routerLink="/" fragment="tickets">
-      Get Your Ticket
-    </a>
   `,
   styles: [
     `
@@ -74,20 +70,6 @@ import { RouterLink } from '@angular/router';
         border-radius: 1.5rem 0;
       }
 
-      .tickets-button {
-        font-weight: 600;
-        text-decoration: none;
-        border: 2px solid var(--accent-color);
-        border-radius: 0.5rem;
-        padding: 0.75rem 1.5rem;
-        box-shadow: 0 0 14px 0 var(--accent-color);
-      }
-
-      .tickets-button:hover {
-        color: inherit;
-        opacity: 0.9;
-      }
-
       @media only screen and (min-width: 850px) {
         :host {
           padding: 4rem 0;
@@ -101,8 +83,7 @@ import { RouterLink } from '@angular/router';
           font-size: 2rem;
         }
 
-        .banner-details,
-        .tickets-button {
+        .banner-details {
           font-size: 1.5rem;
         }
       }
