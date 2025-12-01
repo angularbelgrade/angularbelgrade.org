@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
       static: true,
       prerender: {
         routes: async () => ['/', '/not-found', ...getSpeakersRoutes()],
-        sitemap: { host: 'https://2023.angularbelgrade.org/' },
+        sitemap: { host: 'https://2023-edition.angularbelgrade.org/' },
       },
       nitro: { serveStatic: false },
     }),

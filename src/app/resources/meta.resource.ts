@@ -10,7 +10,7 @@ const descriptions: Record<string, string> = {
 export function getRouteMetaByYear(year: number): RouteMeta {
   const title = `Angular Belgrade Day ${year}`;
   const description = descriptions[year];
-  const image = `https://2023.angularbelgrade.org/banners/angular-belgrade-day-${year}.jpg`;
+  const image = `https://2023-edition.angularbelgrade.org/banners/angular-belgrade-day-${year}.jpg`;
 
   return {
     title,
@@ -45,7 +45,7 @@ export function getRouteMetaBySpeaker(): RouteMeta {
 
       const title = getTitle(route);
       const description = descriptions[year];
-      const image = `https://2023.angularbelgrade.org/banners/angular-belgrade-day-${id}.jpg`;
+      const image = `https://2023-edition.angularbelgrade.org/banners/angular-belgrade-day-${id}.jpg`;
 
       return [
         { name: 'description', content: description },
