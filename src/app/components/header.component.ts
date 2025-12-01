@@ -185,7 +185,7 @@ export class HeaderComponent implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly destroyRef = inject(DestroyRef);
 
-  readonly previousEventLink = 'https://2023.angularbelgrade.org';
+  readonly previousEventLink = 'https://2023-edition.angularbelgrade.org';
 
   readonly isNavVisible = signal(true);
   readonly isMenuOpen = signal(false);
