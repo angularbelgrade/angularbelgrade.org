@@ -18,8 +18,8 @@ import { RouterLink } from '@angular/router';
     <p class="banner-title">The Largest Angular Conference in the Balkans</p>
 
     <div class="banner-details">
-      <p class="conference-day"><b>CONFERENCE DAY</b> : May 24, 2024</p>
-      <p><b>WORKSHOP DAY</b> : May 23, 2024</p>
+      <p class="conference-day"><b>CONFERENCE DAY</b> : May 07, 2026</p>
+      <p><b>WORKSHOP DAY</b> : May 08, 2026</p>
     </div>
 
     <a class="tickets-button" routerLink="/" fragment="tickets">
@@ -34,7 +34,6 @@ import { RouterLink } from '@angular/router';
         align-items: center;
         padding: 2rem 1rem;
         border-bottom: 1px solid var(--border-color);
-        background-color: var(--homebanner-background-color);
         background-image: url(ng-belgrade-conf-cover.svg);
         background-repeat: no-repeat;
         background-position: bottom;
@@ -48,7 +47,7 @@ import { RouterLink } from '@angular/router';
       }
 
       .banner-title {
-        color: var(--homebanner-background-color);
+        color: var(--background-color);
         background: #830248b5;
         padding: 10px 20px;
         margin: 2rem 0 4rem 0;
@@ -82,16 +81,17 @@ import { RouterLink } from '@angular/router';
       }
 
       .tickets-button {
+        color: white;
         background: var(--logo-gray-color);
         font-weight: 600;
         text-decoration: none;
-        border-bottom: solid 4px var(--homebanner-background-color);
+        border-bottom: solid 4px var(--background-color);
         border-radius: 1.5rem;
         padding: 0.75rem 1.5rem;
       }
 
       .tickets-button:hover {
-        color: var(--homebanner-background-color);
+        color: var(--background-color);
         background: #292626ff;
       }
 

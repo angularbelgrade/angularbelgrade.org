@@ -172,9 +172,10 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
       }
 
       .tickets-button {
+        color: white;
         padding: 0.5rem 1.5rem;
         border-radius: 0.5rem;
-        background: var(--angular-gradient);
+        background: var(--logo-purple-color);
         font-weight: 600;
         text-decoration: none;
       }

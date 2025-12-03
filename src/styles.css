@@ -1,27 +1,17 @@
 :root {
   --angular-gradient: linear-gradient(
     to right,
-    #ef4444,
-    #f34054,
-    #f43e64,
-    #f43e74,
-    #f24184,
-    #f03f92,
-    #ed3fa0,
-    #e742ae,
-    #df42bf,
-    #d245d2,
-    #c14ce4,
-    #a855f7
+    #F18347,
+    #DE4A98,
+    #AB6A95
   );
   --red-color: #ef4444;
   --accent-color: #ec4899;
   --purple-color: #a855f7;
   --blue-color: #40a2d8;
   --green-color: #00b863;
-  --background-color: #0f0f11;
-  --border-color: #232125;
-  --homebanner-background-color: #fcefde;
+  --background-color: #fcefde;
+  --border-color: #e1d9d7;
   --logo-orange-color: #ee7955;
   --logo-purple-color: #db4d98;
   --logo-gray-color: #3c3938;
@@ -29,7 +19,7 @@
   font-family: Montserrat, sans-serif;
 
   color-scheme: dark;
-  color: white;
+  color: black;
   background-color: var(--background-color);
 }
 
@@ -47,7 +37,7 @@ body {
 }
 
 a {
-  color: white;
+  color: var(--logo-gray-color);
 }
 
 a:hover,
