@@ -34,9 +34,10 @@ import { RouterLink } from '@angular/router';
         align-items: center;
         padding: 2rem 1rem;
         border-bottom: 1px solid var(--border-color);
+        background-color: var(--homebanner-background-color);
         background-image: url(ng-belgrade-conf-cover.svg);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: bottom;
         background-size: cover;
       }
 
@@ -47,6 +48,9 @@ import { RouterLink } from '@angular/router';
       }
 
       .banner-title {
+        color: var(--homebanner-background-color);
+        background: #830248b5;
+        padding: 10px 20px;
         margin: 2rem 0 4rem 0;
         font-weight: 600;
         font-size: 1.25rem;
@@ -64,27 +68,31 @@ import { RouterLink } from '@angular/router';
         margin: 0;
         text-align: center;
         font-weight: 600;
+        color: #ffffff;
+        box-shadow: 10px 10px 0px -3px var(--logo-gray-color);
+        padding: 0.5rem 1.5rem;
+      }
+
+      .banner-details > p:last-child {
+        background: var(--logo-orange-color);
       }
 
       .conference-day {
-        padding: 0.5rem 1.5rem;
-        background: white;
-        color: var(--background-color);
-        border-radius: 1.5rem 0;
+        background: var(--logo-purple-color);
       }
 
       .tickets-button {
+        background: var(--logo-gray-color);
         font-weight: 600;
         text-decoration: none;
-        border: 2px solid var(--accent-color);
-        border-radius: 0.5rem;
+        border-bottom: solid 4px var(--homebanner-background-color);
+        border-radius: 1.5rem;
         padding: 0.75rem 1.5rem;
-        box-shadow: 0 0 14px 0 var(--accent-color);
       }
 
       .tickets-button:hover {
-        color: inherit;
-        opacity: 0.9;
+        color: var(--homebanner-background-color);
+        background: #292626ff;
       }
 
       @media only screen and (min-width: 850px) {
@@ -93,11 +101,12 @@ import { RouterLink } from '@angular/router';
         }
 
         .banner-logo {
-          max-width: 670px;
+          max-width: 570px;
         }
 
         .banner-title {
-          font-size: 2rem;
+          font-size: 1.7rem;
+          font-weight: 700;
         }
 
         .banner-details,
