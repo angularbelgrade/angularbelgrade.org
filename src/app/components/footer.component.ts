@@ -67,14 +67,24 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
           />
         </a>
       </div>
-      <nav class="footer-links">
-        <a routerLink="/code-of-conduct" routerLinkActive="active-link"
-          >Code of Conduct</a
-        >
-        <span>|</span>
-        <a routerLink="/terms-and-privacy" routerLinkActive="active-link"
-          >Terms & Privacy</a
-        >
+      <nav>
+        <div class="previous-editions">
+          <span>Previous Editions:</span>
+          <a href="https://2024.angularbelgrade.org" target="_blank">2024</a>
+          <span>|</span>
+          <a href="https://2023-edition.angularbelgrade.org" target="_blank"
+            >2023</a
+          >
+        </div>
+        <div class="footer-links">
+          <a routerLink="/code-of-conduct" routerLinkActive="active-link">
+            Code of Conduct
+          </a>
+          <span>|</span>
+          <a routerLink="/terms-and-privacy" routerLinkActive="active-link">
+            Terms & Privacy
+          </a>
+        </div>
       </nav>
       <p class="footer-copy">
         2020-{{ year }} Angular Belgrade © Webkraft Studio. All rights reserved.
@@ -96,6 +106,20 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
       p {
         margin: 0;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .previous-editions {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
       }
 
       .footer-links {

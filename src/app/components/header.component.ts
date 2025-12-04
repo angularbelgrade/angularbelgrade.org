@@ -46,7 +46,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
         <li><a routerLink="/team" routerLinkActive="active-link">Team</a></li>
         <li><a routerLink="/" fragment="venue">Venue</a></li>
-        <li><a [href]="previousEventLink" target="_blank">2023</a></li>
         <li>
           <a class="tickets-button" routerLink="/" fragment="tickets">
             Tickets
@@ -88,7 +87,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         <li>
           <a routerLink="/" fragment="venue" (click)="closeMenu()">Venue</a>
         </li>
-        <li><a [href]="previousEventLink" target="_blank">2023</a></li>
         <li>
           <a
             class="tickets-button"
@@ -211,8 +209,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 export class HeaderComponent implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly destroyRef = inject(DestroyRef);
-
-  readonly previousEventLink = 'https://2023-edition.angularbelgrade.org';
 
   readonly isNavVisible = signal(true);
   readonly isMenuOpen = signal(false);

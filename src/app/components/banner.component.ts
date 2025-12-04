@@ -68,7 +68,7 @@ import { RouterLink } from '@angular/router';
         text-align: center;
         font-weight: 600;
         color: #ffffff;
-        box-shadow: 10px 10px 0px -3px var(--logo-gray-color);
+        box-shadow: 10px 10px 0px -3px var(--gray-color);
         padding: 0.5rem 1.5rem;
       }
 
@@ -82,7 +82,7 @@ import { RouterLink } from '@angular/router';
 
       .tickets-button {
         color: white;
-        background: var(--logo-gray-color);
+        background: var(--gray-color);
         font-weight: 600;
         text-decoration: none;
         border-bottom: solid 4px var(--background-color);

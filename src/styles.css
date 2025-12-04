@@ -5,16 +5,16 @@
   --purple-color: #a855f7;
   --blue-color: #40a2d8;
   --green-color: #00b863;
+  --gray-color: #3c3938;
   --background-color: #fcefde;
   --border-color: #e1d9d7;
   --logo-orange-color: #ee7955;
   --logo-purple-color: #db4d98;
-  --logo-gray-color: #3c3938;
 
   font-family: Montserrat, sans-serif;
 
-  color-scheme: dark;
-  color: black;
+  color-scheme: light;
+  color: var(--gray-color);
   background-color: var(--background-color);
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 a {
-  color: var(--logo-gray-color);
+  color: var(--gray-color);
 }
 
 a:hover,
