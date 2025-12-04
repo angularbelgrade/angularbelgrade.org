@@ -94,7 +94,9 @@ export const routeMeta: RouteMeta = {
     <p>
       If you need to report an incident or have any questions about this Code of
       Conduct, please contact us at
-      <a href="mailto:angularbelgrade@gmail.com">angularbelgrade@gmail.com</a>.
+      <a href="mailto:angularbelgrade@gmail.com">
+        angularbelgrade&#64;gmail.com
+      </a>
     </p>
 
     <h2 class="section-subtitle">Acknowledgment</h2>

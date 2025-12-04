@@ -115,7 +115,7 @@ export const routeMeta: RouteMeta = {
     <p>
       Holder of the treatment is Webkraft Studio DOO, Vranjska 21/01, 11050
       Zvezdara, Belgrade | Company Number: 21724858 | Email:
-      <a href="mailto:office@webkraft.studio">office@webkraft.studio</a>
+      <a href="mailto:office@webkraft.studio">office&#64;webkraft.studio</a>
     </p>
 
     <h2 class="section-subtitle">Changes</h2>
@@ -136,7 +136,9 @@ export const routeMeta: RouteMeta = {
 
     <p>
       If you have any questions about these Terms, please contact us at
-      <a href="mailto:angularbelgrade@gmail.com">angularbelgrade@gmail.com</a>.
+      <a href="mailto:angularbelgrade@gmail.com">
+        angularbelgrade&#64;gmail.com
+      </a>
     </p>
   `,
   styles: [
