@@ -173,13 +173,13 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         color: white;
         padding: 0.5rem 1.5rem;
         border-radius: 0.5rem;
-        background: var(--logo-purple-color);
+        background: var(--dark-purple-color);
         font-weight: 600;
         text-decoration: none;
       }
 
       .tickets-button:hover {
-        opacity: 0.9;
+        background: var(--darker-purple-color);
       }
 
       @media only screen and (min-width: 850px) {
