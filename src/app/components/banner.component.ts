@@ -97,7 +97,7 @@ import { RouterLink } from '@angular/router';
 
       @media only screen and (min-width: 850px) {
         :host {
-          padding: 4rem 0;
+          padding: 4rem 0 9rem 0;
         }
 
         .banner-logo {

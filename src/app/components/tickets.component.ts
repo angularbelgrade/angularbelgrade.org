@@ -158,7 +158,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <b>For companies:</b>
       We can issue an invoice for the desired number of tickets that can be paid
       directly to our account. Contact us at
-      <a href="mailto:angularbelgrade@gmail.com">angularbelgrade@gmail.com</a>.
+      <a href="mailto:angularbelgrade@gmail.com">
+        angularbelgrade&#64;gmail.com
+      </a>
     </p>
   `,
   styles: [
@@ -198,6 +200,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         font-weight: 600;
         white-space: nowrap;
         padding: 0.25rem 0.5rem;
+        color: white;
       }
 
       .ticket-info {
@@ -257,6 +260,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       .buy-button {
+        color: white;
         padding: 0.75rem 1.5rem;
         border-radius: 0.5rem;
         font-weight: 600;
@@ -264,7 +268,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       .buy-button:hover {
-        color: inherit;
         opacity: 0.9;
       }
 
@@ -278,7 +281,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         align-items: center;
         font-size: 2rem;
         font-weight: bold;
-        background: #0f0f11b3;
+        background: rgba(252, 239, 222, 0.6);
         z-index: 1;
         top: -15px;
         border-radius: 0.5rem;
@@ -419,7 +422,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         .companies-note {
           margin: 2rem auto 0 auto;
           text-align: center;
-          max-width: 800px;
+          max-width: 810px;
           font-size: 1.25rem;
         }
 

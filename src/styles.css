@@ -1,10 +1,5 @@
 :root {
-  --angular-gradient: linear-gradient(
-    to right,
-    #F18347,
-    #DE4A98,
-    #AB6A95
-  );
+  --angular-gradient: linear-gradient(to right, #f18347, #de4a98, #ab6a95);
   --red-color: #ef4444;
   --accent-color: #ec4899;
   --purple-color: #a855f7;

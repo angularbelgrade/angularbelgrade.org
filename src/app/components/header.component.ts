@@ -181,7 +181,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
       }
 
       .tickets-button:hover {
-        color: inherit;
         opacity: 0.9;
       }
 

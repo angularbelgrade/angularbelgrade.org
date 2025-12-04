@@ -120,6 +120,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       .sponsors-button {
+        color: white;
         background: var(--angular-gradient);
         text-decoration: none;
         padding: 0.75rem 1.5rem;
@@ -128,7 +129,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       .sponsors-button:hover {
-        color: inherit;
         opacity: 0.9;
       }
 
