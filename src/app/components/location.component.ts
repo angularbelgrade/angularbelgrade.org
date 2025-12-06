@@ -27,7 +27,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     `
       :host {
         display: block;
-        padding-bottom: 2rem;
+        padding: 2rem 0;
       }
 
       .location-details {

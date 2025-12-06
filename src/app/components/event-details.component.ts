@@ -3,39 +3,39 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 @Component({
   selector: 'bgd-event-details',
   template: `
-  <div class="section-container">
-    <p class="event-description">
-      <span class="highlighted-text">NG Belgrade Conf 2026</span> is the largest
-      Angular conference in the Balkans. It takes place in <b>Belgrade</b>,
-      Serbia, including a
-      <span class="highlighted-text">Conference Day</span> on <b>May 7th</b> and
-      a <span class="highlighted-text">Workshop Day</span> on <b>May 8th</b>.
-      Join us to explore the latest trends and best practices in Angular!
-    </p>
+    <div class="section-container">
+      <p class="event-description">
+        <span class="highlighted-text">NG Belgrade Conf 2026</span> is the
+        largest Angular conference in the Balkans. It takes place in
+        <b>Belgrade</b>, Serbia, including a
+        <span class="highlighted-text">Conference Day</span> on
+        <b>May 7th</b> and a
+        <span class="highlighted-text">Workshop Day</span> on <b>May 8th</b>.
+        Join us to explore the latest trends and best practices in Angular!
+      </p>
 
-    <div class="event-stats">
-      <div class="event-stats-item">        
-        <span class="event-stats-label">edition</span>
-        <span class="highlighted-text">3.</span>
+      <div class="event-stats">
+        <div class="event-stats-item">
+          <span class="event-stats-label">edition</span>
+          <span class="highlighted-text">3rd</span>
+        </div>
 
-      </div>
+        <div class="event-stats-item">
+          <span class="event-stats-label">days</span>
+          <span class="highlighted-text">2</span>
+        </div>
 
-      <div class="event-stats-item">
-        <span class="event-stats-label">days</span>
-        <span class="highlighted-text">2</span>
-      </div>
+        <div class="event-stats-item">
+          <span class="event-stats-label">tech talks</span>
+          <span class="highlighted-text">14+</span>
+        </div>
 
-      <div class="event-stats-item">
-        <span class="event-stats-label">tech talks</span>
-        <span class="highlighted-text">14+</span>
-      </div>
-
-      <div class="event-stats-item">
-        <span class="event-stats-label">workshop</span>
-        <span class="highlighted-text">1</span>
+        <div class="event-stats-item">
+          <span class="event-stats-label">workshop</span>
+          <span class="highlighted-text">1</span>
+        </div>
       </div>
     </div>
-  </div>
 
     <p class="event-organization">
       Organized with ❤️ by the community, for the community.
@@ -53,12 +53,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         background-color: var(--lighter-orange-color);
       }
 
-      .section-container{
-        display :flex;
-        justify-content:center;
+      .section-container {
+        display: flex;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
-        gap:2rem;
+        gap: 2rem;
       }
 
       .event-description,
@@ -86,16 +86,16 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       .event-stats-item {
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: flex-start;
         background-color: var(--light-orange-color);
-        text-transform: uppercase;
         padding: 1rem 1.5rem 0.5rem;
         border-radius: 0.5rem;
         max-width: 180px;
         border-right: 6px solid var(--logo-orange-color);
       }
 
-      .event-stats-label{
+      .event-stats-label {
+        text-transform: uppercase;
         font-size: 0.7rem;
       }
 
@@ -105,14 +105,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       @media only screen and (min-width: 850px) {
-        .section-container{
+        .section-container {
           max-width: 1000px;
           flex-direction: row;
           align-items: baseline;
-          gap:4rem;
+          gap: 4rem;
         }
 
-        .event-description{
+        .event-description {
           max-width: 510px;
           font-size: 1.35rem;
         }
