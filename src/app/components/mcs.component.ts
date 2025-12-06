@@ -56,7 +56,8 @@ import { TeamMember } from '../models/team-member.model';
       :host {
         display: block;
         padding-bottom: 2rem;
-        border-bottom: 1px solid var(--border-color);
+        padding-top: 2rem;
+        background-color: var(--lighter-orange-color);
       }
 
       .mc-list {
