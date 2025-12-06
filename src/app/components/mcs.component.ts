@@ -55,8 +55,8 @@ import { TeamMember } from '../models/team-member.model';
     `
       :host {
         display: block;
-        padding-bottom: 2rem;
-        padding-top: 2rem;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
         background-color: var(--lighter-orange-color);
       }
 
@@ -64,7 +64,8 @@ import { TeamMember } from '../models/team-member.model';
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        padding: 1rem;
+        width:220px;
+        margin: 0 auto;
       }
 
       .mc {
@@ -79,7 +80,8 @@ import { TeamMember } from '../models/team-member.model';
       }
 
       .mc-photo {
-        border-radius: 0.5rem;
+        border-radius: 0px;
+        box-shadow: 13px 13px 0px -3px var(--logo-orange-color);
       }
 
       .mc-details {
@@ -93,14 +95,16 @@ import { TeamMember } from '../models/team-member.model';
 
       .mc-name {
         margin: 0;
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--logo-orange-color);
       }
 
       .mc-headline {
         margin: 0;
         font-size: 1rem;
         line-height: 1.4;
+        opacity: 0.8;
       }
 
       .social-media-links {
@@ -118,14 +122,21 @@ import { TeamMember } from '../models/team-member.model';
 
       @media only screen and (min-width: 850px) {
         :host {
-          margin: 0 auto 2rem auto;
+          margin: 0 auto;
         }
 
         .mc-list {
+          width: auto;
           display: grid;
-          grid-template-columns: repeat(2, minmax(0, 340px));
+          grid-template-columns: repeat(2, minmax(0, 220px));
           justify-content: center;
-          gap: 2rem;
+          gap: 8rem;
+          padding:1rem;
+        }
+
+        .mc-details{
+          align-items: flex-start;
+          text-align: left;
         }
       }
     `,

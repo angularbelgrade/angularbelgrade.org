@@ -18,13 +18,19 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       :host {
         display: block;
         padding-bottom: 2rem;
-        border-bottom: 1px solid var(--border-color);
+        padding-top: 2rem;
+        background-color: var(--light-orange-color);
       }
 
       .ticket-sales-note {
         text-align: center;
         font-size: 1.25rem;
         font-weight: 600;
+        background: var(--logo-orange-color);
+        width: fit-content;
+        margin: 0 auto 2rem;
+        padding: 0.3rem 1rem;
+        color: white;
       }
 
       .waiting-list-note {

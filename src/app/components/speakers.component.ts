@@ -60,8 +60,8 @@ import { speakersResource } from '../resources/speakers.resource';
     `
       :host {
         display: block;
-        padding-bottom: 2rem;
-        padding-top: 2rem;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
         background-color: var(--light-orange-color);
       }
 
@@ -126,10 +126,13 @@ import { speakersResource } from '../resources/speakers.resource';
       }
 
       .speakers-announcement-note {
-        margin: 0 0 2rem 0;
-        padding: 0 1rem;
+        background: var(--logo-orange-color);
+        width: fit-content;
+        margin: 0 auto 2rem;
+        padding: 0.3rem 1rem;
         text-align: center;
         font-weight: 600;
+        color: white;
       }
 
       .cfp {
@@ -143,6 +146,7 @@ import { speakersResource } from '../resources/speakers.resource';
 
       .cfp-note {
         margin: 0;
+        text-align: center;
       }
 
       .cfp-button {
