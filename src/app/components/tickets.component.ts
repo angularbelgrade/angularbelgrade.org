@@ -5,162 +5,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <h2 id="tickets" class="section-title">Tickets</h2>
 
-    <div class="tickets">
-      <div class="ticket red-ticket">
-        <span class="badge">Until Feb 10</span>
-
-        <div class="banner">
-          <span class="banner-text">SOLD OUT</span>
-        </div>
-
-        <div class="ticket-info">
-          <h3 class="ticket-name">Early Conference Ticket</h3>
-          <p class="ticket-price">
-            <span class="base-price">135€</span>
-            100€
-          </p>
-        </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Conference Day on <b>May 24</b></li>
-          <li>Early access to talk recordings</li>
-          <li>Personalized badge</li>
-          <li>Gift bag</li>
-          <li>Coffee breaks with free drinks</li>
-          <li>Lunch</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
-
-      <div class="ticket green-ticket">
-        <span class="badge">Group Discount</span>
-
-        <div class="banner">
-          <span class="banner-text">SOLD OUT</span>
-        </div>
-
-        <div class="ticket-info">
-          <h3 class="ticket-name">Conference Ticket</h3>
-          <p class="ticket-price">
-            <span class="base-price">175€</span>
-            135€
-          </p>
-        </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Conference Day on <b>May 24</b></li>
-          <li>Early access to talk recordings</li>
-          <li>Personalized badge</li>
-          <li>Gift bag</li>
-          <li>Coffee breaks with free drinks</li>
-          <li>Lunch</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
-
-      <div class="ticket accent-ticket">
-        <span class="badge">30 Seats Available</span>
-
-        <div class="banner">
-          <span class="banner-text">SOLD OUT</span>
-        </div>
-
-        <div class="ticket-info">
-          <h3 class="ticket-name">Final Conference Ticket</h3>
-          <p class="ticket-price">175€</p>
-        </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Conference Day on <b>May 24</b></li>
-          <li>Early access to talk recordings</li>
-          <li>Personalized badge</li>
-          <li>Gift bag</li>
-          <li>Coffee breaks with free drinks</li>
-          <li>Lunch</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
-
-      <div class="ticket purple-ticket">
-        <span class="badge">30 Seats Available</span>
-
-        <div class="banner">
-          <span class="banner-text">SOLD OUT</span>
-        </div>
-
-        <div class="ticket-info">
-          <h3 class="ticket-name">Workshop Ticket</h3>
-          <p class="ticket-price">
-            <span class="base-price">275€</span>
-            200€
-          </p>
-        </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Workshop Day on <b>May 23</b></li>
-          <li>Certificate of completion</li>
-          <li>Early access to talk recordings</li>
-          <li>Coffee breaks with free drinks</li>
-          <li>Lunch</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
-
-      <div class="ticket blue-ticket">
-        <span class="badge">10 Seats Available</span>
-
-        <div class="banner">
-          <span class="banner-text">SOLD OUT</span>
-        </div>
-
-        <div class="ticket-info">
-          <h3 class="ticket-name">Final Workshop Ticket</h3>
-          <p class="ticket-price">275€</p>
-        </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Workshop Day on <b>May 23</b></li>
-          <li>Certificate of completion</li>
-          <li>Early access to talk recordings</li>
-          <li>Coffee breaks with free drinks</li>
-          <li>Lunch</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
-    </div>
-
-    <p class="companies-note">
-      <b>For companies:</b>
-      We can issue an invoice for the desired number of tickets that can be paid
-      directly to our account. Contact us at
-      <a href="mailto:angularbelgrade@gmail.com">
-        angularbelgrade&#64;gmail.com
+    <p class="ticket-sales-note">Ticket sales will start soon!</p>
+    <p class="waiting-list-note">
+      <a href="https://forms.gle/h1AFiJEUoAfM1mNTA" target="_blank">
+        Join the waiting list
       </a>
+      to receive the latest updates.
     </p>
   `,
   styles: [
@@ -169,6 +19,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         display: block;
         padding-bottom: 2rem;
         border-bottom: 1px solid var(--border-color);
+      }
+
+      .ticket-sales-note {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .waiting-list-note {
+        margin-top: 2rem;
+        text-align: center;
       }
 
       .tickets {
@@ -403,6 +264,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       @media only screen and (min-width: 850px) {
+        .ticket-sales-note {
+          font-size: 1.5rem;
+        }
+
+        .waiting-list-note {
+          font-size: 1.25rem;
+        }
+
         .tickets {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 300px));

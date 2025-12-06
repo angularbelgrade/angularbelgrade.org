@@ -4,7 +4,7 @@ import { TeamMember } from '../models/team-member.model';
 @Component({
   selector: 'bgd-mcs',
   template: `
-    <h2 id="mcs" class="section-title">MCs</h2>
+    <h2 id="mcs" class="section-title">Masters of Ceremony</h2>
 
     <div class="mc-list">
       @for (mc of mcs; track mc.name) {
@@ -14,7 +14,6 @@ import { TeamMember } from '../models/team-member.model';
               class="mc-photo"
               [alt]="mc.name"
               [src]="mc.photoUrl"
-              loading="lazy"
               height="220"
               width="220"
             />
@@ -135,11 +134,10 @@ import { TeamMember } from '../models/team-member.model';
 export class MCsComponent {
   readonly mcs: TeamMember[] = [
     {
-      name: 'Luciano Murruni',
-      headline: 'Lead Software Engineer at ConTe.it<br/>NG Rome Organizer',
-      photoUrl: '/people/luciano-murruni.jpg',
-      twitterUrl: 'https://twitter.com/MrMurruni/',
-      linkedinUrl: 'https://www.linkedin.com/in/lucianomurruni/',
+      name: 'Jelena Ljubenović',
+      headline: 'SAP Consultant at MSG Global Solutions',
+      photoUrl: '/people/jelena-ljubenovic.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/jelena-ljubenovic-b08a68105/',
     },
     {
       name: 'Michael Egger-Zikes',

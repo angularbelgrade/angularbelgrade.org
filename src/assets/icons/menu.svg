@@ -2,9 +2,9 @@
 <svg width="800px" height="800px" viewBox="0 -5 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>menu</title>
     <linearGradient id="ng-gradient">
-        <stop offset="0%" stop-color="#ef4444" />
-        <stop offset="50%" stop-color="#ec4899" />
-        <stop offset="100%" stop-color="#a855f7" />
+        <stop offset="0%" stop-color="#f18347" />
+        <stop offset="50%" stop-color="#de4a98" />
+        <stop offset="100%" stop-color="#ab6a95" />
     </linearGradient>
     <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-995.000000, -160.000000)" fill="url(#ng-gradient)" fill-rule="nonzero">

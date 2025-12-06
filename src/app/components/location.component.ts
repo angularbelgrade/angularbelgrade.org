@@ -1,26 +1,26 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'bgd-venue',
+  selector: 'bgd-location',
   template: `
-    <h2 id="venue" class="section-title">Venue</h2>
+    <h2 id="location" class="section-title">Location</h2>
 
-    <div class="venue-details">
-      <h3>Mona Plaza Hotel</h3>
+    <div class="location-details">
+      <h3>Cineplexx BIG</h3>
 
       <a
-        class="venue-address"
-        href="https://maps.app.goo.gl/RG3DihiaRCDpEMQK6"
+        class="location-address"
+        href="https://maps.app.goo.gl/ukRjq1KEbgWXXEzj8"
         target="_blank"
       >
-        Cara Uroša 62-64, Belgrade, Serbia
+        Višnjička 84, Belgrade, Serbia
       </a>
     </div>
 
     <div class="gallery">
-      <img src="/venue/mona1.jpg" loading="lazy" alt="Mona Plaza Photo 1" />
-      <img src="/venue/mona2.jpg" loading="lazy" alt="Mona Plaza Photo 2" />
-      <img src="/venue/mona3.jpg" loading="lazy" alt="Mona Plaza Photo 3" />
+      <img src="/location/location1.jpg" alt="Location Photo 1" />
+      <img src="/location/location2.jpg" alt="Location Photo 2" />
+      <img src="/location/location3.jpg" alt="Location Photo 3" />
     </div>
   `,
   styles: [
@@ -30,7 +30,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         padding-bottom: 2rem;
       }
 
-      .venue-details {
+      .location-details {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -47,7 +47,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         margin: 0;
       }
 
-      .venue-address {
+      .location-address {
         text-align: center;
       }
 
@@ -73,7 +73,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           font-size: 1.5rem;
         }
 
-        .venue-address {
+        .location-address {
           font-size: 1.25rem;
         }
       }
@@ -81,4 +81,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class VenueComponent {}
+export class LocationComponent {}

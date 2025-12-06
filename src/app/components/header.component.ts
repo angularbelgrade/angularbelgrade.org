@@ -41,11 +41,8 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
 
       <ul class="desktop-links">
         <li><a routerLink="/" fragment="speakers">Speakers</a></li>
-        <li><a routerLink="/" fragment="agenda">Agenda</a></li>
-        <li><a routerLink="/" fragment="workshop">Workshop</a></li>
-        <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
         <li><a routerLink="/team" routerLinkActive="active-link">Team</a></li>
-        <li><a routerLink="/" fragment="venue">Venue</a></li>
+        <li><a routerLink="/" fragment="location">Location</a></li>
         <li>
           <a class="tickets-button" routerLink="/" fragment="tickets">
             Tickets
@@ -63,19 +60,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
           </a>
         </li>
         <li>
-          <a routerLink="/" fragment="agenda" (click)="closeMenu()"> Agenda </a>
-        </li>
-        <li>
-          <a routerLink="/" fragment="workshop" (click)="closeMenu()">
-            Workshop
-          </a>
-        </li>
-        <li>
-          <a routerLink="/" fragment="sponsors" (click)="closeMenu()">
-            Sponsors
-          </a>
-        </li>
-        <li>
           <a
             routerLink="/team"
             routerLinkActive="active-link"
@@ -85,7 +69,9 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
           </a>
         </li>
         <li>
-          <a routerLink="/" fragment="venue" (click)="closeMenu()">Venue</a>
+          <a routerLink="/" fragment="location" (click)="closeMenu()"
+            >Location</a
+          >
         </li>
         <li>
           <a
@@ -173,13 +159,13 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         color: white;
         padding: 0.5rem 1.5rem;
         border-radius: 0.5rem;
-        background: var(--dark-purple-color);
+        background: var(--angular-gradient);
         font-weight: 600;
         text-decoration: none;
       }
 
       .tickets-button:hover {
-        background: var(--darker-purple-color);
+        opacity: 0.9;
       }
 
       @media only screen and (min-width: 850px) {

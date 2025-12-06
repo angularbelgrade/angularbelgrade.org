@@ -5,12 +5,8 @@ import { BannerComponent } from '../components/banner.component';
 import { EventDetailsComponent } from '../components/event-details.component';
 import { SpeakersComponent } from '../components/speakers.component';
 import { MCsComponent } from '../components/mcs.component';
-import { AgendaComponent } from '../components/agenda.component';
-import { WorkshopComponent } from '../components/workshop.component';
 import { TicketsComponent } from '../components/tickets.component';
-import { SponsorsComponent } from '../components/sponsors.component';
-import { PartnersComponent } from '../components/partners.component';
-import { VenueComponent } from '../components/venue.component';
+import { LocationComponent } from '../components/location.component';
 
 export const routeMeta: RouteMeta = {
   title: metaResource.title,
@@ -33,24 +29,16 @@ export const routeMeta: RouteMeta = {
     EventDetailsComponent,
     SpeakersComponent,
     MCsComponent,
-    AgendaComponent,
-    WorkshopComponent,
     TicketsComponent,
-    SponsorsComponent,
-    PartnersComponent,
-    VenueComponent,
+    LocationComponent,
   ],
   template: `
     <bgd-banner />
     <bgd-event-details />
     <bgd-speakers />
     <bgd-mcs />
-    <bgd-agenda />
-    <bgd-workshop />
     <bgd-tickets />
-    <bgd-sponsors />
-    <bgd-partners />
-    <bgd-venue />
+    <bgd-location />
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

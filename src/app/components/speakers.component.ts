@@ -8,14 +8,14 @@ import { speakersResource } from '../resources/speakers.resource';
   template: `
     <h2 id="speakers" class="section-title">Speakers</h2>
 
-    <div class="speaker-list">
+    <div class="speaker-list" style="display: none">
       @for (speaker of speakers; track speaker.id) {
         <a class="speaker" routerLink="/speakers/{{ speaker.id }}">
           <div class="speaker-photo-container">
             <img
               class="open-link"
               src="/icons/open-link.svg"
-              alt="Open Link"
+              alt="Open Link Icon"
               loading="lazy"
               height="26"
               width="26"
@@ -25,7 +25,6 @@ import { speakersResource } from '../resources/speakers.resource';
               class="speaker-photo"
               [alt]="speaker.name"
               [src]="speaker.photoUrl"
-              loading="lazy"
               height="220"
               width="220"
             />
@@ -39,6 +38,22 @@ import { speakersResource } from '../resources/speakers.resource';
           </div>
         </a>
       }
+    </div>
+
+    <p class="speakers-announcement-note">Speakers will be announced soon!</p>
+
+    <div class="cfp">
+      <p class="cfp-note">
+        Interested in speaking at NG Belgrade Conf?
+        <i>Call for Papers closes on Jan 31, 2026.</i>
+      </p>
+      <a
+        class="cfp-button"
+        href="https://forms.gle/Q1eRDgKg94VM7Wpb9"
+        target="_blank"
+      >
+        Submit Your Talk
+      </a>
     </div>
   `,
   styles: [
@@ -109,6 +124,39 @@ import { speakersResource } from '../resources/speakers.resource';
         line-height: 1.4;
       }
 
+      .speakers-announcement-note {
+        margin: 0 0 2rem 0;
+        padding: 0 1rem;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .cfp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0 1rem;
+      }
+
+      .cfp-note {
+        margin: 0;
+      }
+
+      .cfp-button {
+        color: white;
+        background: var(--angular-gradient);
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+      }
+
+      .cfp-button:hover {
+        opacity: 0.9;
+      }
+
       @media only screen and (min-width: 850px) {
         .speaker-list {
           display: grid;
@@ -119,6 +167,12 @@ import { speakersResource } from '../resources/speakers.resource';
 
         .open-link {
           display: none;
+        }
+
+        .cfp-note,
+        .cfp-button,
+        .speakers-announcement-note {
+          font-size: 1.25rem;
         }
       }
     `,

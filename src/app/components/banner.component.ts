@@ -5,10 +5,10 @@ import { RouterLink } from '@angular/router';
   selector: 'bgd-banner',
   imports: [RouterLink],
   template: `
-    <h1 style="display: none">NG Belgrade Conf 2024</h1>
+    <h1 style="display: none">NG Belgrade Conf 2026</h1>
 
     <img
-      alt="NG Belgrade Conf 2024"
+      alt="NG Belgrade Conf 2026"
       src="/ng-belgrade-conf.svg"
       class="banner-logo"
       fetchPriority="high"
@@ -19,7 +19,7 @@ import { RouterLink } from '@angular/router';
 
     <div class="banner-details">
       <p class="conference-day"><b>CONFERENCE DAY</b> : May 07, 2026</p>
-      <p><b>WORKSHOP DAY</b> : May 08, 2026</p>
+      <p class="workshop-day"><b>WORKSHOP DAY</b> : May 08, 2026</p>
     </div>
 
     <a class="tickets-button" routerLink="/" fragment="tickets">
@@ -72,12 +72,12 @@ import { RouterLink } from '@angular/router';
         padding: 0.5rem 1.5rem;
       }
 
-      .banner-details > p:last-child {
-        background: var(--logo-orange-color);
-      }
-
       .conference-day {
         background: var(--logo-purple-color);
+      }
+
+      .workshop-day {
+        background: var(--logo-orange-color);
       }
 
       .tickets-button {

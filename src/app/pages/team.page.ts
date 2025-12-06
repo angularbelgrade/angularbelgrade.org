@@ -154,7 +154,7 @@ export default class TeamPage {
     {
       name: 'Marko Stanimirović',
       headline:
-        'Principal Frontend Engineer at SMG<br/>NgRx Core Team • GDE in Angular',
+        'Frontend Tech Lead at BlinkOps<br/>NgRx Co-Maintainer • GDE in Angular',
       photoUrl: '/people/marko-stanimirovic.jpg',
       twitterUrl: 'https://twitter.com/MarkoStDev/',
       linkedinUrl: 'https://linkedin.com/in/markostanimirovic/',
@@ -168,18 +168,11 @@ export default class TeamPage {
       linkedinUrl: 'https://linkedin.com/in/avramz',
     },
     {
-      name: 'Miloš Rujević',
-      headline: 'Technical PM at Publicis Sapient',
-      photoUrl: '/people/milos-rujevic.jpg',
-      twitterUrl: 'https://twitter.com/MikeTechnicalPM/',
-      linkedinUrl: 'https://www.linkedin.com/in/aitechpm/',
-      githubUrl: 'https://github.com/itmilos/',
-    },
-    {
       name: 'Duško Perić',
-      headline: 'Senior Frontend Engineer at SMG',
+      headline: 'Senior Angular Developer at TwogNation',
       photoUrl: '/people/dusko-peric.jpg',
       linkedinUrl: 'https://linkedin.com/in/du%C5%A1ko-peri%C4%87-a90a9782/',
+      githubUrl: 'https://github.com/DuskoPeric',
     },
     {
       name: 'Anđela Pejanović',
@@ -188,10 +181,35 @@ export default class TeamPage {
       linkedinUrl: 'https://linkedin.com/in/andjelapejanovic/',
     },
     {
+      name: 'Miloš Rujević',
+      headline: 'Technical Product Manager',
+      photoUrl: '/people/milos-rujevic.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/aitechpm/',
+      githubUrl: 'https://github.com/itmilos/',
+    },
+    {
       name: 'Edis Šarda',
       headline: 'Senior Software Engineer at SAP',
       photoUrl: '/people/edis-sarda.jpg',
       linkedinUrl: 'https://linkedin.com/in/edissarda/',
+    },
+    {
+      name: 'Milica Petrović',
+      headline: 'Senior Frontend Engineer at BlinkOps',
+      photoUrl: '/people/milica-petrovic.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/milica-petrovic-5235bbab/',
+    },
+    {
+      name: 'Vesna Babić',
+      headline: 'Frontend Engineer at JobCloud',
+      photoUrl: '/people/vesna-babic.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/vesna-babi%C4%87-49337918b/',
+    },
+    {
+      name: 'Jovan Mitrović',
+      headline: 'Frontend Engineer at JobCloud',
+      photoUrl: '/people/jovan-mitrovic.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/jovan-mitrovic-b682b41b9/',
     },
   ];
 }

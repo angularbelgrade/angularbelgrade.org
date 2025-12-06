@@ -1,6 +1,7 @@
 import {
   ApplicationConfig,
   provideBrowserGlobalErrorListeners,
+  provideZonelessChangeDetection,
 } from '@angular/core';
 import {
   provideHttpClient,
@@ -20,6 +21,7 @@ import { provideFileRouter, requestContextInterceptor } from '@analogjs/router';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
+    provideZonelessChangeDetection(),
     provideFileRouter(
       withInMemoryScrolling({
         anchorScrolling: 'enabled',
