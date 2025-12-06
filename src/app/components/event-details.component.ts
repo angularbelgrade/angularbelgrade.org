@@ -65,8 +65,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       .event-stats {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        flex-direction: column;
-        gap: 2rem;
+        row-gap: 2rem;
+        column-gap: 4rem;
       }
 
       .event-stats-item {
