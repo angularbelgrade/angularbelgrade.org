@@ -6,9 +6,8 @@
     "node": ">=22"
   },
   "scripts": {
-    "ng": "ng",
-    "dev": "vite",
-    "start": "pnpm run dev",
+    "prepare": "git config core.hooksPath .githooks",
+    "start": "vite",
     "build": "vite build",
     "watch": "vite build --watch",
     "format": "prettier --write ."
@@ -33,7 +32,8 @@
     "@angular/build": "21.0.1",
     "@angular/cli": "21.0.1",
     "@angular/compiler-cli": "21.0.1",
-    "prettier": "3.7.3",
+    "lint-staged": "16.2.7",
+    "prettier": "3.7.4",
     "typescript": "5.9.3",
     "vite": "7.2.4"
   }
