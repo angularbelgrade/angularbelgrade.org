@@ -64,7 +64,7 @@ import { TeamMember } from '../models/team-member.model';
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        width:220px;
+        width: 220px;
         margin: 0 auto;
       }
 
@@ -131,10 +131,10 @@ import { TeamMember } from '../models/team-member.model';
           grid-template-columns: repeat(2, minmax(0, 220px));
           justify-content: center;
           gap: 8rem;
-          padding:1rem;
+          padding: 1rem;
         }
 
-        .mc-details{
+        .mc-details {
           align-items: flex-start;
           text-align: left;
         }
@@ -146,9 +146,9 @@ import { TeamMember } from '../models/team-member.model';
 export class MCsComponent {
   readonly mcs: TeamMember[] = [
     {
-      name: 'Jelena Ljubenović',
+      name: 'Jelena Babić',
       headline: 'SAP Consultant at MSG Global Solutions',
-      photoUrl: '/people/jelena-ljubenovic.jpg',
+      photoUrl: '/people/jelena-babic.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/jelena-ljubenovic-b08a68105/',
     },
     {
