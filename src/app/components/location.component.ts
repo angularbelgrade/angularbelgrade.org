@@ -43,9 +43,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       h3 {
+        color: var(--logo-orange-color);
         text-align: center;
         font-size: 1.25rem;
-        font-weight: 600;
+        font-weight: 700;
         margin: 0;
       }
 
@@ -67,7 +68,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         width: 100%;
         max-width: 400px;
         height: auto;
-        border-radius: 0.5rem;
       }
 
       @media only screen and (min-width: 850px) {

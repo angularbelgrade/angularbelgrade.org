@@ -71,9 +71,11 @@ export const routeMeta: RouteMeta = {
   styles: [
     `
       :host {
+        background-color: var(--lighter-orange-color);
         display: flex;
         flex-direction: column;
-        margin: 0 1rem 2rem 1rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         align-items: center;
       }
 
@@ -96,7 +98,8 @@ export const routeMeta: RouteMeta = {
       }
 
       .member-photo {
-        border-radius: 0.5rem;
+        border-radius: 0px;
+        box-shadow: 13px 13px 0px -3px var(--dark-purple-color);
       }
 
       .member-details {
@@ -110,14 +113,16 @@ export const routeMeta: RouteMeta = {
 
       .member-name {
         margin: 0;
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--dark-purple-color);
       }
 
       .member-headline {
         margin: 0;
         font-size: 1rem;
         line-height: 1.4;
+        opacity: 0.8;
       }
 
       .social-media-links {
@@ -135,14 +140,20 @@ export const routeMeta: RouteMeta = {
 
       @media only screen and (min-width: 850px) {
         :host {
-          margin: 0 auto 2rem auto;
+          margin: 0 auto;
         }
 
         .member-list {
           display: grid;
-          grid-template-columns: repeat(3, minmax(0, 340px));
+          grid-template-columns: repeat(3, minmax(0, 220px));
           justify-content: center;
-          gap: 2rem;
+          column-gap: 8rem;
+          row-gap: 3rem;
+        }
+
+        .member-details {
+          align-items: flex-start;
+          text-align: left;
         }
       }
     `,
