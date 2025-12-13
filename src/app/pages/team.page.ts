@@ -144,10 +144,14 @@ export const routeMeta: RouteMeta = {
 
         .member-list {
           display: grid;
-          grid-template-columns: repeat(3, minmax(0, 220px));
+          grid-template-columns: repeat(3, minmax(0, 290px));
           justify-content: center;
-          column-gap: 8rem;
+          column-gap: 7rem;
           row-gap: 3rem;
+        }
+
+        .member {
+          align-items: flex-start;
         }
 
         .member-details {
@@ -164,7 +168,7 @@ export default class TeamPage {
     {
       name: 'Marko Stanimirović',
       headline:
-        'Frontend Tech Lead at BlinkOps • Angular GDE<br/>NgRx Co-Maintainer',
+        'Frontend Tech Lead at BlinkOps<br/>NgRx Co-Maintainer • Angular GDE',
       photoUrl: '/people/marko-stanimirovic.jpg',
       twitterUrl: 'https://twitter.com/MarkoStDev/',
       linkedinUrl: 'https://linkedin.com/in/markostanimirovic/',
