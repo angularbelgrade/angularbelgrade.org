@@ -71,11 +71,10 @@ export const routeMeta: RouteMeta = {
   styles: [
     `
       :host {
-        background-color: var(--lighter-orange-color);
+        background-color: var(--light-orange-color);
         display: flex;
         flex-direction: column;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding: 3rem 0;
         align-items: center;
       }
 
@@ -112,7 +111,7 @@ export const routeMeta: RouteMeta = {
 
       .member-name {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         font-weight: 700;
         color: var(--dark-purple-color);
       }

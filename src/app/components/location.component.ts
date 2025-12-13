@@ -26,10 +26,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styles: [
     `
       :host {
-        background-color: var(--lighter-orange-color);
+        background-color: var(--light-orange-color);
         display: block;
-        padding-bottom: 3rem;
-        padding-top: 3rem;
+        padding: 3rem 0;
       }
 
       .location-details {

@@ -92,9 +92,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     `
       :host {
         display: block;
-        padding-bottom: 2rem;
-        padding-top: 2rem;
-        background-color: var(--light-orange-color);
+        padding: 3rem 0;
+        background-color: var(--lighter-orange-color);
       }
 
       .tickets {

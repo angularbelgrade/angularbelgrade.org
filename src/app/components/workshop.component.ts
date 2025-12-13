@@ -138,8 +138,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     `
       :host {
         display: block;
-        padding: 0 1rem 2rem 1rem;
-        border-bottom: 1px solid var(--border-color);
+        padding: 3rem 1rem;
+        background-color: var(--light-orange-color);
       }
 
       .workshop-card {
@@ -150,6 +150,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         border: 1px solid var(--border-color);
         border-radius: 0.5rem;
         margin: 0 auto;
+        background-color: var(--lighter-orange-color);
       }
 
       .workshop-title {
@@ -167,16 +168,16 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
       .workshop-info {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 2rem;
       }
 
       .trainer-photos {
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        gap: 2rem;
       }
 
       .workshop-info > ul {
@@ -230,7 +231,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           max-width: 860px;
         }
 
-        .trainer-photos {
+        .workshop-info {
           flex-direction: row;
         }
       }

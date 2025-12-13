@@ -55,8 +55,7 @@ import { TeamMember } from '../models/team-member.model';
     `
       :host {
         display: block;
-        padding-bottom: 3rem;
-        padding-top: 3rem;
+        padding: 3rem 0;
         background-color: var(--lighter-orange-color);
       }
 
@@ -94,7 +93,7 @@ import { TeamMember } from '../models/team-member.model';
 
       .mc-name {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         font-weight: 700;
         color: var(--orange-color);
       }
