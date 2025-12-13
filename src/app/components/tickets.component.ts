@@ -34,11 +34,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </div>
 
       <div class="ticket purple-ticket">
-        <span class="badge">20 Seats Available</span>
+        <span class="badge">30 Seats Available</span>
 
         <div class="ticket-info">
           <h3 class="ticket-name">VIP Conference Ticket</h3>
-          <p class="ticket-price">219€</p>
+          <p class="ticket-price">229€</p>
         </div>
 
         <hr />
@@ -338,5 +338,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class TicketsComponent {
   readonly buyTicketsLink =
-    'https://www.entrio.hr/en/event/ng-belgrade-conf-2024-16380';
+    'https://www.entrio.hr/en/event/ng-belgrade-conf-2026-28758';
 }
