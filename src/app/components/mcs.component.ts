@@ -80,8 +80,7 @@ import { TeamMember } from '../models/team-member.model';
       }
 
       .mc-photo {
-        border-radius: 0px;
-        box-shadow: 13px 13px 0px -3px var(--logo-orange-color);
+        box-shadow: 13px 13px 0px -3px var(--orange-color);
       }
 
       .mc-details {
@@ -97,7 +96,7 @@ import { TeamMember } from '../models/team-member.model';
         margin: 0;
         font-size: 1.2rem;
         font-weight: 700;
-        color: var(--logo-orange-color);
+        color: var(--orange-color);
       }
 
       .mc-headline {

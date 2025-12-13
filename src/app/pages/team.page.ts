@@ -98,7 +98,6 @@ export const routeMeta: RouteMeta = {
       }
 
       .member-photo {
-        border-radius: 0px;
         box-shadow: 13px 13px 0px -3px var(--dark-purple-color);
       }
 
@@ -165,7 +164,7 @@ export default class TeamPage {
     {
       name: 'Marko Stanimirović',
       headline:
-        'Frontend Tech Lead at BlinkOps<br/>NgRx Co-Maintainer • GDE in Angular',
+        'Frontend Tech Lead at BlinkOps • Angular GDE<br/>NgRx Co-Maintainer',
       photoUrl: '/people/marko-stanimirovic.jpg',
       twitterUrl: 'https://twitter.com/MarkoStDev/',
       linkedinUrl: 'https://linkedin.com/in/markostanimirovic/',

@@ -91,7 +91,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         padding: 1rem 1.5rem 0.5rem;
         border-radius: 0.5rem;
         max-width: 180px;
-        border-right: 6px solid var(--logo-orange-color);
+        border-right: 6px solid var(--orange-color);
       }
 
       .event-stats-label {

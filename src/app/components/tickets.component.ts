@@ -5,12 +5,87 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <h2 id="tickets" class="section-title">Tickets</h2>
 
-    <p class="ticket-sales-note">Ticket sales will start soon!</p>
-    <p class="waiting-list-note">
-      <a href="https://forms.gle/h1AFiJEUoAfM1mNTA" target="_blank">
-        Join the waiting list
-      </a>
-      to receive the latest updates.
+    <div class="tickets">
+      <div class="ticket red-ticket">
+        <span class="badge">Until Jan 31</span>
+
+        <div class="ticket-info">
+          <h3 class="ticket-name">Early Conference Ticket</h3>
+          <p class="ticket-price">
+            <span class="base-price">159€</span>
+            119€
+          </p>
+        </div>
+
+        <hr />
+
+        <ul>
+          <li>In-person access to the Conference Day on <b>May 7</b></li>
+          <li>Early access to talk recordings</li>
+          <li>Personalized badge</li>
+          <li>Gift bag</li>
+          <li>Coffee breaks with free drinks</li>
+          <li>Lunch</li>
+        </ul>
+
+        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
+          Buy Now
+        </a>
+      </div>
+
+      <div class="ticket purple-ticket">
+        <span class="badge">20 Seats Available</span>
+
+        <div class="ticket-info">
+          <h3 class="ticket-name">VIP Conference Ticket</h3>
+          <p class="ticket-price">219€</p>
+        </div>
+
+        <hr />
+
+        <ul>
+          <li>In-person access to the Conference Day on <b>May 7</b></li>
+          <li>Everything included in the regular conference ticket</li>
+          <li>Personalized VIP badge with photo</li>
+          <li>Premium swag</li>
+          <li>Priority registration</li>
+        </ul>
+
+        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
+          Buy Now
+        </a>
+      </div>
+
+      <div class="ticket blue-ticket">
+        <span class="badge">30 Seats Available</span>
+
+        <div class="ticket-info">
+          <h3 class="ticket-name">Workshop Ticket</h3>
+          <p class="ticket-price">299€</p>
+        </div>
+
+        <hr />
+
+        <ul>
+          <li>In-person access to the Workshop Day on <b>May 8</b></li>
+          <li>Certificate of completion</li>
+          <li>Coffee breaks with free drinks</li>
+          <li>Lunch</li>
+        </ul>
+
+        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
+          Buy Now
+        </a>
+      </div>
+    </div>
+
+    <p class="companies-note">
+      <b>For companies:</b>
+      We can issue an invoice for the desired number of tickets that can be paid
+      directly to our account. Contact us at
+      <a href="mailto:angularbelgrade@gmail.com"
+        >angularbelgrade&#64;gmail.com</a
+      >
     </p>
   `,
   styles: [
@@ -20,22 +95,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         padding-bottom: 2rem;
         padding-top: 2rem;
         background-color: var(--light-orange-color);
-      }
-
-      .ticket-sales-note {
-        text-align: center;
-        font-size: 1.25rem;
-        font-weight: 600;
-        background: var(--logo-orange-color);
-        width: fit-content;
-        margin: 0 auto 2rem;
-        padding: 0.3rem 1rem;
-        color: white;
-      }
-
-      .waiting-list-note {
-        margin-top: 2rem;
-        text-align: center;
       }
 
       .tickets {
@@ -50,10 +109,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 1rem;
         padding: 2.25rem 1rem 2rem 1rem;
         border-radius: 0.5rem;
+        min-height: 503px;
         max-width: 300px;
         position: relative;
       }
@@ -132,6 +192,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         border-radius: 0.5rem;
         font-weight: 600;
         text-decoration: none;
+        margin-top: auto;
       }
 
       .buy-button:hover {
@@ -256,28 +317,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         line-height: 1.5;
       }
 
-      .waiting-list-button {
-        background: var(--angular-gradient);
-        text-decoration: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
-        font-weight: 600;
-      }
-
-      .waiting-list-button:hover {
-        color: inherit;
-        opacity: 0.9;
-      }
-
       @media only screen and (min-width: 850px) {
-        .ticket-sales-note {
-          font-size: 1.5rem;
-        }
-
-        .waiting-list-note {
-          font-size: 1.25rem;
-        }
-
         .tickets {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 300px));
@@ -286,22 +326,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           gap: 4rem;
         }
 
-        .ticket {
-          justify-content: start;
-        }
-
-        .buy-button {
-          margin-top: auto;
-        }
-
         .companies-note {
           margin: 2rem auto 0 auto;
           text-align: center;
           max-width: 810px;
-          font-size: 1.25rem;
-        }
-
-        .waiting-list-button {
           font-size: 1.25rem;
         }
       }

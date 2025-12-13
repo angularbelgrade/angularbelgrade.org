@@ -73,11 +73,11 @@ import { RouterLink } from '@angular/router';
       }
 
       .conference-day {
-        background: var(--logo-purple-color);
+        background: var(--magenta-color);
       }
 
       .workshop-day {
-        background: var(--logo-orange-color);
+        background: var(--orange-color);
       }
 
       .tickets-button {

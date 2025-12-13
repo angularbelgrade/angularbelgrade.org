@@ -104,8 +104,8 @@ export const routeMeta: RouteMeta = {
       }
 
       .speaker-photo {
-        border-radius: 0.5rem;
         margin-bottom: 1rem;
+        box-shadow: 13px 13px 0px -3px var(--magenta-color);
       }
 
       .speaker-headline {

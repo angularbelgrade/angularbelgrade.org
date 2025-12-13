@@ -8,13 +8,15 @@ import { speakersResource } from '../resources/speakers.resource';
   template: `
     <h2 id="speakers" class="section-title">Speakers</h2>
 
-    <div class="speaker-list" style="display: none">
+    <div class="speaker-list">
       @for (speaker of speakers; track speaker.id) {
         <a class="speaker" routerLink="/speakers/{{ speaker.id }}">
           <div class="speaker-photo-container">
             <img
               class="open-link"
-              src="/icons/open-link.svg"
+              src="/icons/open-link-{{
+                speaker.photoBackground === 'dark' ? 'white' : 'black'
+              }}.svg"
               alt="Open Link Icon"
               loading="lazy"
               height="26"
@@ -40,7 +42,9 @@ import { speakersResource } from '../resources/speakers.resource';
       }
     </div>
 
-    <p class="speakers-announcement-note">Speakers will be announced soon!</p>
+    <p class="speakers-announcement-note">
+      More speakers will be announced soon!
+    </p>
 
     <div class="cfp">
       <p class="cfp-note">
@@ -96,7 +100,7 @@ import { speakersResource } from '../resources/speakers.resource';
       }
 
       .speaker-photo {
-        border-radius: 0.5rem;
+        box-shadow: 13px 13px 0px -3px var(--magenta-color);
       }
 
       .speaker-info {
@@ -126,13 +130,11 @@ import { speakersResource } from '../resources/speakers.resource';
       }
 
       .speakers-announcement-note {
-        background: var(--logo-orange-color);
         width: fit-content;
-        margin: 0 auto 2rem;
+        margin: 1rem auto 2rem;
         padding: 0.3rem 1rem;
         text-align: center;
         font-weight: 600;
-        color: white;
       }
 
       .cfp {
