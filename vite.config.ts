@@ -3,7 +3,7 @@ import analog from '@analogjs/platform';
 import { speakersResource } from './src/app/resources/speakers.resource';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(() => ({
   publicDir: 'src/assets',
   build: {
     target: ['es2020'],

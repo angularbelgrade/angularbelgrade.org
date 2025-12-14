@@ -1,6 +1,12 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  PLATFORM_ID,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { speakersResource } from '../resources/speakers.resource';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'bgd-speakers',
@@ -196,5 +202,7 @@ import { speakersResource } from '../resources/speakers.resource';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpeakersComponent {
-  readonly speakers = speakersResource.getSpeakers();
+  readonly #platformId = inject(PLATFORM_ID);
+  readonly #isBrowser = isPlatformBrowser(this.#platformId);
+  readonly speakers = speakersResource.getSpeakers(this.#isBrowser);
 }
