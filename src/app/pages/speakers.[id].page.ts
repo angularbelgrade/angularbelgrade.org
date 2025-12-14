@@ -49,48 +49,59 @@ export const routeMeta: RouteMeta = {
 
 @Component({
   template: `
-    <h1 class="section-title">{{ speaker().name }}</h1>
+    <div class="speaker">
+      <div class="speaker-info">
+        <img
+          class="speaker-photo"
+          [alt]="speaker().name"
+          [src]="speaker().photoUrl"
+          fetchPriority="high"
+          loading="eager"
+          height="250"
+          width="250"
+        />
+      </div>
+      <div class="member-details">
+        <h1 class="section-title">{{ speaker().name }}</h1>
+        <p class="speaker-headline" [innerHTML]="speaker().headline"></p>
+        <div class="social-media-links">
+          @if (speaker().twitterUrl) {
+            <a [href]="speaker().twitterUrl" target="_blank" title="Twitter">
+              <img
+                src="/icons/twitter.svg"
+                alt="Twitter"
+                height="24"
+                width="24"
+              />
+            </a>
+          }
 
-    <img
-      class="speaker-photo"
-      [alt]="speaker().name"
-      [src]="speaker().photoUrl"
-      fetchPriority="high"
-      loading="eager"
-      height="250"
-      width="250"
-    />
+          @if (speaker().linkedinUrl) {
+            <a [href]="speaker().linkedinUrl" target="_blank" title="LinkedIn">
+              <img
+                src="/icons/linkedin.svg"
+                alt="LinkedIn"
+                height="24"
+                width="24"
+              />
+            </a>
+          }
 
-    <p class="speaker-headline" [innerHTML]="speaker().headline"></p>
-
-    <div class="social-media-links">
-      @if (speaker().twitterUrl) {
-        <a [href]="speaker().twitterUrl" target="_blank" title="Twitter">
-          <img src="/icons/twitter.svg" alt="Twitter" height="24" width="24" />
-        </a>
-      }
-
-      @if (speaker().linkedinUrl) {
-        <a [href]="speaker().linkedinUrl" target="_blank" title="LinkedIn">
-          <img
-            src="/icons/linkedin.svg"
-            alt="LinkedIn"
-            height="24"
-            width="24"
-          />
-        </a>
-      }
-
-      @if (speaker().githubUrl) {
-        <a [href]="speaker().githubUrl" target="_blank" title="GitHub">
-          <img src="/icons/github.svg" alt="GitHub" height="24" width="24" />
-        </a>
-      }
+          @if (speaker().githubUrl) {
+            <a [href]="speaker().githubUrl" target="_blank" title="GitHub">
+              <img
+                src="/icons/github.svg"
+                alt="GitHub"
+                height="24"
+                width="24"
+              />
+            </a>
+          }
+        </div>
+        <p class="speaker-bio" [innerHTML]="speaker().bio"></p>
+      </div>
     </div>
-
-    <p class="speaker-bio" [innerHTML]="speaker().bio"></p>
-
-    <h2 class="talk-title">{{ speaker().talkTitle }}</h2>
+    <h2 class="talk-title tba-text">{{ speaker().talkTitle }}</h2>
 
     <p class="talk-description" [innerHTML]="speaker().talkDescription"></p>
   `,
@@ -99,8 +110,16 @@ export const routeMeta: RouteMeta = {
       :host {
         display: flex;
         flex-direction: column;
-        margin: 0 1rem 2rem 1rem;
+        margin: 2rem 1rem;
         align-items: center;
+        padding: 0;
+      }
+
+      .speaker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
       }
 
       .speaker-photo {
@@ -113,6 +132,19 @@ export const routeMeta: RouteMeta = {
         font-size: 1rem;
         line-height: 1.4;
         text-align: center;
+        opacity: 0.8;
+      }
+
+      .member-details {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .section-title {
+        margin: 0 0 0.5rem 0;
+        font-weight: 700;
+        color: var(--magenta-color);
+        text-align: center;
       }
 
       .social-media-links {
@@ -121,7 +153,7 @@ export const routeMeta: RouteMeta = {
         gap: 1rem;
         align-items: center;
         justify-content: center;
-        margin: 1rem 0 2rem 0;
+        margin: 0.5rem 0 1.5rem 0;
       }
 
       .social-media-links > a {
@@ -130,6 +162,7 @@ export const routeMeta: RouteMeta = {
 
       .speaker-bio,
       .talk-description {
+        font-size: 1rem;
         margin: 0;
         line-height: 1.5;
       }
@@ -140,15 +173,31 @@ export const routeMeta: RouteMeta = {
         font-weight: 600;
       }
 
+      .tba-text {
+        background-color: var(--magenta-color);
+        color: white;
+        padding: 5px 10px;
+      }
+
       @media only screen and (min-width: 850px) {
         :host {
           max-width: 900px;
-          margin: 0 auto 2rem auto;
+          margin: 4rem auto 2rem auto;
+          padding: 0 15px;
         }
-
-        .speaker-bio,
-        .talk-description {
-          margin: 0 1rem;
+        .speaker {
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 3rem;
+        }
+        .section-title {
+          text-align: left;
+        }
+        .speaker-headline {
+          text-align: left;
+        }
+        .social-media-links {
+          justify-content: flex-start;
         }
       }
     `,
