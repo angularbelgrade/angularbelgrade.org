@@ -82,7 +82,7 @@ import { RouterLink } from '@angular/router';
 
       .tickets-button {
         color: white;
-        background: var(--dark-purple-color);
+        background: var(--purple-color);
         font-weight: 600;
         text-decoration: none;
         border-bottom: solid 4px var(--background-color);
@@ -92,7 +92,7 @@ import { RouterLink } from '@angular/router';
 
       .tickets-button:hover {
         color: var(--background-color);
-        background: var(--darker-purple-color);
+        background: var(--dark-purple-color);
       }
 
       @media only screen and (min-width: 850px) {

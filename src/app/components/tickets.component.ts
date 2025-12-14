@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ticketsResource } from '../resources/tickets.resource';
 
 @Component({
   selector: 'bgd-tickets',
@@ -6,86 +7,57 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <h2 id="tickets" class="section-title">Tickets</h2>
 
     <div class="tickets">
-      <div class="ticket red-ticket">
-        <span class="badge">Until Jan 31</span>
+      @for (ticket of tickets; track ticket.name) {
+        <div class="ticket" [style]="ticket.styles.card">
+          @if (ticket.note) {
+            <span class="badge" [style]="ticket.styles.badge">
+              {{ ticket.note }}
+            </span>
+          }
 
-        <div class="ticket-info">
-          <h3 class="ticket-name">Early Conference Ticket</h3>
-          <p class="ticket-price">
-            <span class="base-price">159€</span>
-            119€
-          </p>
+          @if (ticket.soldOut) {
+            <div class="banner" [style]="ticket.styles.banner">
+              <span class="banner-text">SOLD OUT</span>
+            </div>
+          }
+
+          <div class="ticket-info">
+            <h3 class="ticket-name">{{ ticket.name }}</h3>
+            <p class="ticket-price">
+              @if (ticket.basePrice) {
+                <span class="base-price">{{ ticket.basePrice }}€</span>
+              }
+              {{ ticket.price }}€
+            </p>
+          </div>
+
+          <hr />
+
+          <ul>
+            @for (benefit of ticket.benefits; track $index) {
+              <li [innerHTML]="benefit"></li>
+            }
+          </ul>
+
+          <a
+            class="buy-button"
+            [style]="ticket.styles.button"
+            [href]="buyTicketsLink"
+            target="_blank"
+          >
+            Buy Now
+          </a>
         </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Conference Day on <b>May 7</b></li>
-          <li>Early access to talk recordings</li>
-          <li>Personalized badge</li>
-          <li>Gift bag</li>
-          <li>Coffee breaks with free drinks</li>
-          <li>Lunch</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
-
-      <div class="ticket purple-ticket">
-        <span class="badge">30 Seats Available</span>
-
-        <div class="ticket-info">
-          <h3 class="ticket-name">VIP Conference Ticket</h3>
-          <p class="ticket-price">229€</p>
-        </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Conference Day on <b>May 7</b></li>
-          <li>Everything included in the regular conference ticket</li>
-          <li>Personalized VIP badge with photo</li>
-          <li>Premium swag</li>
-          <li>Priority registration</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
-
-      <div class="ticket blue-ticket">
-        <span class="badge">30 Seats Available</span>
-
-        <div class="ticket-info">
-          <h3 class="ticket-name">Workshop Ticket</h3>
-          <p class="ticket-price">299€</p>
-        </div>
-
-        <hr />
-
-        <ul>
-          <li>In-person access to the Workshop Day on <b>May 8</b></li>
-          <li>Certificate of completion</li>
-          <li>Coffee breaks with free drinks</li>
-          <li>Lunch</li>
-        </ul>
-
-        <a class="buy-button" [href]="buyTicketsLink" target="_blank">
-          Buy Now
-        </a>
-      </div>
+      }
     </div>
 
     <p class="companies-note">
       <b>For companies:</b>
       We can issue an invoice for the desired number of tickets that can be paid
       directly to our account. Contact us at
-      <a href="mailto:angularbelgrade@gmail.com"
-        >angularbelgrade&#64;gmail.com</a
-      >
+      <a href="mailto:angularbelgrade@gmail.com">
+        angularbelgrade&#64;gmail.com
+      </a>
     </p>
   `,
   styles: [
@@ -221,96 +193,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         border-radius: 0.5rem;
       }
 
-      .red-ticket {
-        border: 2px solid var(--red-color);
-        box-shadow: 0 0 14px 0 var(--red-color);
-      }
-
-      .red-ticket > .badge {
-        background-color: var(--red-color);
-      }
-
-      .red-ticket > .buy-button {
-        background-color: var(--red-color);
-      }
-
-      .red-ticket .banner-text {
-        color: var(--red-color);
-        border-color: var(--red-color);
-      }
-
-      .accent-ticket {
-        border: 2px solid var(--accent-color);
-        box-shadow: 0 0 14px 0 var(--accent-color);
-      }
-
-      .accent-ticket > .badge {
-        background-color: var(--accent-color);
-      }
-
-      .accent-ticket > .buy-button {
-        background-color: var(--accent-color);
-      }
-
-      .accent-ticket .banner-text {
-        color: var(--accent-color);
-        border-color: var(--accent-color);
-      }
-
-      .blue-ticket {
-        border: 2px solid var(--blue-color);
-        box-shadow: 0 0 14px 0 var(--blue-color);
-      }
-
-      .blue-ticket > .badge {
-        background-color: var(--blue-color);
-      }
-
-      .blue-ticket > .buy-button {
-        background-color: var(--blue-color);
-      }
-
-      .blue-ticket .banner-text {
-        color: var(--blue-color);
-        border-color: var(--blue-color);
-      }
-
-      .green-ticket {
-        border: 2px solid var(--green-color);
-        box-shadow: 0 0 14px 0 var(--green-color);
-      }
-
-      .green-ticket > .badge {
-        background-color: var(--green-color);
-      }
-
-      .green-ticket > .buy-button {
-        background-color: var(--green-color);
-      }
-
-      .green-ticket .banner-text {
-        color: var(--green-color);
-        border-color: var(--green-color);
-      }
-
-      .purple-ticket {
-        border: 2px solid var(--purple-color);
-        box-shadow: 0 0 14px 0 var(--purple-color);
-      }
-
-      .purple-ticket > .badge {
-        background-color: var(--purple-color);
-      }
-
-      .purple-ticket > .buy-button {
-        background-color: var(--purple-color);
-      }
-
-      .purple-ticket .banner-text {
-        color: var(--purple-color);
-        border-color: var(--purple-color);
-      }
-
       .companies-note {
         margin: 2rem 1rem 0 1rem;
         line-height: 1.5;
@@ -337,6 +219,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TicketsComponent {
-  readonly buyTicketsLink =
-    'https://www.entrio.hr/en/event/ng-belgrade-conf-2026-28758';
+  readonly tickets = ticketsResource.tickets;
+  readonly buyTicketsLink = ticketsResource.buyTicketsLink;
 }

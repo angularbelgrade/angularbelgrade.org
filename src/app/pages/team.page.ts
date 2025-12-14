@@ -97,7 +97,7 @@ export const routeMeta: RouteMeta = {
       }
 
       .member-photo {
-        box-shadow: 13px 13px 0px -3px var(--dark-purple-color);
+        box-shadow: 13px 13px 0px -3px var(--purple-color);
       }
 
       .member-details {
@@ -113,7 +113,7 @@ export const routeMeta: RouteMeta = {
         margin: 0;
         font-size: 1.25rem;
         font-weight: 700;
-        color: var(--dark-purple-color);
+        color: var(--purple-color);
       }
 
       .member-headline {
