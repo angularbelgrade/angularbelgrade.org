@@ -114,7 +114,7 @@ export const routeMeta: RouteMeta = {
         flex-direction: column;
         margin: auto;
         max-width: 1200px;
-        padding: 0 2rem 2rem;
+        padding: 3rem 0;
       }
 
       p,
