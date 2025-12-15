@@ -48,9 +48,11 @@ const speakerMap: Record<string, Speaker> = {
 
 const speakers = Object.values(speakerMap);
 
+const shuffledSpeakers = shuffle(speakers);
+
 export const speakersResource = {
   getSpeakers: (shouldShuffle = false) =>
-    shouldShuffle ? shuffle(speakers) : speakers,
+    shouldShuffle ? shuffledSpeakers : speakers,
   getSpeakerById: (id: string) => speakerMap[id],
   getSpeakerUrl: (id: string) => `https://angularbelgrade.org/speakers/${id}`,
 } as const;
