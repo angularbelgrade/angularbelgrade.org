@@ -11,7 +11,8 @@ const speakerMap: Record<string, Speaker> = {
     talkDescription: '',
     photoUrl: '/people/dmytro-mezhenskyi.jpg',
     photoBackground: 'light',
-    bannerUrl: 'https://angularbelgrade.org/banners/ng-belgrade-conf-2026.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-dmytro-mezhenskyi.jpg',
     twitterUrl: 'https://x.com/DecodedFrontend/',
     linkedinUrl: 'https://linkedin.com/in/dmezhenskyi/',
     githubUrl: 'https://github.com/DMezhenskyi/',
@@ -25,7 +26,8 @@ const speakerMap: Record<string, Speaker> = {
     talkDescription: '',
     photoUrl: '/people/mike-ryan.jpg',
     photoBackground: 'dark',
-    bannerUrl: 'https://angularbelgrade.org/banners/ng-belgrade-conf-2026.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-mike-ryan.jpg',
     twitterUrl: 'https://twitter.com/MikeRyanDev/',
     linkedinUrl: 'https://linkedin.com/in/mikeryandesigns/',
     githubUrl: 'https://github.com/MikeRyanDev/',
@@ -39,7 +41,8 @@ const speakerMap: Record<string, Speaker> = {
     talkDescription: '',
     photoBackground: 'light',
     photoUrl: '/people/manfred-steyer.jpg',
-    bannerUrl: 'https://angularbelgrade.org/banners/ng-belgrade-conf-2026.jpg',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-manfred-steyer.jpg',
     twitterUrl: 'https://twitter.com/ManfredSteyer/',
     linkedinUrl: 'https://linkedin.com/in/manfred-steyer-84645821/',
     githubUrl: 'https://github.com/manfredsteyer/',
