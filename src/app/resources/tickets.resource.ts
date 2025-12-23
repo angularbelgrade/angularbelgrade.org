@@ -33,6 +33,8 @@ const workshopTicketBenefits = [
   'Lunch',
 ];
 
+// other tickets colors: #ec4899, #00b863, #2234a8
+
 const tickets: Ticket[] = [
   {
     name: 'Early Conference Ticket',

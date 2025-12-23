@@ -6,6 +6,15 @@ import { ticketsResource } from '../resources/tickets.resource';
   template: `
     <h2 id="tickets" class="section-title">Tickets</h2>
 
+    <p class="companies-note">
+      <b>For companies:</b>
+      We can issue an invoice for the desired number of tickets that can be paid
+      directly to our account. Contact us at
+      <a href="mailto:angularbelgrade@gmail.com">
+        angularbelgrade&#64;gmail.com
+      </a>
+    </p>
+
     <div class="tickets">
       @for (ticket of tickets; track ticket.name) {
         <div class="ticket" [style]="ticket.styles.card">
@@ -50,15 +59,6 @@ import { ticketsResource } from '../resources/tickets.resource';
         </div>
       }
     </div>
-
-    <p class="companies-note">
-      <b>For companies:</b>
-      We can issue an invoice for the desired number of tickets that can be paid
-      directly to our account. Contact us at
-      <a href="mailto:angularbelgrade@gmail.com">
-        angularbelgrade&#64;gmail.com
-      </a>
-    </p>
   `,
   styles: [
     `
@@ -73,7 +73,7 @@ import { ticketsResource } from '../resources/tickets.resource';
         flex-direction: column;
         align-items: center;
         gap: 2rem;
-        padding: 1rem;
+        padding: 0 1rem;
       }
 
       .ticket {
@@ -180,7 +180,7 @@ import { ticketsResource } from '../resources/tickets.resource';
         align-items: center;
         font-size: 2rem;
         font-weight: bold;
-        background: rgba(252, 239, 222, 0.6);
+        background: rgba(255, 247, 239, 0.6);
         z-index: 1;
         top: -15px;
         border-radius: 0.5rem;
@@ -194,7 +194,7 @@ import { ticketsResource } from '../resources/tickets.resource';
       }
 
       .companies-note {
-        margin: 2rem 1rem 0 1rem;
+        margin: 2rem 1rem 3rem;
         line-height: 1.5;
       }
 
@@ -208,7 +208,7 @@ import { ticketsResource } from '../resources/tickets.resource';
         }
 
         .companies-note {
-          margin: 2rem auto 0 auto;
+          margin: 2rem auto 3rem;
           text-align: center;
           max-width: 810px;
           font-size: 1.25rem;
