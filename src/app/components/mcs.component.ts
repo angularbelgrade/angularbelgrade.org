@@ -20,7 +20,17 @@ import { TeamMember } from '../models/team-member.model';
           </div>
 
           <div class="mc-details">
-            <h3 class="mc-name">{{ mc.name }}</h3>
+            <div class="mc-top">
+              <h3 class="mc-name">{{ mc.name }}</h3>
+              <img
+                height="30"
+                width="30"
+                loading="lazy"
+                [src]="mc.flagUrl"
+                alt="Flag"
+              />
+            </div>
+
             <p class="mc-headline" [innerHTML]="mc.headline"></p>
 
             <div class="social-media-links">
@@ -63,7 +73,7 @@ import { TeamMember } from '../models/team-member.model';
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        width: 220px;
+        width: 260px;
         margin: 0 auto;
       }
 
@@ -71,7 +81,7 @@ import { TeamMember } from '../models/team-member.model';
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
       }
 
       .mc-photo-container {
@@ -89,6 +99,14 @@ import { TeamMember } from '../models/team-member.model';
         align-items: center;
         justify-content: center;
         text-align: center;
+      }
+
+      .mc-top {
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: center;
       }
 
       .mc-name {
@@ -126,7 +144,7 @@ import { TeamMember } from '../models/team-member.model';
         .mc-list {
           width: auto;
           display: grid;
-          grid-template-columns: repeat(2, minmax(0, 220px));
+          grid-template-columns: repeat(2, minmax(0, 260px));
           justify-content: center;
           gap: 8rem;
           padding: 1rem;
@@ -135,6 +153,14 @@ import { TeamMember } from '../models/team-member.model';
         .mc-details {
           align-items: flex-start;
           text-align: left;
+        }
+
+        .mc-photo-container {
+          align-self: flex-start;
+        }
+
+        .mc-top {
+          justify-content: flex-start;
         }
       }
     `,
@@ -147,12 +173,14 @@ export class MCsComponent {
       name: 'Jelena Babić',
       headline: 'SAP Consultant at MSG Global Solutions',
       photoUrl: '/people/jelena-babic.jpg',
+      flagUrl: '/flags/serbia.png',
       linkedinUrl: 'https://www.linkedin.com/in/jelena-ljubenovic-b08a68105/',
     },
     {
       name: 'Michael Egger-Zikes',
       headline: 'Trainer and Consultant at AngularArchitects',
       photoUrl: '/people/michael-egger-zikes.jpg',
+      flagUrl: '/flags/austria.png',
       twitterUrl: 'https://twitter.com/MikeZks/',
       linkedinUrl: 'https://www.linkedin.com/in/michael-egger-zikes/',
     },

@@ -7,6 +7,7 @@ export type Speaker = {
   talkDescription: string;
   photoUrl: string;
   photoBackground: 'light' | 'dark';
+  flagUrl: string;
   bannerUrl?: string;
   twitterUrl?: string;
   linkedinUrl?: string;

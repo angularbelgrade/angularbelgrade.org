@@ -40,7 +40,17 @@ import { isPlatformBrowser } from '@angular/common';
 
           <div class="speaker-info">
             <div class="speaker-details">
-              <h3 class="speaker-name">{{ speaker.name }}</h3>
+              <div class="speaker-top">
+                <h3 class="speaker-name">{{ speaker.name }}</h3>
+                <img
+                  height="30"
+                  width="30"
+                  loading="lazy"
+                  [src]="speaker.flagUrl"
+                  alt="Flag"
+                />
+              </div>
+
               <p class="speaker-headline" [innerHTML]="speaker.headline"></p>
             </div>
           </div>
@@ -85,7 +95,7 @@ import { isPlatformBrowser } from '@angular/common';
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
         text-decoration: none;
       }
 
@@ -120,6 +130,14 @@ import { isPlatformBrowser } from '@angular/common';
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+      }
+
+      .speaker-top {
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: center;
       }
 
       .speaker-name {
@@ -176,11 +194,15 @@ import { isPlatformBrowser } from '@angular/common';
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 290px));
           justify-content: center;
-          gap: 2rem;
+          gap: 3rem;
         }
 
         .speaker {
           align-items: flex-start;
+        }
+
+        .speaker-top {
+          justify-content: flex-start;
         }
 
         .speaker-info {

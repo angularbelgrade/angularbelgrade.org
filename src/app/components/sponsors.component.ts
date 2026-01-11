@@ -5,78 +5,59 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <h2 id="sponsors" class="section-title">Sponsors</h2>
 
-    <h3>Platinum</h3>
-
-    <div class="sponsors-container">
-      <a
-        href="https://swissmarketplace.group/"
-        target="_blank"
-        style="width: 600px; max-width: 90vw"
-      >
-        <img
-          alt="Swiss Marketplace Group"
-          src="/orgs/swiss-marketplace-group.svg"
-          loading="lazy"
-        />
-      </a>
-    </div>
-
-    <h3>Gold</h3>
-
-    <div class="sponsors-container">
-      <a
-        href="https://www.publicissapient.com/"
-        target="_blank"
-        style="width: 330px; max-width: 54vw"
-      >
-        <img
-          alt="Publicis Sapient"
-          src="/orgs/publicis-sapient.svg"
-          loading="lazy"
-        />
-      </a>
-    </div>
-
     <h3>Silver</h3>
 
-    <div class="sponsors-container">
+    <div class="sponsors-container" style="max-width: 950px; margin: 0 auto">
       <a
-        href="https://qposoft.com/en"
+        href="https://hashbrown.dev/"
         target="_blank"
-        style="width: 300px; max-width: 50vw"
+        style="width: 400px; max-width: 67vw"
       >
-        <img alt="QPO Soft" src="/orgs/qpo-soft.svg" loading="lazy" />
+        <img alt="Hashbrown" src="/orgs/hashbrown.svg" />
+      </a>
+
+      <a
+        href="https://ngrx.io/"
+        target="_blank"
+        style="width: 390px; max-width: 65vw"
+      >
+        <img alt="NgRx" src="/orgs/ngrx.svg" />
       </a>
     </div>
 
-    <h3>Bronze</h3>
+    <h3>Media Partners</h3>
 
-    <div class="sponsors-container">
+    <div class="partners-container">
       <a
-        href="https://offering.solutions/"
+        href="https://www.entrio.hr/"
         target="_blank"
-        style="width: 300px; max-width: 50vw"
+        style="width: 200px; max-width: 35vw"
       >
-        <img
-          alt="Offering Solutions Software"
-          src="/orgs/offering-solutions-software.svg"
-          loading="lazy"
-        />
+        <img alt="Entrio" src="/orgs/entrio.png" />
       </a>
 
       <a
-        href="https://globalitfactory.com/"
+        href="https://www.youtube.com/@ng-news/"
         target="_blank"
-        style="width: 350px; max-width: 57vw"
+        style="width: 110px; max-width: 19vw"
       >
-        <img alt="Global IT Factory" src="/orgs/gitf.svg" loading="lazy" />
+        <img alt="ng-news" src="/orgs/ng-news.png" />
+      </a>
+
+      <a
+        href="https://ekapija.com/"
+        target="_blank"
+        style="width: 225px; max-width: 39vw"
+      >
+        <img alt="eKapija" src="/orgs/ekapija.svg" />
       </a>
     </div>
 
     <div class="sponsors-actions">
+      <p class="sponsors-text">Interested in sponsoring our conference?</p>
       <a
         class="sponsors-button"
-        href="https://forms.gle/LETukcGWLJ4HkJeS7"
+        href="https://forms.gle/biMmYFgdjCXVQ96E7"
         target="_blank"
       >
         Become a Sponsor
@@ -87,8 +68,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     `
       :host {
         display: block;
-        padding: 0 1rem 2rem 1rem;
-        border-bottom: 1px solid var(--border-color);
+        padding: 3rem 0;
+        background-color: var(--light-orange-color);
       }
 
       h3 {
@@ -98,12 +79,20 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         margin: 2rem;
       }
 
-      .sponsors-container {
+      .sponsors-container,
+      .partners-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+      }
+
+      .sponsors-container {
+        gap: 3rem;
+      }
+
+      .partners-container {
         gap: 2rem;
       }
 
@@ -114,9 +103,16 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
       .sponsors-actions {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 1rem;
+      }
+
+      .sponsors-text {
+        margin: 0;
+        font-weight: 600;
+        text-align: center;
       }
 
       .sponsors-button {
@@ -133,11 +129,20 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       }
 
       @media only screen and (min-width: 850px) {
-        .sponsors-container {
+        .sponsors-container,
+        .partners-container {
           padding: 1rem 0;
+        }
+
+        .sponsors-container {
+          gap: 6rem;
+        }
+
+        .partners-container {
           gap: 4rem;
         }
 
+        .sponsors-text,
         .sponsors-button {
           font-size: 1.25rem;
         }

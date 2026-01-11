@@ -7,6 +7,7 @@ import { SpeakersComponent } from '../components/speakers.component';
 import { MCsComponent } from '../components/mcs.component';
 import { WorkshopComponent } from '../components/workshop.component';
 import { TicketsComponent } from '../components/tickets.component';
+import { SponsorsComponent } from '../components/sponsors.component';
 import { LocationComponent } from '../components/location.component';
 
 export const routeMeta: RouteMeta = {
@@ -32,6 +33,7 @@ export const routeMeta: RouteMeta = {
     MCsComponent,
     WorkshopComponent,
     TicketsComponent,
+    SponsorsComponent,
     LocationComponent,
   ],
   template: `
@@ -41,6 +43,7 @@ export const routeMeta: RouteMeta = {
     <bgd-mcs />
     <bgd-workshop />
     <bgd-tickets />
+    <bgd-sponsors />
     <bgd-location />
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

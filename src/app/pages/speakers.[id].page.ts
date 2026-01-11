@@ -182,7 +182,7 @@ export const routeMeta: RouteMeta = {
       @media only screen and (min-width: 850px) {
         :host {
           max-width: 900px;
-          margin: 4rem auto 2rem auto;
+          margin: 4rem auto;
           padding: 0 15px;
         }
         .speaker {
