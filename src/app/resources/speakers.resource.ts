@@ -56,9 +56,10 @@ const speakerMap: Record<string, Speaker> = {
     id: 'pawel-kozlowski',
     name: 'Pawel Kozlowski',
     headline: 'Staff Software Engineer at<br/>Angular Team, Google',
-    bio: 'Pawel is a Staff Software Engineer on the Angular team at Google. He works on the core of the framework: the part that takes your Angular components and updates DOM in a browser. If you want to have a loooong conversation with Pawel just mention reactivity, change detection, content projection or any other JS-framework related topic! When not coding Pawel enjoys hiking, mountain biking and all outdoor activities.',
-    talkTitle: 'Opening Keynote: The State of Angular',
-    talkDescription: '',
+    bio: 'Pawel is a veteran of the web development community and a long-time contributor to the Angular ecosystem. Known for his deep dives into framework architecture, he has spent years shaping how we build modern, scalable applications. Currently, Pawel is focused on the paradigm shift brought about by AI, pioneering research into LLM-first API design and the transition from static components to intent-based interfaces. When he isn’t re-architecting the web, he’s likely in the mountains hiking or biking. And if you’re looking for a "secret" project, ask him about his recent obsession with traditional French stone masonry (pierre sèche)—because whether it’s code or limestone, Pawel believes in building things that are meant to last.',
+    talkTitle: 'From Components to Intents: The Future of Web Interfaces',
+    talkDescription:
+      'For decades, our job as web developers has been to build "maps"-pre-defined paths, static menus, and rigid components that users must learn to navigate. But the rise of LLMs is fundamentally shifting the user\'s expectation from "finding a feature" to "executing an intent."<br/><br/>In this keynote, we will explore the transition toward a world where user interfaces are no longer hard-coded, but are instead fluid, on-demand, and constructed in real-time to match a user’s specific goal. We will discuss why the next generation of applications won\'t just "have AI features," but will be built on an entirely different architectural foundation. Crucially, we’ll look at how we must evolve our API and DSL designs today to ensure they are "LLM-first," acting as the bridge between raw model power and a seamless user experience. It\'s time to stop building static maps and start architecting for the era of intent.',
     photoUrl: '/people/pawel-kozlowski.jpg',
     photoBackground: 'light',
     flagUrl: '/flags/france.png',
