@@ -7,8 +7,10 @@ const speakerMap: Record<string, Speaker> = {
     name: 'Dmytro Mezhenskyi',
     headline: 'Author of Decoded Frontend<br/>Angular GDE • Microsoft MVP',
     bio: 'Dmytro Mezhenskyi is a Google Developer Expert in Angular and the founder of <a href="https://www.youtube.com/@DecodedFrontend" target="_blank">Decoded Frontend</a>. It is a source dedicated to providing advanced tutorials and courses in Angular and web development. With a strong focus on practical, in-depth learning, he creates educational content, shares insights on YouTube, and helps developers improve their skills. He is also a Microsoft MVP and actively contributes to the developer community through teaching and consulting.',
-    talkTitle: 'Talk: TBA',
-    talkDescription: '',
+    talkTitle:
+      'Zoneless Angular: The Hidden Cost of Zone.js and What Replaces It',
+    talkDescription:
+      'Zone.js has been a core part of Angular’s change detection for years. At the same time, it introduces real trade-offs: more challenging debugging, unpredictable performance, increased bundle size, and additional runtime overhead.<br/><br/>In this talk, we’ll start by examining the price we pay for using Zone.js and what practical benefits zoneless mode brings in return: improved performance characteristics, a clearer mental model, and an enhanced developer experience.<br/><br/>After that, we’ll take a short look under the hood of Angular’s zoneless mode. You’ll see how Angular triggers change detection without Zone.js, the role of the ChangeDetectionScheduler, and how the framework knows which exact parts of your application view need to update.<br/><br/>By the end of the talk, you’ll have a clear understanding of why zoneless exists, how it works at a high level, and what changes for you as an Angular developer.',
     photoUrl: '/people/dmytro-mezhenskyi.jpg',
     photoBackground: 'light',
     flagUrl: '/flags/austria.png',
