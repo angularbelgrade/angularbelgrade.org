@@ -25,6 +25,21 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </a>
     </div>
 
+    <h3>Bronze</h3>
+
+    <div class="sponsors-container">
+      <a
+        href="https://offering.solutions/"
+        target="_blank"
+        style="width: 300px; max-width: 52vw"
+      >
+        <img
+          alt="Offering Solutions Software"
+          src="/orgs/offering-solutions-software.svg"
+        />
+      </a>
+    </div>
+
     <h3>Media Partners</h3>
 
     <div class="partners-container">
