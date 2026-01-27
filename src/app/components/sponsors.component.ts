@@ -66,6 +66,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       >
         <img alt="eKapija" src="/orgs/ekapija.svg" />
       </a>
+
+      <a
+        href="https://startit.rs/"
+        target="_blank"
+        style="width: 225px; max-width: 39vw"
+      >
+        <img alt="Startit" src="/orgs/startit.png" />
+      </a>
     </div>
 
     <div class="sponsors-actions">
@@ -91,7 +99,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         text-align: center;
         font-size: 1.75rem;
         font-weight: 600;
-        margin: 2rem;
+        margin: 3rem;
       }
 
       .sponsors-container,
@@ -120,7 +128,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 3rem;
         gap: 1rem;
       }
 
