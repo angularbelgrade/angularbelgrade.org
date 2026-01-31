@@ -38,6 +38,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           src="/orgs/offering-solutions-software.svg"
         />
       </a>
+
+      <a
+        href="https://www.blinkops.com/"
+        target="_blank"
+        style="width: 330px; max-width: 57vw"
+      >
+        <img alt="BlinkOps" src="/orgs/blinkops.svg" />
+      </a>
     </div>
 
     <h3>Media Partners</h3>

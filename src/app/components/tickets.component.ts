@@ -24,10 +24,13 @@ import { ticketsResource } from '../resources/tickets.resource';
             </span>
           }
 
-          @if (ticket.soldOut) {
-            <div class="banner" [style]="ticket.styles.banner">
-              <span class="banner-text">SOLD OUT</span>
-            </div>
+          @switch (ticket.state) {
+            @case ('SOLD OUT')
+            @case ('LOCKED') {
+              <div class="banner" [style]="ticket.styles.banner">
+                <span class="banner-text">{{ ticket.state }}</span>
+              </div>
+            }
           }
 
           <div class="ticket-info">
@@ -48,14 +51,16 @@ import { ticketsResource } from '../resources/tickets.resource';
             }
           </ul>
 
-          <a
-            class="buy-button"
-            [style]="ticket.styles.button"
-            [href]="buyTicketsLink"
-            target="_blank"
-          >
-            Buy Now
-          </a>
+          @if (ticket.state === 'ACTIVE') {
+            <a
+              class="buy-button"
+              [style]="ticket.styles.button"
+              [href]="buyTicketsLink"
+              target="_blank"
+            >
+              Buy Now
+            </a>
+          }
         </div>
       }
     </div>

@@ -61,20 +61,6 @@ import { isPlatformBrowser } from '@angular/common';
     <p class="speakers-announcement-note">
       More speakers will be announced soon!
     </p>
-
-    <div class="cfp">
-      <p class="cfp-note">
-        Interested in speaking at NG Belgrade Conf?
-        <i>Call for Papers closes on Jan 31, 2026.</i>
-      </p>
-      <a
-        class="cfp-button"
-        href="https://forms.gle/Q1eRDgKg94VM7Wpb9"
-        target="_blank"
-      >
-        Submit Your Talk
-      </a>
-    </div>
   `,
   styles: [
     `
@@ -156,37 +142,10 @@ import { isPlatformBrowser } from '@angular/common';
 
       .speakers-announcement-note {
         width: fit-content;
-        margin: 2rem auto 1rem;
+        margin: 2rem auto 0;
         padding: 0 1rem;
         text-align: center;
         font-weight: 600;
-      }
-
-      .cfp {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        padding: 0 1rem;
-      }
-
-      .cfp-note {
-        margin: 0;
-        text-align: center;
-      }
-
-      .cfp-button {
-        color: white;
-        background: var(--angular-gradient);
-        text-decoration: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
-        font-weight: 600;
-      }
-
-      .cfp-button:hover {
-        opacity: 0.9;
       }
 
       @media only screen and (min-width: 850px) {
@@ -213,8 +172,6 @@ import { isPlatformBrowser } from '@angular/common';
           display: none;
         }
 
-        .cfp-note,
-        .cfp-button,
         .speakers-announcement-note {
           font-size: 1.25rem;
         }

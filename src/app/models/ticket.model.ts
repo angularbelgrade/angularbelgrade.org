@@ -12,5 +12,5 @@ export type Ticket = {
   note?: string;
   benefits: string[];
   styles: TicketStyles;
-  soldOut?: boolean;
+  state: 'ACTIVE' | 'SOLD OUT' | 'LOCKED';
 };
