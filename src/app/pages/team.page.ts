@@ -220,7 +220,7 @@ export default class TeamPage {
     },
     {
       name: 'Jovan Mitrović',
-      headline: 'Frontend Engineer at JobCloud',
+      headline: 'Frontend Engineer at Dräger',
       photoUrl: '/people/jovan-mitrovic.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/jovan-mitrovic-b682b41b9/',
     },
