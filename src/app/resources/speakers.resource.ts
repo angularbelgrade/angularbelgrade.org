@@ -104,6 +104,58 @@ const speakerMap: Record<string, Speaker> = {
     linkedinUrl: 'https://linkedin.com/in/rainerhahnekamp/',
     githubUrl: 'https://github.com/rainerhahnekamp/',
   },
+  'fabian-gosebrink': {
+    id: 'fabian-gosebrink',
+    name: 'Fabian Gosebrink',
+    headline: 'Pluralsight Author<br/>Angular GDE • Microsoft MVP',
+    bio: 'Fabian is a software developer, book author, trainer, and speaker with a strong focus on modern web architectures using Angular, Nx, and state management. He is a Google Developer Expert (GDE), Microsoft MVP, and Nx Champion. As a Pluralsight author and book author, he shares practical, experience-driven knowledge on Angular, scalable frontend architectures, and sustainable state management. In his talks and workshops, Fabian combines real-world project experience with clear architectural principles, helping teams build applications that remain maintainable as they grow. His goal is to enable developers to make better technical decisions. Beyond hype and dogma.',
+    talkTitle:
+      'Advanced Signal Store: Structuring State for Real Angular Applications',
+    talkDescription:
+      "Modern Angular applications grow quickly, and with that growth come new questions about how to structure and share state effectively. Signals make local state simple and expressive, but as applications evolve, architectural decisions around state become increasingly important.<br/><br/>In this talk, we go beyond the basics of the NgRx Signal Store and explore how it can be used as an architectural building block in real Angular applications. We look at practical scenarios and discuss where state belongs, how to define clear boundaries between components, features, and application wide concerns, and how Signal Store fits into that picture.<br/><br/>We dive deeper into advanced Signal Store concepts such as store composition, derived state, effects, and integration with Angular's dependency injection system, always from an architectural point of view rather than focusing only on the API.<br/><br/>This session is driven by experience and clear opinions. It focuses on sharing patterns, heuristics, and mental models that help teams structure state with confidence. You will leave with concrete ideas for designing maintainable and scalable Angular applications using Signal Store, grounded in real world constraints and everyday development.",
+    photoUrl: '/people/fabian-gosebrink.jpg',
+    photoBackground: 'light',
+    flagUrl: '/flags/switzerland.png',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-fabian-gosebrink.jpg',
+    twitterUrl: 'https://twitter.com/FabianGosebrink/',
+    linkedinUrl: 'https://linkedin.com/in/fabian-gosebrink-71023a88/',
+    githubUrl: 'https://github.com/FabianGosebrink/',
+  },
+  'matthieu-riegler': {
+    id: 'matthieu-riegler',
+    name: 'Matthieu Riegler',
+    headline: 'Software Engineer at<br/>Angular Team, Google',
+    bio: 'Matthieu is a Software Engineer from France, born and raised in the Alps, he is known for his community contributions over the years. Active as community speaker, he recently he joined the Angular team as a Google contractor and works on the devtools, documentation and of course the framework itself.',
+    talkTitle:
+      'You can do better than console.log : Debugging your apps effectively',
+    talkDescription:
+      "You can do better than console.log is not a judgment - it’s a promise 🙂<br/><br/>This talk is a practical (and slightly opinionated) tour of debugging Angular apps without turning your codebase into a crime scene of console.log('here'). We’ll start from the familiar comfort of logging everything… and then gently move on to tools that actually scale beyond “it works on my machine”.<br/><br/>We’ll explore the browser DevTools and the Angular DevTools to understand what’s really happening in your app:<ul><li>Navigating the Component Tree to inspect inputs, outputs, providers, and state in real time</li><li>Following navigation with Router Visualization instead of guessing why a route didn’t activate</li><li>Inspecting TransferState to debug SSR and hydration issues without superstition</li><li>Visualizing Signals and computed chains to see what updates, when, and why</li><li>Understanding Change Detection cycles and spotting unnecessary work before performance does</li></ul>Along the way, we’ll replace “let me log this real quick” with repeatable debugging strategies, better mental models, and tools that tell the truth even when your logs lie.<br/><br/>You’ll leave knowing when console.log is fine… and when Angular already gave you something much better.",
+    photoUrl: '/people/matthieu-riegler.jpg',
+    photoBackground: 'light',
+    flagUrl: '/flags/france.png',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-matthieu-riegler.jpg',
+    twitterUrl: 'https://x.com/Jean__Meche/',
+    linkedinUrl: 'https://linkedin.com/in/matthieuriegler/',
+    githubUrl: 'https://github.com/jeanmeche/',
+  },
+  'ana-kljajic': {
+    id: 'ana-kljajic',
+    name: 'Ana Kljajić',
+    headline: 'Senior Frontend Engineer',
+    bio: 'Ana is a Senior Frontend Engineer with a Master of Science in Software Engineering from the University of Belgrade. She specializes in building scalable web architectures and solving complex engineering challenges through modern tooling. Outside of coding, Ana enjoys exploring challenging new destinations and playing table tennis.',
+    talkTitle:
+      'Get Busted by the Sheriff: The Nextgen TypeScript Linting Experience',
+    talkDescription:
+      'In this talk, we will explore how to eliminate configuration fatigue and bring order to the "Wild West" of your codebase. We will dive into Sheriff, an opinionated, nextgen ESLint setup that replaces dozens of plugins with a single, bulletproof standard. You’ll learn how getting "busted" by strict rules during development is the ultimate shortcut to shipping safer TypeScript and ending code review debates forever.',
+    photoUrl: '/people/ana-kljajic.jpg',
+    photoBackground: 'light',
+    flagUrl: '/flags/serbia.png',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-ana-kljajic.jpg',
+    linkedinUrl: 'https://linkedin.com/in/kljajicana/',
+  },
 };
 
 const speakers = Object.values(speakerMap);
