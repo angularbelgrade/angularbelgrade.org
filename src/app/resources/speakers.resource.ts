@@ -156,6 +156,54 @@ const speakerMap: Record<string, Speaker> = {
       'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-ana-kljajic.jpg',
     linkedinUrl: 'https://linkedin.com/in/kljajicana/',
   },
+  'kiril-zafirov': {
+    id: 'kiril-zafirov',
+    name: 'Kiril Zafirov',
+    headline: 'Senior Frontend Engineer<br/>Angular Macedonia Organizer',
+    bio: 'Kiril Zafirov is a senior software engineer with over 10 years of experience building large-scale web and mobile applications. He specializes in Angular, performance optimization, and modern frontend architecture, with a strong focus on writing maintainable, production-ready code. He has worked with international teams and companies across fintech, healthcare, and SaaS, and is actively involved in the Angular community through talks, meetups, and mentoring. Kiril is particularly interested in performance, developer experience, and turning complex problems into simple, effective solutions.',
+    talkTitle: 'NgOptimizedImage: The Easiest Performance Win You’re Not Using',
+    talkDescription:
+      'NgOptimizedImage delivers measurable performance gains with almost no code.<br/><br/>In this lightning talk, I’ll show a live before-and-after demo using Angular’s built-in image optimization to improve LCP, loading behavior, and real-world performance in minutes.',
+    photoUrl: '/people/kiril-zafirov.jpg',
+    photoBackground: 'light',
+    flagUrl: '/flags/macedonia.png',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-kiril-zafirov.jpg',
+    linkedinUrl: 'https://linkedin.com/in/kiril-z/',
+    githubUrl: 'https://github.com/KirilZafirov/',
+  },
+  'brygida-fiejdasz': {
+    id: 'brygida-fiejdasz',
+    name: 'Brygida Fiejdasz',
+    headline: 'Frontend Lead at Avenga<br/>Angular GDE • Microsoft MVP',
+    bio: "I'm an Angular GDE and Lead of the Frontend Competence Center at Avenga. Beyond that, I'm an Angular enthusiast who loves to code and enjoys sharing knowledge – on stage, at meetups, and on my YouTube channel “Speed Date with Angular”. In my free time, I'm an explorer and a proud cat mom.",
+    talkTitle: 'Modern Data Fetching Techniques in Angular',
+    talkDescription:
+      'Angular now provides signal-based data fetching through two APIs: resource and httpResource, designed to simplify reactive data access.<br/><br/>In this lightning talk, we’ll take a focused look at how these APIs work under the hood and how they differ in real applications. You’ll see how resource is built on the browser’s native fetch, while httpResource leverages Angular’s HttpClient, enabling integration with interceptors, dependency injection, and existing HTTP infrastructure.<br/><br/>You’ll learn:<ul><li>How signal-based resources manage loading, error, and refresh states</li><li>The architectural differences between resource and httpResource</li><li>Practical guidelines for choosing the right API in Angular apps</li></ul>This session is ideal for developers who want a quick but technical introduction to modern Angular data fetching patterns without diving into full-scale examples.',
+    photoUrl: '/people/brygida-fiejdasz.jpg',
+    photoBackground: 'light',
+    flagUrl: '/flags/poland.png',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-brygida-fiejdasz.jpg',
+    twitterUrl: 'https://x.com/brydziaf/',
+    linkedinUrl: 'https://linkedin.com/in/brygidafiejdasz/',
+  },
+  'dhananjay-kumar': {
+    id: 'dhananjay-kumar',
+    name: 'Dhananjay Kumar',
+    headline: 'Founder of NomadCoder<br/>ng-India Organizer',
+    bio: 'Dhananjay Kumar is a trainer, consultant, developer evangelist, and the founder of NomadCoder, which organizes ng-India and AI-India — two of India’s largest developer communities and conferences. He focuses on building job-ready developers across modern web and AI technologies and is currently working on his second book on Angular.',
+    talkTitle: 'Modern Data Fetching Techniques in Angular',
+    talkDescription:
+      'Angular now provides signal-based data fetching through two APIs: resource and httpResource, designed to simplify reactive data access.<br/><br/>In this lightning talk, we’ll take a focused look at how these APIs work under the hood and how they differ in real applications. You’ll see how resource is built on the browser’s native fetch, while httpResource leverages Angular’s HttpClient, enabling integration with interceptors, dependency injection, and existing HTTP infrastructure.<br/><br/>You’ll learn:<ul><li>How signal-based resources manage loading, error, and refresh states</li><li>The architectural differences between resource and httpResource</li><li>Practical guidelines for choosing the right API in Angular apps</li></ul>This session is ideal for developers who want a quick but technical introduction to modern Angular data fetching patterns without diving into full-scale examples.',
+    photoUrl: '/people/dhananjay-kumar.jpg',
+    photoBackground: 'light',
+    flagUrl: '/flags/india.png',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-dhananjay-kumar.jpg',
+    twitterUrl: 'https://x.com/debug_mode/',
+    linkedinUrl: 'https://linkedin.com/in/dhananjaykumar07/',
+  },
 };
 
 const speakers = Object.values(speakerMap);
