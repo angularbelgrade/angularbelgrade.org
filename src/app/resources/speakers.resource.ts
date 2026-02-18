@@ -204,6 +204,23 @@ const speakerMap: Record<string, Speaker> = {
     twitterUrl: 'https://x.com/debug_mode/',
     linkedinUrl: 'https://linkedin.com/in/dhananjaykumar07/',
   },
+  'christian-liebel': {
+    id: 'christian-liebel',
+    name: 'Christian Liebel',
+    headline: 'Member of W3C Technical<br/>Architecture Group • Angular GDE',
+    bio: 'Christian Liebel is a developer with a passion for modern web technologies. He has been recognized as a Microsoft Most Valuable Professional (MVP) and a Google Developer Expert (GDE) and speaks at user groups and conferences worldwide. As a member of the W3C Technical Architecture Group (TAG), he helps push the boundaries of the web.',
+    talkTitle: 'What’s New in Web? 2026 Edition',
+    talkDescription:
+      "Christian is a member of the World Wide Web’s architecture board, the Technical Architecture Group (TAG) of W3C. As such, he has insights into what’s going on in the web platform. In his session, you'll gain insights into the latest discussions among standards bodies, browser vendors, and web developers. And you have the opportunity to report your wishes back to the Web’s architecture board. Don't miss this opportunity to stay updated on the forefront of web technologies.",
+    photoUrl: '/people/christian-liebel.jpg',
+    photoBackground: 'dark',
+    flagUrl: '/flags/germany.png',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-christian-liebel.jpg',
+    twitterUrl: 'https://x.com/christianliebel/',
+    linkedinUrl: 'https://linkedin.com/in/christianliebel/',
+    githubUrl: 'https://github.com/christianliebel/',
+  },
 };
 
 const speakers = Object.values(speakerMap);

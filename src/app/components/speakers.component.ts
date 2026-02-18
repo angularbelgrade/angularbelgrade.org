@@ -57,10 +57,6 @@ import { isPlatformBrowser } from '@angular/common';
         </a>
       }
     </div>
-
-    <p class="speakers-announcement-note">
-      More speakers will be announced soon!
-    </p>
   `,
   styles: [
     `
@@ -140,14 +136,6 @@ import { isPlatformBrowser } from '@angular/common';
         opacity: 0.8;
       }
 
-      .speakers-announcement-note {
-        width: fit-content;
-        margin: 2rem auto 0;
-        padding: 0 1rem;
-        text-align: center;
-        font-weight: 600;
-      }
-
       @media only screen and (min-width: 850px) {
         .speaker-list {
           display: grid;
@@ -170,10 +158,6 @@ import { isPlatformBrowser } from '@angular/common';
 
         .open-link {
           display: none;
-        }
-
-        .speakers-announcement-note {
-          font-size: 1.25rem;
         }
       }
     `,
