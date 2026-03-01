@@ -6,4 +6,10 @@ export type SpeakerAgendaItem = BaseAgendaItem & { speaker: Speaker };
 
 export type PlainAgendaItem = BaseAgendaItem & { details: string };
 
-export type AgendaItem = SpeakerAgendaItem | PlainAgendaItem;
+export type AgendaSection = {
+  name: string;
+  index: number;
+  items: AgendaSectionItem[];
+};
+
+export type AgendaSectionItem = PlainAgendaItem | SpeakerAgendaItem;

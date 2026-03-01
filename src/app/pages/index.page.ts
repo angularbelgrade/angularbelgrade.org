@@ -5,6 +5,7 @@ import { BannerComponent } from '../components/banner.component';
 import { EventDetailsComponent } from '../components/event-details.component';
 import { SpeakersComponent } from '../components/speakers.component';
 import { MCsComponent } from '../components/mcs.component';
+import { AgendaComponent } from '../components/agenda.component';
 import { WorkshopComponent } from '../components/workshop.component';
 import { TicketsComponent } from '../components/tickets.component';
 import { SponsorsComponent } from '../components/sponsors.component';
@@ -31,6 +32,7 @@ export const routeMeta: RouteMeta = {
     EventDetailsComponent,
     SpeakersComponent,
     MCsComponent,
+    AgendaComponent,
     WorkshopComponent,
     TicketsComponent,
     SponsorsComponent,
@@ -41,6 +43,7 @@ export const routeMeta: RouteMeta = {
     <bgd-event-details />
     <bgd-speakers />
     <bgd-mcs />
+    <bgd-agenda />
     <bgd-workshop />
     <bgd-tickets />
     <bgd-sponsors />

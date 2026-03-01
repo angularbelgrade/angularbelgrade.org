@@ -100,7 +100,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       :host {
         display: block;
         padding: 3rem 0;
-        background-color: var(--light-orange-color);
+        background-color: var(--lighter-orange-color);
       }
 
       h3 {

@@ -70,7 +70,7 @@ import { ticketsResource } from '../resources/tickets.resource';
       :host {
         display: block;
         padding: 3rem 0;
-        background-color: var(--lighter-orange-color);
+        background-color: var(--light-orange-color);
       }
 
       .tickets {

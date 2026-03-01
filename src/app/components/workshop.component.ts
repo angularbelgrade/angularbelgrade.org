@@ -159,7 +159,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       :host {
         display: block;
         padding: 3rem 1rem;
-        background-color: var(--light-orange-color);
+        background-color: var(--lighter-orange-color);
       }
 
       .workshop-card {
@@ -169,7 +169,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         padding: 1rem;
         border-radius: 0.5rem;
         margin: 0 auto;
-        background-color: var(--lighter-orange-color);
+        background-color: var(--light-orange-color);
       }
 
       .card-header {
@@ -278,7 +278,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         flex-direction: column;
         list-style: circle;
         margin: 0;
-        background: var(--light-orange-color);
+        background: var(--lighter-orange-color);
       }
       .workshop-agenda-item > ul > li {
         padding: 5px 10px;
