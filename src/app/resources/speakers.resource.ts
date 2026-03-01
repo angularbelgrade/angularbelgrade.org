@@ -76,8 +76,9 @@ const speakerMap: Record<string, Speaker> = {
     name: 'Brandon Roberts',
     headline: 'Creator of AnalogJS<br/>NgRx Maintainer • Angular GDE',
     bio: 'Brandon is an OSS Advocate, focused on community engagement, content creation, and collaboration. He enjoys learning new things, helping other developers be successful, speaking at conferences, and contributing to open source. He is a GDE, technical writer, maintainer of the NgRx project, and creator of the AnalogJS meta-framework.',
-    talkTitle: 'Talk: AnalogJS (TBA)',
-    talkDescription: '',
+    talkTitle: 'Embracing the Vite ecosystem with Angular and Analog',
+    talkDescription:
+      "The Vite ecosystem continues to grow its suite of tools that support Vite-first integrations. Angular also supports some of Vite's features, while Analog takes it to the next step. This talk expands on using Analog and Angular to extend even more into the ecosystem of Vite-based tools for better performance and developer experience with tools like Vitest, Storybook, and more.",
     photoUrl: '/people/brandon-roberts.jpg',
     photoBackground: 'dark',
     flagUrl: '/flags/united-states.png',
@@ -177,9 +178,9 @@ const speakerMap: Record<string, Speaker> = {
     name: 'Brygida Fiejdasz',
     headline: 'Frontend Lead at Avenga<br/>Angular GDE • Microsoft MVP',
     bio: "I'm an Angular GDE and Lead of the Frontend Competence Center at Avenga. Beyond that, I'm an Angular enthusiast who loves to code and enjoys sharing knowledge – on stage, at meetups, and on my YouTube channel “Speed Date with Angular”. In my free time, I'm an explorer and a proud cat mom.",
-    talkTitle: 'Modern Data Fetching Techniques in Angular',
+    talkTitle: 'From Server to Client: Mastering Hydration in Angular',
     talkDescription:
-      'Angular now provides signal-based data fetching through two APIs: resource and httpResource, designed to simplify reactive data access.<br/><br/>In this lightning talk, we’ll take a focused look at how these APIs work under the hood and how they differ in real applications. You’ll see how resource is built on the browser’s native fetch, while httpResource leverages Angular’s HttpClient, enabling integration with interceptors, dependency injection, and existing HTTP infrastructure.<br/><br/>You’ll learn:<ul><li>How signal-based resources manage loading, error, and refresh states</li><li>The architectural differences between resource and httpResource</li><li>Practical guidelines for choosing the right API in Angular apps</li></ul>This session is ideal for developers who want a quick but technical introduction to modern Angular data fetching patterns without diving into full-scale examples.',
+      'Hydration is the key to making server-side rendered applications fully interactive. In this talk, we’ll explore how Angular’s hydration process works under the hood, why it is vital for modern web development, and how it significantly boosts both performance and user experience.<br/><br/>We’ll take a deep dive into incremental hydration, a game-changing feature that enables selective hydration of components, making SSR more efficient than ever. We will also look at how Angular ensures no user interaction is lost during the transition, with a look at event replay and how to debug these processes using Angular DevTools effectively.',
     photoUrl: '/people/brygida-fiejdasz.jpg',
     photoBackground: 'light',
     flagUrl: '/flags/poland.png',
@@ -220,6 +221,42 @@ const speakerMap: Record<string, Speaker> = {
     twitterUrl: 'https://x.com/christianliebel/',
     linkedinUrl: 'https://linkedin.com/in/christianliebel/',
     githubUrl: 'https://github.com/christianliebel/',
+  },
+  'julian-jandl': {
+    id: 'julian-jandl',
+    name: 'Julian Jandl',
+    headline: 'Lead Performance Engineer<br/>at PushBased',
+    bio: 'Julian is Lead Performance Engineer, Trainer & Consultant at PushBased. As a web performance enthusiast, he loves experimenting with cutting edge technologies to improve the speed of the web at scale. Julian is conducting performance audits for existing applications, fixing performance bottlenecks and teaching about web performance & Angular in workshops.',
+    talkTitle: 'Analyze the JS Heap and Detect Memory Leaks',
+    talkDescription:
+      'Memory leaks or high memory consumption are the number one reason for crashing browser sessions. However, analyzing the memory consumption of javascript applications and identifying memory leaks are one of the most difficult tasks to perform, even as a dedicated performance engineer. It requires a deep understanding of the language, specific tooling and most of the time of the underlying application and its various states as well.<br/><br/>With this talk I want to invite you to a deep dive into the memory analysis of javascript applications. I will point out the theoretical concepts of javascripts memory consumption, the garbage collection process, the memory heap and memory leak identification.<br/><br/>Based on comprehensive demo applications I will walk you through a methodical approach on how to identify and fix memory leaks while showcasing the latest available developer tools.',
+    photoUrl: '/people/julian-jandl.jpg',
+    photoBackground: 'dark',
+    flagUrl: '/flags/austria.png',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-julian-jandl.jpg',
+    twitterUrl: 'https://x.com/hoebbelsB/',
+    linkedinUrl: 'https://linkedin.com/in/julian-jandl-43a2b9125/',
+    githubUrl: 'https://github.com/hoebbelsB/',
+  },
+  'marko-stanimirovic': {
+    id: 'marko-stanimirovic',
+    name: 'Marko Stanimirović',
+    headline:
+      'Frontend Tech Lead at BlinkOps<br/>NgRx Co-Maintainer • Angular GDE',
+    bio: 'Marko is a core member of the NgRx team, a Google Developer Expert in Angular, and a co-organizer of the NG Belgrade conference. He actively contributes to open-source software, shares knowledge through technical articles and talks, and enjoys playing the guitar. Marko holds a Master of Science in Software Engineering from the University of Belgrade.',
+    talkTitle:
+      'Proven State Management Principles for Sustainable Angular Apps',
+    talkDescription:
+      'Most Angular applications live for years, not weeks, and state management is usually where complexity accumulates first. This talk brings together proven principles from real-world teams and large-scale applications, showing how to design state management logic that remains understandable, adaptable, and sustainable as requirements, teams, and codebases evolve.',
+    photoUrl: '/people/marko-stanimirovic.jpg',
+    photoBackground: 'light',
+    flagUrl: '/flags/serbia.png',
+    bannerUrl:
+      'https://angularbelgrade.org/banners/ng-belgrade-conf-2026-marko-stanimirovic.jpg',
+    twitterUrl: 'https://twitter.com/MarkoStDev/',
+    linkedinUrl: 'https://linkedin.com/in/markostanimirovic/',
+    githubUrl: 'https://github.com/markostanimirovic',
   },
 };
 
