@@ -189,11 +189,11 @@ export class AgendaComponent {
         },
         {
           time: { from: '13:50', to: '14:10' },
-          speaker: speakersResource.getSpeakerById('fabian-gosebrink'),
+          speaker: speakersResource.getSpeakerById('marko-stanimirovic'),
         },
         {
           time: { from: '14:10', to: '14:30' },
-          speaker: speakersResource.getSpeakerById('marko-stanimirovic'),
+          speaker: speakersResource.getSpeakerById('fabian-gosebrink'),
         },
         {
           time: { from: '14:30', to: '14:40' },
@@ -205,7 +205,7 @@ export class AgendaComponent {
         },
         {
           time: { from: '15:00', to: '15:20' },
-          details: 'Q&A Panel with Manfred, Fabian, Marko, DJ, and Rainer',
+          details: 'Q&A Panel with Manfred, Marko, Fabian, DJ, and Rainer',
         },
       ],
     },
