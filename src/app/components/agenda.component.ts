@@ -13,61 +13,51 @@ import { speakersResource } from '../resources/speakers.resource';
   imports: [RouterLink],
   template: `
     <h2 id="agenda" class="section-title">Agenda</h2>
+    <div class="agenda">
+      @for (agendaItem of agenda; track $index) {
+        @if (isSection(agendaItem)) {
+          <h2 class="block-title">
+            Block {{ agendaItem.index }}: {{ agendaItem.name }}
+          </h2>
 
-    <table>
-      <tbody>
-        @for (agendaItem of agenda; track $index) {
-          @if (isSection(agendaItem)) {
-            <tr>
-              <td class="agenda-section" colspan="2">
-                Block {{ agendaItem.index }}: {{ agendaItem.name }}
-              </td>
-            </tr>
-            @for (sectionItem of agendaItem.items; track $index) {
-              @if (isSpeaker(sectionItem)) {
-                <tr>
-                  <td class="agenda-item-time">
-                    {{ sectionItem.time.from }} <span>-</span>
-                    {{ sectionItem.time.to }}
-                  </td>
-                  <td class="agenda-item-details">
-                    <p>{{ sectionItem.speaker.name }}</p>
+          @for (sectionItem of agendaItem.items; track $index) {
+            @if (isSpeaker(sectionItem)) {
+              <section class="agenda-item-card">
+                <div class="time-col">
+                  {{ sectionItem.time.from }} - {{ sectionItem.time.to }}
+                </div>
+                <div class="content-col">
+                  <h3 class="title orange">{{ sectionItem.speaker.name }}</h3>
+                  <p class="subtitle">
                     <a routerLink="/speakers/{{ sectionItem.speaker.id }}">
                       {{ sectionItem.speaker.talkTitle }}
                     </a>
-                  </td>
-                </tr>
-              } @else {
-                <tr>
-                  <td class="agenda-item-time">
-                    {{ sectionItem.time.from }} <span>-</span>
-                    {{ sectionItem.time.to }}
-                  </td>
-                  <td class="agenda-item-details">
-                    <span>{{ sectionItem.details }}</span>
-                  </td>
-                </tr>
-              }
+                  </p>
+                </div>
+              </section>
+            } @else {
+              <section class="agenda-item-card align-center">
+                <div class="time-col">
+                  {{ sectionItem.time.from }} - {{ sectionItem.time.to }}
+                </div>
+                <div class="content-col">
+                  <h3 class="title orange">{{ sectionItem.details }}</h3>
+                </div>
+              </section>
             }
-            <tr>
-              <td class="agenda-section" colspan="2">
-                End of Block {{ agendaItem.index }}
-              </td>
-            </tr>
-          } @else {
-            <tr>
-              <td class="agenda-item-time">
-                {{ agendaItem.time.from }} <span>-</span>
-                {{ agendaItem.time.to }}
-              </td>
-              <td class="agenda-item-details">
-                <span>{{ agendaItem.details }}</span>
-              </td>
-            </tr>
           }
+        } @else {
+          <section class="agenda-item-card purple">
+            <div class="time-col">
+              {{ agendaItem.time.from }} - {{ agendaItem.time.to }}
+            </div>
+            <div class="content-col">
+              <h3 class="title purple">{{ agendaItem.details }}</h3>
+            </div>
+          </section>
         }
-      </tbody>
-    </table>
+      }
+    </div>
   `,
   styles: [
     `
@@ -77,58 +67,146 @@ import { speakersResource } from '../resources/speakers.resource';
         background-color: var(--light-orange-color);
       }
 
-      table {
-        margin: 0 1rem;
-        border-collapse: collapse;
-      }
+      .agenda {
+        width: min(100%, 860px);
+        margin: 1.75rem auto 0 auto;
+        padding: 0 1.25rem;
 
-      tr:not(:last-child) {
-        border-bottom: 1px solid #47424b;
-      }
-
-      td {
-        padding: 1rem;
-      }
-
-      .agenda-section {
-        font-weight: 600;
-      }
-
-      .agenda-item-time {
-        border-right: 1px solid #47424b;
-        text-align: center;
-
-        > span {
-          display: block;
+        @media only screen and (min-width: 850px) {
+          margin: 3.5rem auto 0 auto;
         }
       }
 
-      .agenda-item-details {
-        width: 100%;
-        line-height: 1.5;
-
-        > p {
-          margin: 0 0 1rem 0;
-          font-weight: 600;
-        }
-
-        > span {
-          font-weight: 600;
-        }
+      .block-title {
+        margin: 1.25rem 0;
+        font-size: 1rem;
+        line-height: 1.1;
+        font-weight: 800;
+        letter-spacing: -0.02em;
       }
 
-      @media only screen and (min-width: 850px) {
-        table {
-          width: 740px;
-          margin: 0 auto;
+      .agenda-item-card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        background: white;
+        border-radius: 0;
+        margin-bottom: 0.5rem;
+        padding: 0.75rem 1rem;
+        min-height: 0;
+        border-left: 0.5rem solid var(--orange-color);
+
+        @media only screen and (min-width: 850px) {
+          grid-template-columns: 7.5rem 1fr;
+          gap: 1.75rem;
+          padding: 0.75rem 1.25rem;
+          min-height: 4.5rem;
         }
 
-        .agenda-item-time {
-          white-space: nowrap;
+        &.purple {
+          border-left-color: var(--magenta-color);
+          align-items: center;
 
-          > span {
-            display: inline;
+          .time-col {
+            display: flex;
+            align-items: center;
+            line-height: 1.2;
+
+            &::after {
+              top: -0.75rem;
+              height: calc(100% + 1.5rem);
+            }
           }
+
+          .content-col {
+            justify-content: center;
+            gap: 0;
+          }
+        }
+
+        &.align-center {
+          align-items: center;
+
+          .time-col {
+            display: flex;
+            align-items: center;
+            line-height: 1.2;
+
+            &::after {
+              top: -0.75rem;
+              height: calc(100% + 1.5rem);
+            }
+          }
+
+          .content-col {
+            justify-content: center;
+            gap: 0;
+          }
+        }
+
+        .time-col {
+          position: relative;
+          padding-left: 0;
+          font-size: 1rem;
+          line-height: 1.35;
+          font-weight: 500;
+          letter-spacing: -0.01em;
+          color: var(--gray-color);
+
+          &::after {
+            display: none;
+            content: '';
+            position: absolute;
+            right: -1rem;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: var(--light-gray-color);
+          }
+
+          @media only screen and (min-width: 850px) {
+            padding-left: 0.75rem;
+
+            &::after {
+              display: block;
+            }
+          }
+        }
+
+        .content-col {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.5rem;
+          padding-right: 0.5rem;
+        }
+
+        .title {
+          margin: 0;
+          font-size: 1rem;
+          line-height: 1.12;
+          font-weight: 700;
+          letter-spacing: -0.01em;
+
+          &.orange {
+            color: var(--orange-color);
+          }
+
+          &.purple {
+            color: var(--magenta-color);
+          }
+        }
+
+        .subtitle {
+          margin: 0;
+          font-size: 1rem;
+          line-height: 1.2;
+          font-weight: 500;
+          text-decoration: underline;
+          text-underline-offset: 2px;
+          color: var(--gray-color);
+          letter-spacing: -0.005em;
         }
       }
     `,
