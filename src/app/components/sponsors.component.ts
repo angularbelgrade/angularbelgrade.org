@@ -5,6 +5,18 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <h2 id="sponsors" class="section-title">Sponsors</h2>
 
+    <h3>Gold</h3>
+
+    <div class="sponsors-container">
+      <a
+        href="https://angular.dev/"
+        target="_blank"
+        style="width: 530px; max-width: 87vw"
+      >
+        <img alt="Angular" src="/orgs/angular.png" />
+      </a>
+    </div>
+
     <h3>Silver</h3>
 
     <div class="sponsors-container" style="max-width: 950px; margin: 0 auto">

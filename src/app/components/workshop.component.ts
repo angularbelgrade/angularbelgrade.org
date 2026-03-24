@@ -53,7 +53,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
                   height="24"
                   width="24"
                 />
-                <span> Workshop venue will be announced soon! </span>
+                <a
+                  href="https://maps.app.goo.gl/gLadL3E9tAibrbz99"
+                  target="_blank"
+                >
+                  Centar za Digitalnu Transformaciju, Kneza Miloša 12, Beograd
+                </a>
               </li>
             </ul>
           </div>
