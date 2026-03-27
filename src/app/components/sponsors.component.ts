@@ -94,6 +94,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       >
         <img alt="Startit" src="/orgs/startit.png" />
       </a>
+
+      <a
+        href="https://netokracija.rs/"
+        target="_blank"
+        style="width: 260px; max-width: 45vw"
+      >
+        <img alt="Netokracija" src="/orgs/netokracija.svg" />
+      </a>
     </div>
 
     <div class="sponsors-actions">
