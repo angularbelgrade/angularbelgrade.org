@@ -35,36 +35,12 @@ const workshopTicketBenefits = [
 
 const tickets: Ticket[] = [
   {
-    name: 'Conference Ticket',
-    price: 159,
-    benefits: conferenceTicketBenefits,
-    styles: getTicketStyles('#e11d48'),
-    note: 'Discount for 3+ Tickets',
-    state: 'ACTIVE',
-  },
-  {
-    name: 'VIP Conference Ticket',
-    price: 229,
-    benefits: vipTicketBenefits,
-    styles: getTicketStyles('#7c3aed'),
-    note: '30 Seats Available',
-    state: 'ACTIVE',
-  },
-  {
-    name: 'Final Workshop Ticket',
-    price: 359,
-    benefits: workshopTicketBenefits,
-    styles: getTicketStyles('#2234a8'),
-    note: 'Last 10 Seats',
-    state: 'ACTIVE',
-  },
-  {
     name: 'Final Conference Ticket',
     price: 199,
     benefits: conferenceTicketBenefits,
     styles: getTicketStyles('#9f1239'),
     note: 'Last 30 Seats',
-    state: 'LOCKED',
+    state: 'ACTIVE',
   },
   {
     name: 'Early Conference Ticket',
@@ -76,11 +52,35 @@ const tickets: Ticket[] = [
     state: 'SOLD OUT',
   },
   {
+    name: 'Conference Ticket',
+    price: 159,
+    benefits: conferenceTicketBenefits,
+    styles: getTicketStyles('#e11d48'),
+    note: 'Discount for 3+ Tickets',
+    state: 'SOLD OUT',
+  },
+  {
+    name: 'VIP Conference Ticket',
+    price: 229,
+    benefits: vipTicketBenefits,
+    styles: getTicketStyles('#7c3aed'),
+    note: '30 Seats Available',
+    state: 'SOLD OUT',
+  },
+  {
     name: 'Workshop Ticket',
     price: 299,
     benefits: workshopTicketBenefits,
     styles: getTicketStyles('#2563eb'),
     note: '30 Seats Available',
+    state: 'SOLD OUT',
+  },
+  {
+    name: 'Final Workshop Ticket',
+    price: 359,
+    benefits: workshopTicketBenefits,
+    styles: getTicketStyles('#2234a8'),
+    note: 'Last 10 Seats',
     state: 'SOLD OUT',
   },
 ];
