@@ -35,14 +35,6 @@ const workshopTicketBenefits = [
 
 const tickets: Ticket[] = [
   {
-    name: 'Final Conference Ticket',
-    price: 199,
-    benefits: conferenceTicketBenefits,
-    styles: getTicketStyles('#9f1239'),
-    note: 'Last 30 Seats',
-    state: 'ACTIVE',
-  },
-  {
     name: 'Early Conference Ticket',
     price: 119,
     basePrice: 159,
@@ -57,6 +49,14 @@ const tickets: Ticket[] = [
     benefits: conferenceTicketBenefits,
     styles: getTicketStyles('#e11d48'),
     note: 'Discount for 3+ Tickets',
+    state: 'SOLD OUT',
+  },
+  {
+    name: 'Final Conference Ticket',
+    price: 199,
+    benefits: conferenceTicketBenefits,
+    styles: getTicketStyles('#9f1239'),
+    note: 'Last 30 Seats',
     state: 'SOLD OUT',
   },
   {

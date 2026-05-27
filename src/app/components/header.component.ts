@@ -46,11 +46,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
         <li><a routerLink="/" fragment="sponsors">Sponsors</a></li>
         <li><a routerLink="/team" routerLinkActive="active-link">Team</a></li>
         <li><a routerLink="/" fragment="location">Location</a></li>
-        <li>
-          <a class="tickets-button" routerLink="/" fragment="tickets">
-            Tickets
-          </a>
-        </li>
       </ul>
 
       <ul
@@ -88,16 +83,6 @@ import { filter, fromEvent, map, pairwise, tap } from 'rxjs';
           <a routerLink="/" fragment="location" (click)="closeMenu()"
             >Location</a
           >
-        </li>
-        <li>
-          <a
-            class="tickets-button"
-            routerLink="/"
-            fragment="tickets"
-            (click)="closeMenu()"
-          >
-            Tickets
-          </a>
         </li>
       </ul>
     </nav>

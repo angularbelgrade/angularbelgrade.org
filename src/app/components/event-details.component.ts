@@ -37,6 +37,18 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </div>
     </div>
 
+    <div class="aftermovie">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/49xGStMDum4"
+        title="NG Belgrade Conf 2026 Aftermovie"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+
     <p class="event-organization">
       Organized with ❤️ by the community, for the community.
     </p>
@@ -61,6 +73,22 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         gap: 2rem;
       }
 
+      .aftermovie {
+        width: 100%;
+        max-width: 560px;
+        aspect-ratio: 16 / 9;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 10px 10px 0px -3px var(--gray-color);
+      }
+
+      .aftermovie iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+
       .event-description,
       .event-organization {
         max-width: 100%;
@@ -70,7 +98,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
       .event-organization {
         text-align: center;
-        margin-top: 1rem;
         font-weight: 600;
       }
 
