@@ -1,9 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'bgd-banner',
-  imports: [RouterLink],
   template: `
     <h1 style="display: none">NG Belgrade Conf 2026</h1>
 
@@ -22,8 +20,12 @@ import { RouterLink } from '@angular/router';
       <p class="workshop-day"><b>WORKSHOP DAY</b> : May 08, 2026</p>
     </div>
 
-    <a class="tickets-button" routerLink="/" fragment="tickets">
-      Get Your Ticket
+    <a
+      class="photos-button"
+      href="https://photos.app.goo.gl/fxkYeKopEXyC8iWZ8"
+      target="_blank"
+    >
+      Photo Gallery
     </a>
   `,
   styles: [
@@ -80,7 +82,7 @@ import { RouterLink } from '@angular/router';
         background: var(--orange-color);
       }
 
-      .tickets-button {
+      .photos-button {
         color: white;
         background: var(--purple-color);
         font-weight: 600;
@@ -90,7 +92,7 @@ import { RouterLink } from '@angular/router';
         padding: 0.75rem 1.5rem;
       }
 
-      .tickets-button:hover {
+      .photos-button:hover {
         color: var(--background-color);
         background: var(--dark-purple-color);
       }
@@ -110,7 +112,7 @@ import { RouterLink } from '@angular/router';
         }
 
         .banner-details,
-        .tickets-button {
+        .photos-button {
           font-size: 1.5rem;
         }
       }
