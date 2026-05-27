@@ -103,17 +103,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <img alt="Netokracija" src="/orgs/netokracija.svg" />
       </a>
     </div>
-
-    <div class="sponsors-actions">
-      <p class="sponsors-text">Interested in sponsoring our conference?</p>
-      <a
-        class="sponsors-button"
-        href="https://forms.gle/biMmYFgdjCXVQ96E7"
-        target="_blank"
-      >
-        Become a Sponsor
-      </a>
-    </div>
   `,
   styles: [
     `
